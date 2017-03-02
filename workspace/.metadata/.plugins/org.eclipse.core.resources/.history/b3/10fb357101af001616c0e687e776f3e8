@@ -1,0 +1,10 @@
+package bean.validation;
+
+public class TestValidation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

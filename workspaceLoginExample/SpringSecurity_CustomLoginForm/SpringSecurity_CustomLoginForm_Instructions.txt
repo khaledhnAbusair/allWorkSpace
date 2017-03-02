@@ -1,0 +1,20 @@
+Spring Security Part 3
+"Custom Login Form"
+"Quick look at the previous project with default login form"
+
+Steps:
+1. Create custom jsp page for login
+	- So these names need to be as it is:
+		j_spring_security_check
+		j_username
+		j_password
+	- form needs to be POST
+	- Let's put the error message under the form
+2. Configure form-login in security xml file
+	- The goal is to go back to login form and display the error message
+	- Let's exclude login url in the secured resources
+3. Create a LoginController class
+4. Test
+	- Now we are seeing the new login page
+
+That's it!!! You can provide more configurations in Spring Security.

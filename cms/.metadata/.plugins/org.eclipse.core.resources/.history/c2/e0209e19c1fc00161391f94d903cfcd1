@@ -1,0 +1,186 @@
+package com.progressoft.jip.controllers;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import com.progressoft.jip.entity.UserEntity;
+import com.progressoft.jip.entity.view.UserView;
+import com.progressoft.jip.usecase.UserUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeFindAnyUserException;
+import com.progressoft.jip.usecase.impl.exception.ConfirmPasswordDoesNotMatchException;
+import com.progressoft.jip.usecase.impl.exception.UserIsAlreadyExistException;
+import com.progressoft.jip.usecase.impl.exception.UserNotFoundException;
+
+@Controller
+public class UserManagementController {
+	private static final String USER_MANAGEMENT_JSP_PAGE = "UserManagement";
+	private static final String USER_MANAGEMENT_JSP = "UserManagement.jsp";
+	private static final String CHANGE_PASSW_JSP_PAGE = "ChangePassword";
+	private static final String CHANGE_PASS_JSP = "ChangePassword.jsp";
+	private static final String USER_MANAGEMENT = "/userManagement";
+	private static final String CONFIRM_PASS = "confirmPassword";
+	private static final String EDIT_USER_JSP_PAGE = "EditUser";
+	private static final String CHANGE_PASS = "/changePassword";
+	private static final String EDIT_USER_JSP = "EditUser.jsp";
+	private static final String ADD_USER_JSP_PAGE = "AddUser";
+	private static final String ADD_USER_JSP = "AddUser.jsp";
+	private static final String CREATE_USER = "createUser";
+	private static final String NEW_PASS = "newPassword";
+	private static final String EDIT_USER = "/editUser";
+	private static final String REDIRECT = "redirect:";
+	private static final String USER_NAME = "userName";
+	private static final String ADD_USER = "/addUser";
+	private static final String DISABLE = "disable";
+	private static final String PASS = "password";
+	private static final String ENABLE = "enable";
+	private static final String ERRORS = "errors";
+	private static final String RESET = "reset";
+	private static final String USERS = "users";
+	private static final String USER = "user";
+	private static final String SAVE = "save";
+
+	private static final String FAILURE_ERROR = "failureError";
+
+	private static final String BASE_PAGE = "/base";
+	private static final String PAGE_CONTENT = "pageContent";
+
+	@Autowired
+	private UserUseCase userUsecase;
+
+	public void setUserUsecase(UserUseCase userUsecase) {
+		this.userUsecase = userUsecase;
+	}
+
+	@RequestMapping(path = USER_MANAGEMENT, method = RequestMethod.GET)
+	public String viewUserManagement(Map<String, Object> model, HttpSession session) {
+		Iterable<UserEntity> userLists = userUsecase.getAllUsers();
+		model.put(USERS, userLists);
+		model.put(USER_NAME, session.getAttribute(USER_NAME));
+		return USER_MANAGEMENT_JSP_PAGE;
+	}
+
+	@RequestMapping(path = EDIT_USER, method = RequestMethod.GET)
+	public String viewEditUser(@RequestParam Map<String, String> params, Map<String, Object> model) {
+		UserView user = userUsecase.findOneUserByUserName(params.get(USER_NAME));
+		model.put(USER, user);
+		return EDIT_USER_JSP_PAGE;
+	}
+
+	@RequestMapping(path = ADD_USER, method = RequestMethod.GET)
+	public String viewAddUser() {
+		return ADD_USER_JSP_PAGE;
+	}
+
+	@RequestMapping(path = CHANGE_PASS, method = RequestMethod.GET)
+	public String viewChangePassword() {
+		return CHANGE_PASSW_JSP_PAGE;
+	}
+
+	@RequestMapping(path = CHANGE_PASS, method = RequestMethod.POST)
+	public String changePassword(@RequestParam(name = PASS) String password,
+			@RequestParam(name = NEW_PASS) String newPassword,
+			@RequestParam(name = CONFIRM_PASS) String confirmPassword, Map<String, Object> modal,
+			UriComponentsBuilder builder, HttpSession session) {
+		userUsecase.changeUserPassword(session.getAttribute(USER_NAME).toString(), password, newPassword,
+				confirmPassword);
+		return REDIRECT + builder.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = { ADD_USER, CREATE_USER }, method = RequestMethod.POST)
+	public String addUser(@ModelAttribute @Validated UserEntity userEntity, BindingResult bindingResult,
+			Map<String, Object> model, RedirectAttributes redirectAttributes, UriComponentsBuilder bulider) {
+		if (bindingResult.hasErrors()) {
+			model.put(ERRORS, bindingResult);
+			return ADD_USER_JSP_PAGE;
+		}
+			userUsecase.addUser(userEntity);
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = EDIT_USER, params = SAVE, method = RequestMethod.POST)
+	public String editUser(@ModelAttribute @Validated UserEntity userEntity, BindingResult bindingResult,
+			Map<String, Object> model, UriComponentsBuilder bulider, HttpServletRequest request) {
+		handleError(bindingResult, model);
+			userUsecase.editUserFullName(userEntity);
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = EDIT_USER, params = DISABLE, method = RequestMethod.POST)
+	public String changeUserStatusToDisable(@ModelAttribute @Validated UserEntity userEntity,
+			BindingResult bindingResult, Map<String, Object> model, UriComponentsBuilder bulider,
+			HttpServletRequest request) {
+		handleError(bindingResult, model);
+			userUsecase.disableUser(userEntity);
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = EDIT_USER, params = ENABLE, method = RequestMethod.POST)
+	public String changeUserStatusToEnable(@ModelAttribute @Validated UserEntity userEntity,
+			BindingResult bindingResult, Map<String, Object> model, UriComponentsBuilder bulider,
+			HttpServletRequest request) {
+		handleError(bindingResult, model);
+			userUsecase.enableUser(userEntity);
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = EDIT_USER, params = { RESET }, method = RequestMethod.POST)
+	public String changeUserPasswordToComplexPassword(@ModelAttribute @Validated UserEntity userEntity,
+			BindingResult bindingResult, Map<String, Object> model, UriComponentsBuilder bulider,
+			HttpServletRequest request) {
+		handleError(bindingResult, model);
+			userUsecase.resetUserPassword(userEntity);
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@ExceptionHandler(UserNotFoundException.class)
+	public String handleUserNotFoundException(Exception e, Model model) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, EDIT_USER_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(UserIsAlreadyExistException.class)
+	public String handleUserIsAlreadyExistException(Exception e, Model model) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, ADD_USER_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(CannotBeFindAnyUserException.class)
+	public String handleCannotBeFindAnyUserException(Exception e, Model model) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, USER_MANAGEMENT_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(ConfirmPasswordDoesNotMatchException.class)
+	public String handleConfirmPasswordDoesNotMatchException(Exception e, Model model) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, CHANGE_PASS_JSP);
+		return BASE_PAGE;
+	}
+
+	private String handleError(BindingResult bindingResult, Map<String, Object> model) {
+		if (!bindingResult.hasErrors()) {
+			model.put(ERRORS, bindingResult);
+			return null;
+		}
+		return EDIT_USER_JSP_PAGE;
+	}
+
+}

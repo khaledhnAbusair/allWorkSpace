@@ -1,0 +1,7 @@
+1486311109537	Rename local variable 'par'
+1486311337426	Extract local variable 'importHandler'
+1486313673213	Delete element
+1486373390304	Extract constant 'TEXT_XML'
+1486385235729	Extract constant 'IMPORT_REPORT_XML'
+1486386438466	Extract constant 'FILE_UPLOAD'
+1486472707207	Delete elements

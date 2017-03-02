@@ -1,0 +1,566 @@
+<html>
+<head>
+<title>User Guide</title>
+<style type="text/css">
+.SectionHeader {
+	background-color: darkblue;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.SubSectionHeader {
+	color: black;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.CommandLine {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-family: fantasy;
+	font-size: 13px;
+	width: 400px;
+}
+</style>
+</head>
+<body>
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr class="SectionHeader">
+			<td><a name="guide-top">Introduction and Index</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td>This guide describes how to run, configure, and run the
+							Bodgitt and Scarper CSRs (Customer Service Representatives)
+							"Booking system" and database server administration programs. The
+							only deployment required is <code>runme.jar</code> file which
+							contains the application.<br>Any quoted word(s) in this
+							document means a component or a section in the GUI, if the
+							word(s) in italic, example: <i>"Search Filter"</i>, means a
+							section in the UI or an entry field, if bold, example: <b>"Book"</b>,
+							means a function (button) on screen or in menus.<br> Below
+							is the index of this document:</td>
+					</tr>
+					<tr>
+						<td><hr /></td>
+					</tr>
+					<tr>
+						<td>
+							<ol>
+								<li><a href="#run">Running the program</a>
+								</li>
+								<li><a href="#server-gui">Database Server program</a>
+									<ul>
+										<li><a href="#database-server-configuration">Database
+												server configuration</a>
+										</li>
+										<li><a href="#available-actions">Available Functions</a>
+										</li>
+										<li><a href="#database-server-monitoring">Database
+												server monitoring</a>
+										</li>
+										<li><a href="#server-gui-shortcuts">Functions
+												shortcuts</a>
+										</li>
+									</ul></li>
+								<li><a href="#booking-system-gui">Booking System
+										program</a>
+									<ul>
+										<li><a href="#database-connectivity-configuration">Database
+												Connectivity Configuration</a>
+										</li>
+										<li><a href="#contractors-filtering">Contractors
+												Filtering</a></li>
+										<li><a href="#contractors-booking">Contractors
+												Booking</a></li>
+										<li><a href="#contractors-visible-columns">Contractors
+												List Columns</a></li>
+										<li><a href="#internal-error-report">Internal Error
+												Report</a></li>
+										<li><a href="#client-gui-shortcuts">Functions
+												shortcuts</a>
+										</li>
+									</ul></li>
+							</ol></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="SectionHeader"><a name="run">Running the program</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td>The same jar file <i>runme.jar</i> is used to run both
+							database server administration and "Booking system" GUI.<br>
+							Program can be run through any command line tool available on
+							user machine (examples: for Windows a CMD, for Linux a terminal)
+							by passing one of the following (case insensitive) arguments:
+							<ul>
+								<li><i>server</i>: to launch database server administration
+									GUI</li>
+								<li><i>alone</i>: to launch client GUI in alone mode where
+									the user selects a database file resides in his machine.</li>
+								<li>Empty (blank): to launch client GUI in client networked
+									mode where the user will configure the program to connect to a
+									database server resides on a remote machine.</li>
+							</ul> The following example demonstrates how to run the program in a
+							Linux environment, make sure java (minor version 1.6) is
+							installed and configured by running <code>"java -version"</code>
+							in a command line, if not, please contact your administrator:<br>
+							<ul>
+								<li>Lets say runme.jar exist under path: <code>/home/user/BodgittAndScarper</code>
+								</li>
+								<li>Open a terminal then navigate to target path:
+									<p class="CommandLine">:$ cd /home/user/BodgittAndScarper/
+									</p></li>
+								<li>Run the jar by passing mode flag to it: <code>java
+										-jar runme.jar [mode-flag]</code> <br> <br> To run database
+									server administration program pass <code>'server'</code> mode
+									flag:
+									<p class="CommandLine">:$ java -jar runme.jar server</p> To run
+									a "Booking System" program in alone mode pass <code>'alone'</code>
+									mode flag:
+									<p class="CommandLine">:$ java -jar runme.jar alone</p> To run
+									a "Booking System" GUI in networked mode, just run the jar
+									without passing any arguments:
+									<p class="CommandLine">:$ java -jar runme.jar</p></li>
+							</ul> Regardless of mode, a file will be created in current working
+							directory with name <code>suncertify.properties</code> which will
+							hold configuration used by the user between program runs, it is
+							recommended to not alter this file.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td class="SectionHeader"><a name="server-gui">Database
+					Server program</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td>This section describes how to use Database server
+							administration GUI to run and configure a database network
+							service. This GUI contains:
+							<ul>
+								<li><i>"Network service Info"</i>: contains entries for
+									database file selection and network server configuration.</li>
+								<li><i>"Statistics"</i>: shows database server running
+									status (up or down), database server start time, and stop time
+									in case the database server was stopped</li>
+								<li>Functions:
+									<ul>
+										<li><b>"Start"</b>: for starting up server</li>
+										<li><b>"Stop"</b>: for shutting down server.</li>
+										<li><b>"Close"</b>: for shutting down server, if running,
+											and closing the server program.</li>
+									</ul>
+								</li>
+								<li>Menus:
+									<ul>
+										<li><b>"File"</b>: contains <b>"Close"</b> for exiting
+											program, which can be done also by pressing 'ALT+F4'</li>
+										<li><b>"Action"</b>: contains the same functions
+											available on UI</li>
+									</ul>
+								</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr>
+						<td class="SubSectionHeader"><a
+							name="database-server-configuration">Database server
+								configuration</a>
+						</td>
+					</tr>
+					<tr>
+						<td>To start a database network service, the administrator
+							has to fill the following entries:
+							<ul>
+								<li><i>"Database Location"</i>: the path for a valid
+									database file for which a network service to be run</li>
+								<li><i>"Service Name"</i>: the unique name to bound
+									database network service with.</li>
+								<li><i>"Port"</i>: the port on which the database network
+									service will listen to client requests.</li>
+							</ul> The service name and port along with the server machine IP
+							address or name (where Server program is running) will be
+							provided to database network service clients so they can connect
+							to network server using them.<br> This GUI allows the
+							administrator to start a network service for only one file at a
+							time, to expose a network service for another database file, the
+							administrator has to run the server GUI again, selects the target
+							database file, then assign unique service name along with chosen
+							service port.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr>
+						<td class="SubSectionHeader"><a name="available-actions">Available
+								Functions</a></td>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li><b>"Start"</b>: once clicked, configuration entries
+									will be validated, if they are valid, the server will be
+									started, if not, the administrator will be prompted to fix the
+									defected entries. Once server is started successfully,
+									configuration entries and start button will be disabled.
+									Entries are considered as valid if:
+									<ul>
+										<li>File selected is a valid database file and not locked
+											by another process.</li>
+										<li>Service name only contains letters, numbers, '_', or
+											'/'</li>
+										<li>Service port not empty and is a valid unused port.
+											The range of ports to use is not controlled because it
+											depends on user permission on machine for assigning ports.</li>
+									</ul>
+								</li>
+								<li><b>"Stop"</b>: by default it is disabled, once server
+									is started it will be enabled to allow the administrator to
+									stop database server.</li>
+								<li><b>"Close"</b>: to stop database server, if running,
+									and close the database server program.</li>
+							</ul></td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr /></td>
+					</tr>
+					<tr>
+						<td class="SubSectionHeader"><a
+							name="database-server-monitoring">Database server monitoring</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Once the database server is started, the <i>"Statistics"</i>
+							section will display the status of database server as 'UP' and
+							the start time stamp in <i>"Start Time"</i> field. If user
+							chooses to stop server, the status will be changed as 'DOWN' and
+							the "Stop Time" field will be set to stop time stamp.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr>
+						<td class="SubSectionHeader"><a name="server-gui-shortcuts">Functions
+								shortcuts</a></td>
+					</tr>
+					<tr>
+						<td>The following shortcuts will trigger the functions
+							available on screen:
+							<table border="1" cellspacing="0">
+								<tr>
+									<th>Function</th>
+									<th>Shortcut keys</th>
+								</tr>
+								<tr>
+									<td><b>"Close"</b></td>
+									<td>'ALT+F4' or 'ALT+C'</td>
+								</tr>
+								<tr>
+									<td><b>"Start"</b>
+									</td>
+									<td>'ALT+S'</td>
+								</tr>
+								<tr>
+									<td><b>"Stop"</b>
+									</td>
+									<td>'ALT+O'</td>
+								</tr>
+							</table></td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a></td>
+					</tr>
+				</table></td>
+		</tr>
+		<tr>
+			<td class="SectionHeader"><a name="booking-system-gui">Booking
+					System Program</a></td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td>The client application is specially implemented to
+							satisfy CSRs needs to search database for a contractors matching
+							clients needs and booking them to specific home owners. It
+							contains:</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<ul>
+								<li><i>"Search Filter"</i>: contains entries and actions to
+									filter contractors according to <i>"Name"</i> and <i>"Location"</i>
+									and <b>"Match All"</b> check box to verify if records to list
+									must match both filter entries or at least one of them.</li>
+								<li><i>"Contractors List"</i>: contains the list of
+									contractors matching filter criteria.</li>
+								<li><i>"Details"</i>: view the details for currently
+									selected contractor in list.</li>
+								<li>Functions:
+									<ul>
+										<li><b>"Search"</b>: to list contractors from database
+											according to user filter entries.</li>
+										<li><b>"Clear"</b>: to clear entries in <i>"Search
+												Filter"</i> fields, all records in <i>"Contractor List"</i>, and
+											clear all fields in <i>"Details"</i>
+										</li>
+										<li><b>"Book"</b>: to book the currently selected
+											contractor to a home owner, enabled only if selected
+											contractor is not booked.</li>
+									</ul></li>
+								<li>Menus:
+									<ul>
+										<li><b>"File"</b>: menu which holds only <b>"Close"</b>
+											item to exit the program</li>
+										<li><b>"Action"</b>: menu which contains the same
+											functions available on screen.</li>
+										<li><b>"Options"</b>: contains <b>"Columns"</b> item to
+											configure columns to display in <b>"Contractors List"</b>
+										</li>
+									</ul>
+								</li>
+								<li><i>"Status bar"</i>: at the bottom, displays the last
+									time the user search the database and the total records count
+									listed from database.</li>
+							</ul>The same application is used to run in both <i><code>alone</code>
+						</i> mode and networked mode.</td>
+
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a></td>
+					</tr>
+					<tr>
+						<td><hr /></td>
+					</tr>
+					<tr class="SubSectionHeader">
+						<td><a name="database-connectivity-configuration">Database
+								Connectivity Configuration</a></td>
+					</tr>
+					<tr>
+						<td>When running "Booking System" program in alone mode, a
+							dialog will prompt to select a database file exist in user local
+							file system, once a file is selected and it is a valid not locked
+							contractors database, the GUI will be enabled, if not, a warning
+							message will describe connectivity problem and the file selection
+							dialog will prompt to select database again. If <b>"Cancel"</b>
+							is pressed, the application will exit, when running in networked
+							mode, a dialog will prompt to enter database server connection
+							configuration (host, service name, and port provided by system
+							administrator), once the entries are valid and <b>"Connect"</b>
+							button is pressed, the application will try to connect to the
+							remote database server, if connection is established the GUI will
+							be enabled, otherwise, a warning message will display the cause
+							of connection failure then connection dialog will prompt for
+							connection entries again. If <b>"Cancel"</b> is pressed, the
+							program will exit.<br />Once a connection is made to a database,
+							program title bar will show which database currently in use
+							(example for connecting to local database: "Booking
+							System-Database:/home/mohammad/db2x2.db").</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr /></td>
+					</tr>
+					<tr class="SubSectionHeader">
+						<td><a name="contractors-filtering">Contractors Filtering</a>
+						</td>
+					</tr>
+					<tr>
+						<td>User can list contractors from a database by <i>"Name"</i>
+							and/or <i>"Location"</i>. Filter entries are case insensitive and
+							a contractor will be considered as matched if its name and/or
+							location are an <b>exact</b> match to filter entries, for
+							example: "Fred" matches only "Fred" or "freD", "Fred something"
+							is not considered as match. If <b>"Match All"</b> check box is
+							selected, records to list from database must match both filter
+							fields, if not selected, records listed will match the <i>"Name"</i>
+							or <i>"Location"</i> entries, so we may have a record matching <i>"Name"</i>
+							filter entry but does not match <i>"Location"</i> filter entry
+							and visa versa. Pressing <b>"Search"</b> button or pressing enter
+							while focus at filter fields will trigger the search function
+							which list contractors from database according to filter and
+							displays them in <i>"Contractors List"</i>, clicking on <b>"Clear"</b>
+							will uncheck <b>"Match All"</b> check box, clear all filter
+							entries, empty entries in contractor <i>"Details"</i> view, and
+							clear all records displayed in <i>"Contractors list"</i>.<br />
+							To view all records in database, clear filters by pressing on <b>"Clear"</b>,
+							then press <b>"Search"</b> without filling filter entries.<br />
+							If <b>"Match All"</b> check box is checked but at least one of
+							the filter entries are empty, it will be ignored, it is only
+							functioning if both entries are filled.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a></td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr class="SubSectionHeader">
+						<td><a name="contractors-booking">Contractors Booking</a></td>
+					</tr>
+					<tr>
+						<td>Once a contractor is selected in <i>"Contractors
+								List"</i>, it`s details will be displayed in <i>"Details"</i>
+							section entries and the <b>"Book"</b> action will be enabled if
+							it is not booked for a client. When <b>"Book"</b> action is
+							pressed, a dialog will prompt the user to enter a client ID to
+							book contractor with, once the user confirms the entry, the
+							contractor booking will be updated to database.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr /></td>
+					</tr>
+					<tr class="SubSectionHeader">
+						<td><a name="contractors-visible-columns">Contractors
+								List Columns</a>
+						</td>
+					</tr>
+					<tr>
+
+						<td valign="top">Be default, at the first launch for program,
+							the only fields visible in contractors list are <i>"Name"</i>, <i>"Location"</i>,
+							and <i>"Owner"</i>, to configure what fields to display in
+							contractors list, go to menu <b>"Options"</b> click on <b>"Columns"</b>,
+							a dialog will display check boxes for each column, check the
+							columns you want to display, uncheck the columns you want to
+							hide, then click <b>"Ok"</b>. The order in which columns are
+							displayed is fixed (Name, Location, Owner, Size, Rate,
+							Specialties), displayed records are ordered according to
+							contractor name then location.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a></td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr class="SubSectionHeader">
+						<td><a name="internal-error-report">Internal Error Report</a>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">If a dialog with title "Internal Error
+							Report" popes up during use of program, this means a sever
+							failure occurred, a text area in this dialog shows the details of
+							this failure, copy its contents, then send it to system
+							administrator in order to fix the problem. Mostly to recover from
+							such issue restart the application.</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a>
+						</td>
+					</tr>
+					<tr>
+						<td><hr />
+						</td>
+					</tr>
+					<tr>
+						<td class="SubSectionHeader"><a name="client-gui-shortcuts">Functions
+								shortcuts</a></td>
+					</tr>
+					<tr>
+						<td>The following shortcuts will trigger the functions
+							available on screen or menus:
+							<table border="1" cellspacing="0">
+								<tr>
+									<th>Function</th>
+									<th>Shortcut keys</th>
+								</tr>
+								<tr>
+									<td><b>"File"->"Close"</b></td>
+									<td>'ALT+F4'</td>
+								</tr>
+								<tr>
+									<td><b>"Search"</b>
+									</td>
+									<td>'ALT+S'</td>
+								</tr>
+								<tr>
+									<td><b>"Clear"</b>
+									</td>
+									<td>'ALT+C'</td>
+								</tr>
+								<tr>
+									<td><b>"Match All"</b> check/uncheck</td>
+									<td>'ALT+M'</td>
+								</tr>
+								<tr>
+									<td><b>"Book"</b>
+									</td>
+									<td>'ALT+B'</td>
+								</tr>
+							</table> The following shortcuts are useful to move cursor between
+							Entries:
+							<table border="1" cellspacing="0">
+								<tr>
+									<th>Description</th>
+									<th>Shortcut keys</th>
+								</tr>
+								<tr>
+									<td>Focus cursor on <i>"Name"</i> filter field</td>
+									<td>'ALT+N'</td>
+								</tr>
+								<tr>
+									<td>Focus cursor on <i>"Location"</i> filter field</td>
+									<td>'ALT+L'</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td><a href="#guide-top">Back to top</a></td>
+					</tr>
+				</table></td>
+		</tr>
+	</table>
+</body>
+</html>

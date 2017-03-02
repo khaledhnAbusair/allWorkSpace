@@ -1,0 +1,15 @@
+package com.progressoft.jip.initializer;
+
+import com.progressoft.jip.entity.SiteEntity;
+
+public class Void extends SiteEntity {
+	private static final Void INSTANCE = new Void();
+
+	private Void() {
+	}
+
+	public static Void getInstance() {
+		return INSTANCE;
+	}
+
+}

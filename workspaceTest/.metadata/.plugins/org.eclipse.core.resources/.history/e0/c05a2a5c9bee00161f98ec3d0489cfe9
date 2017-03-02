@@ -1,0 +1,5 @@
+package camel.integration;
+
+public class MessageRouting {
+
+}

@@ -1,0 +1,2 @@
+JDK Version: 1.6.0_26
+Platform: Linux ubuntu 10.10

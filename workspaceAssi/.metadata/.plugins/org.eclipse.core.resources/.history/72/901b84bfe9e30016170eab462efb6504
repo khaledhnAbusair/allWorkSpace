@@ -1,0 +1,7 @@
+package Tasks;
+
+public interface A {
+
+	public void test();
+	public void play(String a);
+}

@@ -1,0 +1,5 @@
+package com.progressoft.jip.rest;
+
+public class DepartmentService {
+
+}

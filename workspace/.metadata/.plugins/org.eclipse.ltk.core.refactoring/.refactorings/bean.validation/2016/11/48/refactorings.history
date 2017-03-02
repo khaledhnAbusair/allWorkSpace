@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;constraintAnnotation&apos; in &apos;bean.validation.IbanValidators&apos; to &apos;iban&apos;&#x0A;- Original project: &apos;bean.validation&apos;&#x0A;- Original element: &apos;bean.validation.IbanValidators.constraintAnnotation&apos;&#x0A;- Renamed element: &apos;bean.validation.IbanValidators.iban&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;constraintAnnotation&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;bean.validation{IbanValidators.java[IbanValidators^constraintAnnotation" name="iban" references="true" setter="false" stamp="1479712970035" textual="false" version="1.0"/>
+</session>

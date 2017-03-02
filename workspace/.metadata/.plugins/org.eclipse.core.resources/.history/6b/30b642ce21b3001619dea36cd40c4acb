@@ -1,0 +1,104 @@
+package com.progressoft.jip.xmltest;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.stream.XMLStreamException;
+
+import org.apache.commons.dbcp.BasicDataSource;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class XMLParserConnection extends DefaultHandler implements Parser{
+
+	private static final String DRIVER_CLASS_NAME = "driverClassName";
+	private static final String URL = "url";
+	private static final String PASSWORD = "password";
+	private static final String USERNAME = "username";
+	private static final String CONNECTION_SETTINGS = "connection-settings";
+
+	private BasicDataSource dataSource = new BasicDataSource();
+	private XMLParserData xmlParserData;
+
+	private boolean isUser;
+	private boolean isPass;
+	private boolean isURL;
+	private boolean isDriverClass;
+
+	public static void main(String[] args)
+			throws XMLStreamException, ParserConfigurationException, SAXException, IOException {
+		SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+		String path = "/home/khaled/task/monitor/sample.xml";
+
+		SAXParser saxParser = saxParserFactory.newSAXParser();
+		XMLParserConnection handler = new XMLParserConnection();
+		saxParser.parse(new FileInputStream(path), handler);
+
+	}
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+
+		if (qName.equalsIgnoreCase(CONNECTION_SETTINGS)) {
+			System.out.println("Start Elemnt " + qName);
+
+		} else if (qName.equalsIgnoreCase(USERNAME)) {
+			isUser = true;
+		} else if (qName.equalsIgnoreCase(PASSWORD)) {
+			isPass = true;
+		} else if (qName.equalsIgnoreCase(URL)) {
+			isURL = true;
+		} else if (qName.equalsIgnoreCase(DRIVER_CLASS_NAME)) {
+			isDriverClass = true;
+		}
+
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+
+		if (qName.equalsIgnoreCase(CONNECTION_SETTINGS)) {
+			xmlParserData = new XMLParserData(dataSource);
+		}
+	}
+
+	@Override
+	public void endDocument() {
+		System.out.println("-------------------------------");
+		System.out.println(dataSource.getUsername());
+		System.out.println(dataSource.getPassword());
+		System.out.println(dataSource.getUrl());
+		System.out.println(dataSource.getDriverClassName());
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		if (isUser) {
+			dataSource.setUsername(new String(ch, start, length));
+			System.out.println("user Name: " + new String(ch, start, length));
+			isUser = false;
+		} else if (isPass) {
+			System.out.println("password: " + new String(ch, start, length));
+			dataSource.setPassword(new String(ch, start, length));
+			isPass = false;
+		} else if (isURL) {
+			System.out.println("URL : " + new String(ch, start, length));
+			dataSource.setUrl(new String(ch, start, length));
+			isURL = false;
+		} else if (isDriverClass) {
+			System.out.println("Driver: " + new String(ch, start, length));
+			dataSource.setDriverClassName(new String(ch, start, length));
+			isDriverClass = false;
+		}
+	}
+
+	@Override
+	public void parseDocument(FileInputStream inputStream) {
+		
+	}
+
+}

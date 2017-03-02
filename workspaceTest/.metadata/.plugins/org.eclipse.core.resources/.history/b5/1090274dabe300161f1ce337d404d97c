@@ -1,0 +1,21 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import domain.repository.DepartmentRepository;
+
+public class DepartmentTest {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/data-bean.xml");
+		DepartmentRepository bean = context.getBean(DepartmentRepository.class);
+
+		Department department = new Department();
+
+		department.setDeptNo("SE1125");
+		department.setName("Software Enginering");
+		bean.save(department);
+	}
+
+}

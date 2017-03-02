@@ -1,0 +1,124 @@
+package com.progressoft.jip.usecase.impl;
+
+import java.util.Objects;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.view.PageView;
+import com.progressoft.jip.entity.view.SiteView;
+import com.progressoft.jip.repository.PageRepository;
+import com.progressoft.jip.repository.SiteRepository;
+import com.progressoft.jip.usecase.PageUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeDeleteDefaultPageException;
+import com.progressoft.jip.usecase.impl.exception.CannotBeFindAnyPagesException;
+import com.progressoft.jip.usecase.impl.exception.LoadPageContentException;
+import com.progressoft.jip.usecase.impl.exception.LoadSiteContentException;
+import com.progressoft.jip.usecase.impl.exception.PageIsNotPublishedException;
+import com.progressoft.jip.usecase.impl.exception.PageNotFoundException;
+import com.progressoft.jip.usecase.impl.exception.PageUrlIsAlreadyExistException;
+
+public class PageUseCaseImpl implements PageUseCase {
+
+	private static final String FORWORD_SLASH = "/";
+	private static final String WELCOME_PAGE_URL = "/Welcome";
+
+	private PageRepository pageRepository;
+	private SiteRepository siteRepository;
+
+	public void setSiteRepository(SiteRepository siteRepository) {
+		this.siteRepository = siteRepository;
+	}
+
+	public void setPageRepository(PageRepository pageRepository) {
+		this.pageRepository = pageRepository;
+	}
+
+	@Override
+	public PageView loadPageContent(String siteUrl, String pageUrl) {
+		PageView pageView = pageRepository.findBypageUrl(FORWORD_SLASH + pageUrl);
+		if (Objects.isNull(pageView) || !(pageView.getSiteId().getSiteUrl().equals(FORWORD_SLASH + siteUrl)))
+			throw new LoadPageContentException();
+
+		if (!pageView.getIsPublish())
+			throw new PageIsNotPublishedException();
+		return pageView;
+	}
+
+	@Override
+	public void addPage(PageView pageView, Integer siteId) {
+		if (Objects.nonNull(pageRepository.findBypageUrl(pageView.getPageUrl()))) {
+			throw new PageUrlIsAlreadyExistException();
+		} else {
+			PageEntity pageEntity = new PageEntity();
+			pageEntity.setPageUrl(pageView.getPageUrl());
+			pageEntity.setPageTitle(pageView.getPageTitle());
+			pageEntity.setPageContent(pageView.getPageContent());
+			pageEntity.setSeo(pageView.getSeo());
+			pageEntity.setHtml(true);
+			pageEntity.setPublish(true);
+			pageEntity.setSiteId(siteRepository.findOne(siteId));
+			pageRepository.save(pageEntity);
+		}
+	}
+
+	@Override
+	public PageView findOneUserBypageUrl(String pageUrl) {
+		if (Objects.isNull(pageRepository.findBypageUrl(pageUrl))) {
+			throw new PageNotFoundException();
+		} else {
+			return pageRepository.findBypageUrl(pageUrl);
+		}
+	}
+
+	@Override
+	public Iterable<PageEntity> getAllPages() {
+		Iterable<PageEntity> allPages = pageRepository.findAll();
+		if (Objects.isNull(allPages)) {
+			throw new CannotBeFindAnyPagesException();
+		}
+		return allPages;
+	}
+
+	@Override
+	public void editPage(PageView pageView, Integer siteId) {
+		if (Objects.isNull(pageRepository.findBypageUrl(pageView.getPageUrl()))) {
+			throw new PageNotFoundException();
+		} else {
+			PageEntity pageEntity = new PageEntity();
+			pageEntity.setHtml(pageView.getIsHtml());
+			pageEntity.setLandingPage(pageView.getIsLandingPage());
+			pageEntity.setPageContent(pageView.getPageContent());
+			pageEntity.setPageTitle(pageView.getPageTitle());
+			pageEntity.setPageUrl(pageView.getPageUrl());
+			pageEntity.setPublish(pageView.getIsPublish());
+			pageEntity.setSeo(pageView.getSeo());
+			pageEntity.setSiteId(siteRepository.findOne(siteId));
+			pageRepository.save(pageEntity);
+		}
+	}
+
+	@Override
+	public void deletePage(String pageUrl) {
+		if (Objects.isNull(pageRepository.findBypageUrl(pageUrl))) 
+			throw new PageNotFoundException();
+		 else if (pageUrl.equals(WELCOME_PAGE_URL)) 
+			throw new CannotBeDeleteDefaultPageException();
+		else
+			pageRepository.delete(pageUrl);
+	}
+
+	@Override
+	public Iterable<PageEntity> loadAllPagesBySiteId(Integer siteId) {
+		if (siteId == 0)
+			return pageRepository.findAll();
+		return pageRepository.findBySiteId(siteRepository.findOne(siteId));
+	}
+
+	@Override
+	public PageView loadLandingPage(String siteUrl) {
+		SiteView siteView = siteRepository.findBySiteUrl(FORWORD_SLASH + siteUrl);
+		if (Objects.isNull(siteView))
+			throw new LoadSiteContentException();
+		return siteView.getLandingPage();
+	}
+
+}

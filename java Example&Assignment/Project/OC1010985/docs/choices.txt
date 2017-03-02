@@ -1,0 +1,616 @@
+1.0-Application architecture:
+========================
+The implementation can be categorized in three components:
+1- Database file management components: contains the API and framework for an
+   engine which manages the access to provided database file through sessions.
+   Network service is implemented as part of this layer.
+   The API and framework related to this layer can be found under suncertify.db
+   and suncertify.db.server.
+   Only one single implementation for this layer can be found under packages
+   suncertify.db.impl and suncertify.db.server.rmi
+2- User interface components: contains classes for loading "Booking system"
+   program and database server administration GUI.   
+3- Data model and Business tear: which is the middle layer between the user
+   interface code and database management system code.
+   This layer decouples the UI code from knowing how does persistence storage
+   looks like and how does it work, by encapsulating database file records into
+   beans and providing business classes to manipulate contractors information.
+
+Sections below describe each layer design.
+
+    1.1-Database file management layer:
+    ===================================
+        1.1.1-Database file Engine:
+        ===================================
+        Access to provided database file data and structure is encapsulated in a
+        component called an Engine which manages the access to database file by
+        providing each database client a unique session.
+        The purpose for encapsulating clients access in sessions are:
+        a- Provide much easier way for API user to have one single point of view
+           for resources related to each client.
+        b- Allow API user to manage and monitor the number of clients to a
+           database file.
+        c- Control when a client session is not needed by discarding it.
+
+        Interface suncertify.db.Engine defines a database file engine managing
+        the access to a database file resides locally in same JVM file system or
+        a remote engine managing the access to a database file resides in it`s
+        file system.
+        
+        Interface suncertify.db.Session defines a client connection accepted by
+        an engine which is obtained by calling Engine method Engine.newSession()
+        
+        Each session has its unique data access through suncertify.db.DBMain
+        interface created by calling Session.getDataAccess(). 
+        Call to method Session.discard() will invalidate and discard the session
+        and free any resources (locked records for example) related it.
+
+        As Inversion Of Control is one of the main design concepts considered
+        during implementation, the implementation of suncertify.db.Engine
+        interface can be injected to other application classes without knowing
+        if passed instance is a reference to a local or remote database file
+        engine.
+
+        A remote engine reference is a proxy for a local engine exist in another
+        remote JVM, the same interface suncertify.db.Engine is used to access
+        the remote engine, this will decouple API user from knowing if passed
+        instance is a reference for a local or remote database so it will only
+        concentrate on its business.
+
+        Database engine is implemented as a framework to decouple database file
+        clients from future implementation changes. For example: if engine
+        network server was implemented using RMI and we choose to use TCP/IP
+        sockets instead, the framework user will not notice the difference
+        because the framework will still give them the same behavior and
+        business.
+
+
+        1.1.2-suncertify.db.Data as suitable implementation:
+        ====================================================
+        suncertify.db.Data class was implemented as suitable concrete
+        implementation for DBMain interface which can be used for any database
+        file format using any strategies for record read, write, and lock
+        operations. A suncertify.db.Engine implementer has the free to use this
+        implementation by injecting it with it`s required strategies
+        implementation.
+        
+        If engine implementer chooses Data class as the implementation for
+        DBMain, he has to implemented two strategies required by this class, 
+        RecordsHandler strategy for handling the process of read, create, 
+        delete, and update for file records, and RecordsLockHandler strategy for
+        handling the process of lock and unlock of database files records.
+
+        The number of instances of Data class created during the application
+        life time must be controlled by its engine implementer, one single
+        instance can be created to handle all database calls or multiple for
+        each client. It is up to engine implementer to handle this as long as
+        the data integrity and consistency is handled.
+
+        Class suncertify.db.CachingRecordsHandler is an implementation of Data
+        class RecordsHandler which wraps an instance of RecordsHandler to add
+        the behavior of caching records read and write to database file, this
+        implementation is suitable to add a records caching behavior for a
+        database file engine implementation and can be used by any engine
+        implementation.
+
+        Since DBMain.update() method does not through DuplicateKeyException, 
+        so the assumption in implementing the update operation is to forbid
+        callers to update the primary key fields, if the caller wants to modify
+        a key for the record, it has to delete it first and reinsert it again.
+        There was two ways to implement this behavior:
+            a- ignore new values for primary key fields when updating record and
+               keep them unchanged.
+            b- check if passed values for primary key fields are not changed, if
+               they are changed, throw an IllegalStateException to notify the
+               caller that modifying primary key fields is not allowed.
+        Option (b) was chosen to keep the API user notified regard such scenario
+        and to keep data consistency between API caller and in database file.
+
+        1.1.3-Database file engine service:
+        ===================================
+        A suncertify.db.EngineService is the factory for local/remote engine
+        instances and engine network services (described in next section),
+        the engine implementer can implement this service interface to utilize
+        it as the factory for his engine implementations and to give API user a
+        single safe access point for obtaining engine instances.
+        suncertify.db.EngineServiceLocator uses JDK 1.5 Service loader feature
+        to search for engine service implementations in class path and uses
+        first one found as the target implementation.
+
+        1.1.4-Database file network service:
+        ====================================
+        Network service was implemented as part of database file engine
+        framework to centralize the access to database file engine in one place
+        for remote and local clients regardless of type and location of business
+        services which uses the database.
+
+        Interface suncertify.db.server.NetworkService defines a database network
+        service provider with its stop and start functionality. Only one
+        implementation exist which uses RMI as the communication between remote
+        clients and a database engine.
+
+        A network service is considered part of Engine service (part 1.1.3), 
+        because an engine provider has to implement his own remote client to
+        engine communication protocol by implementing this interface.
+
+        1.1.5-Database file engine implementation:
+        ==========================================
+        The default implementation for suncertify.db.Engine and
+        suncertify.db.EngineService can be found under package
+        suncertify.db.impl. The following is some of the design decisions and
+        concepts taken during implementation:
+
+        1- As an implementation of DBMain, Data class is used by implementing
+           its RecordsHandler and RecordsLockHandler strategy. RecordsHandler
+           implementation injected to Data instances uses 
+           java.io.RandomAccessFile to read, write, and update file records
+           bytes wrapped with CachingRecordsHandler to add a caching behavior
+           for read records to speed up records read.
+                  
+           Multiple instances for Data is created, each one for each client
+           session, it is implemented this way because there is now way using
+           provided DBMain interface to pass client identify to internal
+           database engine business to perform locking/unlocking process using
+           it, so creating new instance for each client to hold client session
+           identify is the solution to maintain identity and work separation.
+           
+           Data class creates new records by adding them to the end of file
+           instead of reusing deleted record space,it is implemented this way
+           according to the business perspective of maintaining deleted records
+           for future debugging and trace, and to keep the decision of
+           permanently delete contractors records from database up to the user
+           according to some manual process.
+           
+           RandomAccessFile was chosen because of easy use of seek method to
+           move read/write pointer to records offset and the utilize read/write
+           data methods exist in this class.
+           
+           There is three implementations for each RecordsLockHandler and
+           RecordsHandler used by data class, one which do the real business, 
+           other for throwing exceptions to verify that caller session is 
+           invalid, and third one for passing calls to one of the previous
+           implementations according to caller session validity, RecordsHandler
+           implementations described below describes how:
+           1- RecordsHandlerImpl: which uses a java.io.RandomAccessFile passed
+              to it to do read write operations using it.
+           2- InvalidSessionLockHandler: which always throws exceptions to
+              notify the caller that his session is invalid during to an engine
+              shutdown or by discarding it.
+           3- RecordsHandlerDelegate: which takes an instance of RecordsHandler
+              and only delegates the call to it.
+           To be more clear, it is a "State" design pattern which have two
+           states for executing a Data class algorithm, one for a valid session
+           and the other one for invalid session.
+
+        2- All create and update operations are written directly to file stream
+           to guarantee the consistency and integrity of data and to survive
+           JVM crashes.
+        3- Each session accepted through an engine to access a database file has
+           its own instance of Data class to holds its unique identify and to
+           separate each session work from each other.
+        4- Only one single instance of engine is created to handle the access
+           for a local database file, if it was shutdown by calling
+           Engine.shutdown() the next call on engine service to create an engine
+           for same database file will create a new singleton fresh one.
+           
+           Code example below demonstrate how:
+           
+           // Create an EngineService instance
+           EngineService service = new EngineServiceImpl();
+           // create an engine for local database file
+           Engine engine = service.getEngine(new File("db-2x2.db"));
+           // another call for getEngine() passing the same file will
+           // return the same instance
+           engine = service.getEngine(new File("db-2x2.db"));
+           // do some work on it, then shut it down
+           engine.shutdown();
+           // another call for getEngine() passing the same old file will
+           // create new singleton instance
+           engine = engine.getEngine(new File("db-2x2.db"));
+           
+        5- Database file schema part is read dynamically, this allows any type
+           of databases other than contractors information database to be
+           supported by engine implementations.
+        6- RecordDeletedException was added as a subclass of
+           RecordNotFoundException to identify the scenario for reading, 
+           updating, or deleting of a record that is marked as deleted in
+           database file, this will help the caller to recognize what the
+           failure actually is.
+        7- RMI is used as communication method between remote clients and
+           database file engine.
+           It is chosen for:
+           a- Instead of taking care of low level serialization and TCP/IP
+              sockets handling, RMI runtime will handles this for us. RMI
+              runtime take care of serialization of data exchanged between a
+              remote client and server components. 
+           b- While implementing the server code, we only concentrate on writing
+              server business code not low level communication protocol.
+           c- RMI provide us with an easy way to register, unregister, and
+              monitor for server code components exposed to an RMI registry.
+           d- It is much easier for the network service client to lookup a
+              service in RMI registry than creating a socket connection with
+              server and handle low level protocol serialization.
+           f- Remote clients can have more flexible way of handling server
+              components or network IO failures using RemoteException and any
+              defined business exceptions than taking care of such failures in
+              a protocol specific way.
+           g- In future if non java client want to connect to our database
+              server, we can reconfigure our server to run using IIOP support. 
+         8- This engine implementation supports only one type of database file, 
+            which is Bodgitt and Scarper contractors database file, this file
+            is identified by its magic cookie value (514).
+         9- DBInternalException is thrown to indicate an unrecoverable state in
+            application run, example: IO exceptions while read/write record
+            data, RemoteException while communication with remote engine.
+            API user can catch this exception to know that his engine state is
+            not valid so he can decide to shutdown the engine or not or maybe
+            report a problem to system administrator.
+        10- The fields considered as primary keys for provided database files
+            are name and location fields.
+            This decision is made passed on provided data and the sense of
+            having the same contractor name exist at the same location.
+        11- Once an engine is created for a database file, the file will be
+            locked so other processes can not access it and lock it, this will
+            guarantee no more than one application will manage the database file. 
+        12- Interface java.rmi.server.Unreferenced was implemented by engine
+            session skeleton RemoteSessionSkelton To capture the disconnection
+            between a remote engine and its client to discard client session
+            accordingly.
+        13- Since no dynamic class loading is required, stubs are generated
+            using rmic tool and added to runme.jar.
+
+    1.2-Database Model:
+    ===================
+    Data Model is the layer between GUI components of the application and the
+    persistence storage where contractors information are stored. Code related
+    to this layer is under package suncertify.model and suncertify.facade.
+
+    A contractor entity is encapsulated in a suncertify.model.Contractor
+    instance, which provides a much easier way to read/write a contractor
+    attributes using properties getter/setter methods and to utilize equals
+    and hascode method when comparing between contractors.
+    Interface suncertify.db.ContractorModel defines the model which convert a
+    Contractor bean to its related form in a persistence storage and a
+    contractors entity in a persistence storage to a Contractor bean.
+
+    This layer is implemented so if we choose to move contractors information
+    from provided file to a relational database, XML database, or any other
+    persistence storage type, the GUI and application business components wont
+    be affected because they are working with contractors entities as beans
+    through ContractorModel interface.
+
+    Only one implementation suncertify.model.db.DBFileContractorModel which
+    reads/writes contractors information from/to provided file.
+
+    Class ContractorModel defines methods to read, write, update and delete
+    contractors information, lock and unlock method are added to provide the
+    caller with the ability to lock a contractor record in a persistence storage
+    so no other threads can modify it except the locking thread.
+    A refresh method is added as a suitable utility to refresh a contractor
+    instance from a persistence storage to allow application components an
+    easier way to update a contractor entity with latest changes made on its
+    persistence storage.
+    
+    Passing Contractor instances returned by a ContractorModel find method to
+    delete, update, and refresh methods will perform faster than passing
+    instances created outside the model, because the model implementer can
+    extends Contractor entity class and puts more information in it related
+	to its location in a persistence storage which will help in increasing
+	performance in manipulation methods.
+	
+	BookingFacade encapsulate the business of "Booking System" for listing
+	contractors records from a persistence storage and to book a contractor for
+	a specific client.
+	
+    1.3- User interface:
+    ====================
+    Two frames are implemented:
+    a- Server administration frame: allow system administrator to configure a
+       network service, start and stop a network service.
+    b- Booking system frame: allow CSRs to search the database for contractors
+       and allow them to update database by book a contractor for a specific
+       customer using the customer related ID.
+
+	Actions available in UI using JButtons are also available in menus to
+	provide an alternative suitable way for actions execution.
+	 
+    Sections below describe in detail each one of them.
+
+        1.3.1- Server Administration frame:
+        ===================================
+        Through this UI the system administrator can configure a network service
+        to run for the provided file, administrator must select a database file
+        resides in his machine file system, enter a name to be used as unique
+        identify for network service, and a port to which network service will
+        listen for client requests.
+        Actions available for user are:
+        a- Start: start a network service according to administrator entries
+           after validating them.
+        b- Stop: stops a network service already running.
+        c- Close: stops network service if it is still running and closes the 
+           frame.
+        Previous actions and configuration entries are enabled and disabled
+        according to entries and network service running status. Once the UI is
+        launched, all entries are enabled, start button is enabled too, once the
+        user clicks start button and a network service is started successfully,
+        start button and configuration entries are disabled, stop and close
+        buttons are enabled to allow the administrator to close the application
+        and stop the network service.
+        
+        A statistics panel in this frame will display the start time of network
+        service and stop time if it was stopped and the status of network
+        service (UP/DOWM).
+
+        If a network service is running and the user chooses to exit program, 
+        the frame will capture this and prompt the user to confirm if he wants
+        to exist the application so if confirmed the network service will be
+        stopped accordingly. 
+        
+        Once start button is clicked, network configuration entries are
+        validated to match the following:
+        1- A file is selected: any file, if the selected file is not a database
+           file the user will prompted to fix the entry then try again.
+        2- service name contains letters, numbers, '_', and '/', other non
+           characters are not accepted, it is implemented this way so when
+           clients can look up network service using url pattern
+           //[host]:[port]/[service name].
+        3- no validation on port number except validation to be an integer.
+           Assigning ports to network service can be something related to user
+           running the program permission.
+            
+        
+        1.3.2- Booking System Frame:
+        ============================
+        Booking system frame is the same frame used to run application in alone
+        and networked client mode.
+        If alone mode was selected, a dialog will prompt user to select a
+        database file, if the database file is not locked and it was a valid
+        contractors database file, the dialog will be closed and the booking
+        system will be enabled , the same thing for networked client mode except
+        the dialog will prompt the user to enter required information to connect
+        to a remote database network service.
+
+        Booking system frame contains the following panels:
+        a- Filter Panel: contains two fields, according to requirements, "Name"
+           and "Location" to filter contractors according to them and a check
+           box to identify if all filter entries are to match with or not.
+           Actions available in filter are "Search" and "Clear". Search action
+           will list all records in database according to user entries in filter
+           and according to "Match all" check box, if there is entries in filter
+           fields and "Match All" check box is not checked, the listed records
+           will match the name "OR" location filter entries, if checked, listed
+           records will match both name "AND" location filter entries.
+           If "Clear" button is clicked, filter entries will be cleared, 
+           "Match All" check box set to unchecked, clear contractor detail view
+           panel, and clear contractors listed (described next sections).
+           The user is able to list all records from database by clearing the
+           filter then click on search button again.
+           If "Match All" check box is checked and one (or all) of filter fields
+           are empty, the empty entry(s) will be ignored, so the functionality
+           of match all filters will be ignored, in another words, "Match All"
+           is not effective until both filter fields are filled.
+        b- Contractors list: displays contractors according to selected filter
+           in a JTable. Name, Location, and Owner columns are displayed by
+           default at first run, the user can configure the application to
+           display more columns by clicking menu item Options->Columns which
+           displays a dialog through it the user will check the columns to be
+           viewed in table, last columns chosen by the user will be persisted in
+           his preferences storage "suncertify.properties" file.
+           The decision made to display only three fields by default is based on
+           not having an enough visible space to display contractors information
+           on, especially "Specialties" field which is a comma separated list of
+           values.
+           Name, Location, and Owner fields are chosen as default fields because
+           they are the key fields which CSRs can depend on while booking a
+           contractor to a client.
+           Once the user selects a record from table, the selected contractor
+           information will be displayed in details view panel (described next)
+           and the "Book" button will be enabled in case selected contractor
+           is not booked, otherwise, the "Book" button will be disabled.
+        c- Contractor Detailed view: displays all fields for currently selected
+           contractor from contractors table list.
+        d- Menu bar:contains the following menus:
+        	-"File": contains close program item for exiting application, 
+        	-"Actions": contains items which are the same actions available on
+        	  screen.
+            -"Options": holds only one item, "Columns", to configure columns
+              visible in contractors list. 
+              
+
+        1.3.3- General GUI utility and classes:
+        =======================================
+        Package suncertify.ui contains classes and utility which is shared by
+        client and server administrator GUI classes:
+        a- UIUtil contains utility methods used by both client and server
+           administrator GUI classes.
+        b- FileSelectionComponent is a custom panel which provides a way to
+           capture a user file selection, it contains a text field for
+           displaying the file currently selected by the user and a button which
+           shows a JFileChooser dialog to prompt the user to select a file.
+        c- ErrorHandleAction: a swing action wrapper which catch any exception
+           thrown by a wrapped swing action then displays an Error report dialog
+           to user showing him what is the failure.
+        d- LengthLimitFromatter: custom formatter can be used with
+           javax.swing.JFormattedTextField to control the number of characters
+           to be inserted in a formatted text field.
+		e- PositiveIntegerFromatter: custom formatter can be used with
+           javax.swing.JFormattedTextField to accept only positive integer
+           values.        
+
+
+ 
+2.0 General consideration in implementation:
+===========================================
+This section describes difficulties and problems faced while implementation the
+application and what was the solution for them and choices regard specific
+classes implementation and design.
+
+    1- Any package level class exist means it is a class used internally by a
+       class resides under the same package and it is meaningless, unsafe to
+       expose it to other packages, or there is no use of making them public and
+       final, for example:
+       a- RecordsHandler and RecordsLockHandler implementations under package 
+          suncertify.db.impl are package view because those implementations are
+          specific for an engine implementation and there is no use to expose
+          them as public classes because extending them means overriding the
+          core functionality of them and using them in outer world gives no
+          functionality.
+       b- DBFileContractor under package suncertify.model.db is a package view
+          because it is only used by DBFileContractorModel to hold a contractor
+          record number and related to it and session ID used to access database
+          file engine with to make it much easier for the model implementation
+          to figure a contractor entity record number if the same instance
+          returned by model find method is passed to update or delete operation,
+          exposing this class as public means allowing other packages to extend
+          and modify the record number related to a contractor method.
+       c- RMI skeletons are package view because they are server side
+          components, extending them means overriding the main functionality of
+          them, so it would be more clean to write a new fresh skeleton
+          implementation instead of extending and overriding an already existing
+          functionality.
+     2- Field description in database file schema does not contain if this field
+        is part of primary key or not, this is one of difficulties faced during
+        implementation, so the decision made was to hard code them according to
+        file magic cookie value, if passed file magic cookie is 514, this means
+        it is a contractors database file which means "name" and "location"
+        fields are considered as primary keys.
+     3- Persisting for users configuration during the program runs was done
+        using JDK 1.5 Preferences API.
+        This API was chosen because it provides a framework for persisting and
+        loading for system and user preferences, instead of implementing a
+        preferences loading mechanism from scratch, we only write implementation
+        for java.util.prefs.PreferencesFactory and java.util.prefs.Preferences
+        then inject it to application.
+        Preferences API was chosen so in future if persisting for a user
+        preferences is moved from file suncertify.properties to a relational
+        database, for example, this will not affect other application components
+        because the new implementation will be plugged to the application using
+        JDK 1.5 service loader mechanism.
+     4- DBMain.find() method throws a RecordNotFoundException, from the
+        beginning this is not realistic, why throwing a RecordNotFoundException
+        from a method which returns a list of matching records, if no matches
+        are found, just return an empty array.
+        Since the method signature throws this exception, and the caller must
+        catch it, so utilizing it is better than declaring it but having it not
+        functioning. So if no matches are found a RecordNotFoundException will
+        be thrown from this method.
+     5- DBMain.update() method does not throws DuplicateKeyException, this means
+        no updating for a key must is allowed, if the caller wants to modify the
+        key of a record, he has to delete it and insert again because the
+        uniqueness of the record is changed.
+        To make sure no caller will fall on the mistake of updating a primary
+        key, the implementation throws an IllegalStateException to notify the
+        caller for updating a primary key is not allowed.
+     6- A ContractorModel and Contractor are presented to minimize the 
+        maintenance for moving contractors information in provided database file
+        to another persistence storage (relational database for example).
+     7- suncertify.facade.BookingSystemFacade contains the business for booking
+        a contractor for a specific client.
+        Booking for a contractor is done in the following steps:
+        a- Lock contractor entity in persistence storage so no other users can
+           lock and modify it.
+        b- Refresh contractor entity with latest updates for contractor fields
+           from persistence storage.
+        c- Check if refresh entity owner id is still empty, if not, throw a
+           BookingException to notify the caller that contractor is already
+           booked by another user.
+        d- Update contractor entity with its new owner id.
+        c- Unlock contractor entity so other users can lock and modify it.
+     8- There is three classes with static main method under suncertify.main:
+        a- ClientMain: which accepts an empty or 'alone' as an argument and
+           starts client application.
+        b- ServerMain: which accepts only 'server' model flag and starts server
+           administration application.
+        c- Main: which accepts empty, 'alone', or 'server' mode flags and passes
+           application launching to above classes. this class is the one used as
+           application launcher.
+        First two classes was introduced so if one day we choose to have two
+        jars, one for running client program and the other for running server
+        program, it will be much easier to modify MANIFEST file with main class
+        required.
+     9- Main benefit of having BookingSystemFacade and ContractorModel is to
+        easy the movement for application from desktop to web environment by
+        utilizing those interfaces and their implementations and concentrate on
+        implementing web pages UI.
+    10- All public classes with their public members are documented using Java
+        Doc style, private members are only documented to give more explanation
+        regard their behavior.
+    11- Descriptive names for database fields are not used because short names
+        are clear enough to the users.
+        Having long text to describe a field may mess up the UI and the way it
+        looks.
+    12- Local.US is used to format contractor rate field value because, 
+        according to file data provided, it is preceded with $ and has two
+        decimal points.
+    13- Search is not case insensitive from database file because it might be
+        harder for the user to remember the value to filter with along with its
+        letters case.
+    14- Contractors listed from database are ordered according to name and
+        location, this will easy finding a contractor among displayed list. 
+    15- The "indication to accept a local database file" mentioned in
+        requirement is implemented by passing mode flag to program, which is the
+        way mentioned in requirements.
+    16- A status bar is added to "Booking System" GUI to provide the feedback
+        of the last time the data is refreshed and the number of records listed.
+    17- During implementation, I faced a problem running the server code in
+        linux and having clients program connected to it, after investigation
+        and debugging, I found it is something related to machine configuration
+        regard "Machine name" to "IP" mapping, if we alter file in linux
+        etc/hosts to use the real IP address assigned to machine instead of
+        local address (127.0.1.1), it will work fine.
+        Handling such issues in server code is error prone and complicated, we
+        can not handle all network issues inside java code because there is too
+        much scenarios related to network failure, so it is left because it is
+        something related to server machine and network configuration.
+    18- Encoding used is US-ASCII, requirement mentions it is 8-bit US-ASCII
+        encoding, but is is misleading, because there is no such thing, so I
+        passed to string methods US-ASCII character set.
+         
+3.0-Design patterns used:
+=========================
+The following are the design patterns applied with samples from source code
+implemented:
+    1- Factory design pattern:
+       a- EngineServiceLocator: for creating EngineSevice instances.
+       b- EngineService: creating Engine and NetworkService instances.
+       c- Engine: for creating Session instances.
+       d- PreferencesFactorImpl: for creating Preferences instances.
+    2- State design pattern:
+       a- RecordsHandlerDelegate wrapping RecordsHandlerImpl or 
+          InvalidSessionRecordsHandlerImpl: which delegates the calls to wrapped
+          handler instance according to user session status.
+       b- RecordsLockHandlerDelegate wrapping RecordsLockHandlerImpl or
+          InvalidSessionLockRecordsHandlerImpl: delegates the calls to wrapped
+          handler instance according to user session status.
+    3- Proxy Design pattern:
+       a- Class under suncertify.db.impl RMIDBMain, RMIEngine, and RMISession, 
+          which delegates local calls to remote RMI skeletons through looked up
+          stubs.
+    4- Observer Design pattern:
+       a- NetworkService and NetworkServiceEventListener: to observe when a
+          network service is started or stopped.
+       b- Contractor property change support: to listen when a contractor
+          instance property are changed.
+       c- ContractorsTabularViewPanel property change support: by adding new
+          property selectedContractor to notify the listeners that a contractor
+          is selected in list view table.
+    5- Facade design pattern:
+       a- BookingSystemFacade and BookingSystemFacadeImpl: which defines the
+          business for booking a contractor.
+    6- Data access Object:
+       a- ContractorModel: to read/write contractor entities from/to a
+          persistence storage.
+    7- Decorator design pattern:
+       a- ErrorHandlerAction: Wraps a swing action and adds the behavior of
+          catching exceptions thrown by wrapped action then do proper handling
+          for them which is generating an error report.
+    8- Composite Design pattern:
+       a- suncertify.db.server.rmi.RemoteServiceObject: provide the single
+          access point to export/unexport a skeleton and its related children
+          to/from RMI environment. For example: If we want to shutdown a remote
+          engine service which is exported to RMI registy through interface
+          RemoteEngine and its skeleton implements RemoteServiceObject, we just
+          have to call unexport() on skeleton and it will unexport it self and
+          any other skeletons (children) exported by it to RMI registry instead
+          of searching for all server components exported and unexport them
+          manually.

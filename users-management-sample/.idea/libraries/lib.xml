@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/jstl-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/login-0.0.1-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/static-filtering-0.0.1-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/standard-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/uploader-0.0.1-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/war/target/war-0.0.1-SNAPSHOT/WEB-INF/lib/commons-lang3-3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<employees>
+
+
+	<employee id="10">
+		<firstname>khaled</firstname>
+		<lastname>waleed</lastname>
+		<location>jordan</location>
+	</employee>
+
+
+	<employee id="20">
+		<firstname>Omar</firstname>
+		<lastname>abusair</lastname>
+		<location>America</location>
+	</employee>
+
+
+	<employee id="30">
+		<firstname>samer</firstname>
+		<lastname>ali</lastname>
+		<location>sudia arabia</location>
+	</employee>
+
+</employees>

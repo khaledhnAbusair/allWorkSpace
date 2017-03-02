@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Jan 18 13:49:38 EET 2017
+org.eclipse.jst.j2ee.server\:web-servlets=WEB-INF/lib/web-servlets-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:terms-task-entity=WEB-INF/lib/terms-task-entity-0.0.1-SNAPSHOT.jar

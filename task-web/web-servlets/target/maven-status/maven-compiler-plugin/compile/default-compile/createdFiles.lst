@@ -1,0 +1,5 @@
+servlets/Categories.class
+servlets/UserManagement.class
+servlets/EditCategory.class
+servlets/DeleteCategory.class
+servlets/SearchTerms.class

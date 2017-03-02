@@ -1,0 +1,9 @@
+
+Osquid:S1213M"8Move this variable to comply with Java Code Conventions.(°•œæ
+jsquid:ModifiersOrderCheck+"EReorder the modifiers to comply with the Java Language Specification.(Õ·ö
+xsquid:S1188e"\Reduce this anonymous class number of lines from 23 to at most 20, or make it a named class.(ŸÍÛğşÿÿÿÿ
+ssquid:S00117/"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¨¸äÿÿÿÿÿ
+Tsquid:S1213@"8Move this variable to comply with Java Code Conventions.(Œ’Üóıÿÿÿÿ
+Osquid:S1213+"8Move this variable to comply with Java Code Conventions.(Õ·ö
+ssquid:S1188M"\Reduce this anonymous class number of lines from 24 to at most 20, or make it a named class.(°•œæ
+Tsquid:S1213e"8Move this variable to comply with Java Code Conventions.(ŸÍÛğşÿÿÿÿ

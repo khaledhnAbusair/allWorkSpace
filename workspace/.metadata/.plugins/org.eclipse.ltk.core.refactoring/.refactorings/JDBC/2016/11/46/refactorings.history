@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PooledConnection.java&apos; to &apos;bank-system-core/src/main/java/com.progressoft.jip.datasource&apos;&#x0A;- Original project: &apos;JDBC&apos;&#x0A;- Destination element: &apos;bank-system-core/src/main/java/com.progressoft.jip.datasource&apos;&#x0A;- Original element: &apos;com.progressoft.jip.datasource.PooledConnection.java&apos;" description="Copy compilation unit" destination="=bank-system-core/src\/main\/java&lt;com.progressoft.jip.datasource" element1="/src&lt;com.progressoft.jip.datasource{PooledConnection.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1478632367604" units="1" version="1.0"/>
+</session>

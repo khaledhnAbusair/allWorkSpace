@@ -1,0 +1,90 @@
+package com.progressoft.jip.parsing.watcherfile;
+
+import static com.progressoft.jip.parsing.framework.Constant.CSV_EXTENTION;
+import static com.progressoft.jip.parsing.framework.Constant.XML_EXTENTION;
+import static java.nio.file.StandardWatchEventKinds.ENTRY_CREATE;
+import static java.nio.file.StandardWatchEventKinds.OVERFLOW;
+
+import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.WatchEvent;
+import java.nio.file.WatchKey;
+import java.nio.file.WatchService;
+
+import com.progressoft.jip.parsing.csv.CSVParser;
+import com.progressoft.jip.parsing.framework.WatcherOpertaion;
+import com.progressoft.jip.parsing.importer.XMLSettings;
+import com.progressoft.jip.parsing.xml.XMLParserConnection;
+
+public class WatcherDirctoryServices implements Runnable, WatcherOpertaion {
+
+	private XMLParserConnection parserConnection;
+	private CSVParser csvParser;
+	private XMLSettings pathName;
+	private WatchKey key;
+
+	public WatcherDirctoryServices(XMLSettings pathName) {
+		this.pathName = pathName;
+	}
+
+	@Override
+	public void run() {
+		checkIfDirctoryContainsFile();
+		try {
+			Path dirctory = pathName.getSourcePath();
+			dirctory.register(FileSystems.getDefault().newWatchService(), ENTRY_CREATE);
+			checkDirctory(FileSystems.getDefault().newWatchService(), dirctory);
+		} catch (Exception e) {
+		}
+	}
+
+	@Override
+	public void checkIfDirctoryContainsFile() {
+		try {
+			Files.list(pathName.getSourcePath()).forEach(file -> {
+				new Thread() {
+					@Override
+					public void run() {
+						parseFile(file);
+					}
+				}.start();
+			});
+		} catch (IOException e1) {
+			// report.identifyExceptionType(e1);
+		}
+	}
+
+	@Override
+	public void parseFile(Path file) {
+		if (file.toString().toLowerCase().endsWith(XML_EXTENTION)) {
+			parserConnection = new XMLParserConnection(file);
+
+			parserConnection.parseDocument(pathName);
+		} else if (file.toString().toLowerCase().endsWith(CSV_EXTENTION)) {
+			csvParser = new CSVParser(file);
+			csvParser.parseDocument(pathName);
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	private void checkDirctory(WatchService watchService, Path dirctory) throws InterruptedException {
+		do {
+			key = watchService.take();
+			for (WatchEvent<?> watchEvent : key.pollEvents()) {
+				if (OVERFLOW == watchEvent.kind()) {
+					continue;
+				} else if (ENTRY_CREATE == watchEvent.kind()) {
+					Path fileName = ((WatchEvent<Path>) watchEvent).context();
+					new Thread() {
+						@Override
+						public void run() {
+							parseFile(dirctory.resolve(fileName));
+						}
+					}.start();
+				}
+			}
+		} while (key.reset());
+	}
+}

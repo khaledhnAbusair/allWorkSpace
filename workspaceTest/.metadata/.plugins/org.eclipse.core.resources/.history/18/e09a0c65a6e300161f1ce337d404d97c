@@ -1,0 +1,39 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import domain.repository.EmployeeRepository;
+
+public class SpringDateTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/data-bean.xml");
+		EmployeeRepository repository = context.getBean(EmployeeRepository.class);
+		Employee employee = new Employee();
+		employee.setFirstName("Khaled");
+		employee.setLastName("Abusair");
+		employee.setPosition("Java eveloper");
+		// repository.save(employee);
+
+		// Iterable<Employee> findByFirstNameLikeAndLastNameLikeOrderByIdDesc =
+		// repository
+		// .findByFirstNameLikeAndLastNameLikeOrderByIdDesc("%k%", "%a%");
+		// for (Employee employee2 :
+		// findByFirstNameLikeAndLastNameLikeOrderByIdDesc) {
+		// System.out.println(employee2.getId() + " " +
+		// employee2.getFirstName());
+		// }
+
+		// Iterable<Employee> findByIdGreaterThan =
+		// repository.findByIdGreaterThan(2);
+		// for (Employee employee2 : findByIdGreaterThan) {
+		// System.out.println(employee2.getFirstName());
+		// }
+
+//		Iterable<Employee> findByIdBetween = repository.findByIdBetween(2, 3);
+//		for (Employee employee2 : findByIdBetween) {
+//			System.out.println(employee2.getFirstName() + " " + employee2.getId());
+//		}
+	}
+
+}

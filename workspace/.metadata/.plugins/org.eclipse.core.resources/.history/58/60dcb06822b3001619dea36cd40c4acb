@@ -1,0 +1,104 @@
+package com.progressoft.jip.xmltest;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.apache.commons.dbcp.BasicDataSource;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class XMLParserData extends DefaultHandler implements Parser {
+
+	private static final String DATA = "data";
+	private static BasicDataSource dataSource;
+
+	private boolean dataStatus;
+	private String key;
+	private Map<String, String> dataMap = new HashMap<String, String>();
+
+	public XMLParserData(BasicDataSource dataSource) {
+		this.dataSource = dataSource;
+
+	}
+
+	public Map<String, String> getData() {
+		return this.dataMap;
+	}
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		key = qName;
+		if (qName.equalsIgnoreCase(DATA)) {
+			dataStatus = true;
+
+		}
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+		String value = new String(ch, start, length);
+		if (dataStatus) {
+			if (!key.trim().equals(DATA) && !key.trim().isEmpty() && !value.isEmpty()) {
+				dataMap.put(key, value);
+			}
+		}
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+
+		// for (int i = 0; i < attributesList.size(); i++) {
+		// String att = attributesList.getQName(i);
+		// String value = attributes.getValue(i);
+		// String uri2 = attributes.getURI(i);
+		// String localName2 = attributes.getLocalName(i);
+		//
+		// System.out.println("Attributes : " + att);
+		// System.out.println("Value : " + value);
+		// System.out.println("Uri : " + uri2);
+		// System.out.println("LocalName : " + localName2);
+		// }
+
+		if (qName.equals(DATA)) {
+			dataStatus = false;
+		}
+	}
+
+	@Override
+	public void parseDocument(FileInputStream path) {
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		try {
+			SAXParser saxParser = factory.newSAXParser();
+			saxParser.parse(path, this);
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+		}
+
+	}
+
+	public static void main(String[] args)
+			throws ParserConfigurationException, SAXException, FileNotFoundException, IOException {
+
+		// String sqlTest = "insert into " + tableName + " values(" +
+		// attributes.getValue(i) + ");";
+		// System.out.println(attributes.getValue(i));
+
+		XMLParserData handler = new XMLParserData(dataSource);
+		handler.parseDocument(new FileInputStream(Paths.get("/home/khaled/task/monitor/sample.xml").toFile()));
+		Map<String, String> request = handler.getData();
+		for (String key : request.keySet()) {
+			// System.out.println(key);
+		}
+
+	}
+}

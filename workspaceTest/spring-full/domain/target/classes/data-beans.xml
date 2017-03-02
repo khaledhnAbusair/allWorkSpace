@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/data/jpa 
+	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
+	</bean>
+
+
+	<jpa:repositories base-package="domain.repository.**"
+		transaction-manager-ref="transactionManager"
+		entity-manager-factory-ref="entityManagerFactory">
+	</jpa:repositories>
+
+	<beans profile="production">
+		<bean id="entityManagerFactory" class="javax.persistence.Persistence"
+			factory-method="createEntityManagerFactory">
+			<constructor-arg value="emp_unit"></constructor-arg>
+		</bean>
+	</beans>
+
+	<beans profile="test">
+		<bean id="entityManagerFactory" class="javax.persistence.Persistence"
+			factory-method="createEntityManagerFactory">
+			<constructor-arg value="emp_unit"></constructor-arg>
+			<constructor-arg>
+				<map>
+					<entry key="javax.persistence.jdbc.url"
+						value="jdbc:mysql://localhost:3306/employee_data_test?createDatabaseIfNotExist=true" />
+				</map>
+			</constructor-arg>
+		</bean>
+	</beans>
+</beans>

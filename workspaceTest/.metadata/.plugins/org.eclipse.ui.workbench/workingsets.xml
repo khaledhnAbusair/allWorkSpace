@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1481477954655_0" label="data-importer-parent" name="data-importer-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/data-importer-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/entity-datastracture" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1484205235019_2" label="users-management-sample" name="users-management-sample">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/users-management-sample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/static-filtering" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/uploader" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/war" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/login" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485339677983_3" label="springMvc" name="springMvc">
+<item elementID="=controllers" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/spring-full" type="4"/>
+<item elementID="=usecases" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=hr-war" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=domain" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485676366547_5" label="spring-full" name="spring-full"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485944779155_6" label="webservice" name="webservice">
+<item elementID="=webservices-restful" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=webservice.currencies" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=webservices.calculater" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=currency-webservice" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486366203111_9" label="resstfull" name="resstfull">
+<item elementID="=webservices-restful" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486625330740_9" label="apache-camel" name="apache-camel">
+<item elementID="=camel.integration" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=social-posts" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1481478987554_1" label="Window Working Set" name="Aggregate for window 1481478987553"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486365941204_7" label="Multiple Working Sets" name="Aggregate:springMvc:webservice:">
+<workingSet IMemento.internal.id="springMvc"/>
+<workingSet IMemento.internal.id="webservice"/>
+</workingSet>
+<mruList name="springMvc"/>
+<mruList name="spring-full"/>
+<mruList name="apache-camel"/>
+<mruList name="resstfull"/>
+<mruList name="webservice"/>
+</workingSetManager>

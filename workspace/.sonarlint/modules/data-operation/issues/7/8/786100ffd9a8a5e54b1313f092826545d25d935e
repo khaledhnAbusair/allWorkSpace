@@ -1,0 +1,7 @@
+
+\squid:S1193["@Replace the usage of the "instanceof" operator by a catch block.(¨°ä®øÿÿÿÿ
+xsquid:S1450"\Remove the "parserRecords" field and declare it as a local variable in the relevant methods.(“óðŒøÿÿÿÿ
+Q
+squid:S106\";Replace this usage of System.out or System.err by a logger.(„Ê¢í
+usquid:S1488f"^Immediately return this expression instead of assigning it to the temporary variable "schema".(ÙøÌ¹
+Asquid:S00108-")Either remove or fill this block of code.(…­®ë

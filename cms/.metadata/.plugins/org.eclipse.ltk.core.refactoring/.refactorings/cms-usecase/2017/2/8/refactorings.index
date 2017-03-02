@@ -1,0 +1,3 @@
+1487668973490	Rename type 'SiteIsAlreadyExistException'
+1487672668614	Extract local variable 'siteLogo'
+1487745044909	Extract local variable 'findAll'

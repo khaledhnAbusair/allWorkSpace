@@ -1,0 +1,54 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+
+import domain.repository.DepartmentRepository;
+
+public class DepartmentTest {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/data-bean.xml");
+		DepartmentRepository bean = context.getBean(DepartmentRepository.class);
+
+		Department department = new Department();
+
+		department.setDeptNo("SE113133f3225");
+		department.setName("Software Engineringsss");
+		 bean.save(department);
+		 
+
+			department.setDeptNo("SE1131333f225");
+			department.setName("Software Engineringsss");
+			 bean.save(department);
+
+				department.setDeptNo("SE1s131333225");
+				department.setName("Software Engineringsss");
+				 bean.save(department);
+
+					department.setDeptNo("SE113133d3225");
+					department.setName("Software Engineringsss");
+					 bean.save(department);
+
+						department.setDeptNo("SE1131das333225");
+						department.setName("Software Engineringsss");
+						 bean.save(department);
+
+							department.setDeptNo("SE113asd1333225");
+							department.setName("Software Engineringsss");
+							 bean.save(department);
+
+
+								department.setDeptNo("SE113asd1333225");
+								department.setName("Software Engineringsss");
+								 bean.save(department);
+//
+//		PageRequest pageable = new PageRequest(1, 2);
+//		Page<Department> page = bean.findAll(pageable);
+//		System.out.println("Total Page : " + page.getTotalPages());
+//		System.out.println("Page Number  :  " + page.getNumber());
+	}
+
+}

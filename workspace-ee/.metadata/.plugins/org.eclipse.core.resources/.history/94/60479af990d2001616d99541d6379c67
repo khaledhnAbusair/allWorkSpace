@@ -1,0 +1,99 @@
+
+package repositories.impl;
+
+import static org.junit.Assert.assertEquals;
+
+import java.math.BigDecimal;
+import java.util.Collection;
+
+import javax.persistence.EntityExistsException;
+import javax.persistence.EntityManager;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import entity.Account;
+import entity.Currency;
+import repositories.exceptions.AccountIsAlreadyExistException;
+import repositories.exceptions.AccountNotFoundExceptions;
+import repositories.exceptions.NullAccountIBANException;
+import repositories.impl.AccountJpaRepository;
+import repositories.loader.EntityManagerLoader;
+
+public class AccountJpaRepositoryTest {
+	private AccountJpaRepository accountJpaRepository;
+	private EntityManager entityManager;
+
+	@Before
+	public void setUp() throws Exception {
+		accountJpaRepository = new AccountJpaRepository();
+		entityManager= EntityManagerLoader.getEntityManger(); 
+	}
+
+	@Test(expected = NullAccountIBANException.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingNullIBANCode_ShouldThrowNullAccountIBAN() {
+
+		accountJpaRepository.loadAccountByIBAN(null);
+	}
+
+	@Test(expected = NullAccountIBANException.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingEmptyIBANCode_ShouldThrowNullAccountIBAN() {
+		accountJpaRepository.loadAccountByIBAN("");
+	}
+
+	@Test(expected = AccountNotFoundExceptions.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingUnavailableIBANCode_ShouldThrowIbanNotExistException() {
+		accountJpaRepository.loadAccountByIBAN("sddsdsdsdsdSSS");
+	}
+
+	@Test
+	public void givenAccountJpaRepositry_CallingLoadAccountByIBAN_PassingAvailableIBANCode_ShouldReturnAccount() {
+		accountJpaRepository.loadAccountByIBAN("AZ21NABZ00000000137010001944");
+	}
+
+	@Test
+	public void givenAccountJpaRepositry_CallingloadAccounts_ShouldReturnAccountsCollecton() {
+		Collection<Account> loadAccounts = accountJpaRepository.loadAccounts();
+		Assert.assertNotNull(loadAccounts);
+	}
+
+	@Test
+	public void givenAccountJpaRepositry_CallingUpdateAcount_PassingExistingAccount_ThenCallingLoadAccountByIBAN_ShouldReturnUpdatedAccount() {
+		Account account = accountJpaRepository.loadAccountByIBAN("AZ21NABZ00000000137010001944");
+		Currency currency = new Currency();
+		currency.setCode("JOD");
+		account.setCurrency(currency);
+		accountJpaRepository.updateAccount(account);
+		Assert.assertNotEquals("USD",
+				accountJpaRepository.loadAccountByIBAN("AZ21NABZ00000000137010001944").getCurrency().getCode());
+	}
+
+	@Test(expected = AccountIsAlreadyExistException.class)
+	public void givenAccountGateway_CallingCreateAccountWithPredifnedAccount_ShouldThrowAccountIsAlreadyExistException() {
+		Account account = populateNewAccount();
+		accountJpaRepository.createAccount(account);
+	}
+
+	@Test
+	public void givenAccountJpaRepositry_CallingCreateAccount_ShouldCreateAccount() {
+		Account account = populateNewAccount();
+		accountJpaRepository.createAccount(account);
+		assertEquals(account.getIban(), "RO49AAAA1B3100759384000055555");
+	}
+
+	private Account populateNewAccount() {
+		Account account = new Account();
+		Currency currency = new Currency();
+		currency.setCode("JOD");
+		account.setIban("RO49AAAA1B3100759384000055555");
+		account.setBalance(new BigDecimal(500));
+		account.setCurrency(currency);
+		account.setType("investment");
+		account.setStatus("ACTIVE");
+		account.setRule("THIS_MONTH");
+		return account;
+	}
+
+}

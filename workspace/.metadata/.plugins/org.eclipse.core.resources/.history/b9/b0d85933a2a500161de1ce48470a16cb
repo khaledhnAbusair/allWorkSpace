@@ -1,0 +1,18 @@
+package com.progressoft.jip.simulation.impl.ui;
+
+import com.progressoft.jip.framework.SimulationState;
+import com.progressoft.jip.framework.SimulationStateListener;
+
+public class DebugLis implements  SimulationStateListener {
+
+	@Override
+	public void simulationStarted(SimulationState state) {
+	}
+	@Override
+	public void statusChanged(SimulationState state) {
+
+	}
+
+	
+
+}

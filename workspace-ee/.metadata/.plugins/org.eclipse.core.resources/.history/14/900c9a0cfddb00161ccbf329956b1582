@@ -1,0 +1,100 @@
+package servlets;
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Objects;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import entity.Term;
+import entity.TermCategory;
+import impl.TermCategoryJpaRepositorey;
+import impl.TermJpaRepositorey;
+
+@WebServlet(urlPatterns = "/userManagment")
+public class UserManagement extends HttpServlet {
+	private static final String ID = "id";
+	private static final String SAVE = "save";
+	private static final long serialVersionUID = 1L;
+	private TermJpaRepositorey termRepository;
+	private TermCategoryJpaRepositorey categoryJpaRepository;
+	private static final String ERROR = "error";
+
+	@Override
+	public void init() throws ServletException {
+		categoryJpaRepository = new TermCategoryJpaRepositorey();
+		termRepository = new TermJpaRepositorey();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		setAttributesIsExists(req);
+		validateException(req);
+		loadCategories(req);
+		req.setAttribute("body", "/WEB-INF/views/user-management.jsp");
+		req.getRequestDispatcher("/WEB-INF/views/base.jsp").forward(req, resp);
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		if (req.getParameter("action").equals("save")) {
+			TermCategory category = new TermCategory();
+			category.setCatName(req.getParameter("termCategory"));
+
+			Term term = new Term();
+			term.setTermName(req.getParameter("termName"));
+			term.setTermLabel(req.getParameter("termLabel"));
+			term.setTermPurpose(req.getParameter("termPurpose"));
+			term.setTermCategory(category);
+			term.setTermId(Integer.parseInt(req.getParameter("parentId")));
+			termRepository.updateTerm(term);
+		}
+		resp.sendRedirect(req.getServletContext().getContextPath() + "/userManagment");
+	}
+
+	private void insertTerm(HttpServletRequest req) {
+		TermCategory category = new TermCategory();
+		category.setCatName(req.getParameter("termCategory"));
+		Term term = new Term();
+		term.setTermName(req.getParameter("termName"));
+		term.setTermLabel(req.getParameter("termLabel"));
+		term.setTermPurpose(req.getParameter("termPurpose"));
+		term.setTermCategory(category);
+		if (Objects.isNull(req.getParameter("parentId"))) {
+			term.setTerm(termRepository.getParentRootTerm());
+		} else {
+			Term parentTerm = new Term();
+			parentTerm.setTermId(Integer.parseInt(req.getParameter("parentId")));
+			term.setTerm(parentTerm);
+		}
+		termRepository.addTerm(term);
+	}
+
+	private void loadCategories(HttpServletRequest req) {
+		Collection<TermCategory> loadCategories = categoryJpaRepository.loadCategories();
+		req.setAttribute("loadCategories", loadCategories);
+	}
+
+	private void validateException(HttpServletRequest req) {
+		Object attribute = req.getSession().getAttribute(ERROR);
+		req.setAttribute(ERROR, attribute);
+		req.getSession().removeAttribute(ERROR);
+	}
+
+	private void setAttributesIsExists(HttpServletRequest req) {
+		if (Objects.nonNull(req.getParameter(ID))) {
+			Term term = termRepository.loadTermById(Integer.parseInt(req.getParameter(ID)));
+			req.setAttribute("name", term.getTermName());
+			req.setAttribute("catName", term.getTermCategory().getCatName());
+			req.setAttribute("label", term.getTermLabel());
+			req.setAttribute("purpose", term.getTermPurpose());
+			req.setAttribute("termId", term.getTermId());
+		}
+	}
+}

@@ -1,0 +1,12 @@
+
+Msquid:S1153b"1Directly append the argument of String.valueOf().(ŽÀïŽÿÿÿÿÿ
+3squid:S1643W"Use a StringBuilder instead.(Õ¶øí
+Ksquid:S1066Q"/Merge this if statement with the enclosing one.(ñÞªšÿÿÿÿÿ
+i
+squid:S134V"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ýåÊ÷ûÿÿÿÿ
+Lsquid:S1948#"0Make "termRepository" transient or serializable.(ÇÝßúþÿÿÿÿ
+?squid:S19893"(Add a "try/catch" block for "getWriter".(¼½Ù†
+3squid:S1643U"Use a StringBuilder instead.(”Ë ß
+Csquid:S19890"'Add a "try/catch" block for "parseInt".(‹ŽÍ¦úÿÿÿÿ
+Csquid:S1989."'Add a "try/catch" block for "fillData".(áàñ×ýÿÿÿÿ
+usquid:S2226#"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(ÇÝßúþÿÿÿÿ

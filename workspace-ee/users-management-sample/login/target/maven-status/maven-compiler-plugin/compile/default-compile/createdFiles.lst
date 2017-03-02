@@ -1,0 +1,4 @@
+login/LoginServlet.class
+login/LoginFilter.class
+login/SessionFixationFilter.class
+login/LoginServlet$1.class

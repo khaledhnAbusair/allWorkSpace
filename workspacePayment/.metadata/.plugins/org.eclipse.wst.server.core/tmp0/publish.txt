@@ -1,0 +1,7 @@
+#Tomcat publish data
+#Tue Feb 07 16:10:10 EET 2017
+org.eclipse.jst.jee.server\:Login=WEB-INF/lib/Login-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:SubmitPayment=WEB-INF/lib/SubmitPayment-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:induction-payment-core=WEB-INF/lib/induction-payment-core-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:induction-payment-gateways=WEB-INF/lib/induction-payment-gateways-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:induction-payment-jpa=WEB-INF/lib/induction-payment-jpa-0.0.1-SNAPSHOT.jar

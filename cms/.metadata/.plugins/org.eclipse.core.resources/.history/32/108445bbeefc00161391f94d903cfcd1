@@ -1,0 +1,23 @@
+package com.progressoft.jip.entity.view;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.SiteEntity;
+
+public interface PageView {
+
+	String getPageContent();
+
+	String getPageTitle();
+
+	String getPageUrl();
+
+	String getSeo();
+
+	Boolean getIsHtml();
+
+	SiteView getSiteId();
+
+	Boolean getIsLandingPage();
+
+
+}

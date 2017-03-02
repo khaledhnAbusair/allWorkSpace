@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="1">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:9696/war/login|*|http\://localhost\:9696/war/|*|http\://www.eclipse.org/|*|http\://www.eclipse.org|*|http\://localhost\:9696/war/login?|*|https\://docs.oracle.com/javase/8/docs/api/java/lang/String.html|*|http\://localhost\:9696/war/downloader|*|http\://localhost\:9696/war/department|*|http\://localhost\:9696/war/departments|*|http\://localhost\:9696/war/debartments|*|https\://www.google.jo/?gfe_rd\=cr&ei\=wr1HWJqBA6yo8wfou6iABA&gws_rd\=ssl|*|http\://www.google.com|*|http|*|http\://www.nodeclipse.org/updates/list|*|

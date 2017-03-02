@@ -1,0 +1,24 @@
+package com.progressoft.jip.entity;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.SiteEntity;
+
+public interface DraftPageView {
+
+	String getPageUrl();
+
+	String getPageTitle();
+
+	String getDraftUrl();
+
+	String getPageContent();
+
+	String getSeo();
+
+	PageEntity getPublishedPage();
+
+	SiteEntity getSiteId();
+
+	Boolean getIsLandingPage();
+
+}

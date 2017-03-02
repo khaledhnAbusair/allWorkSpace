@@ -1,0 +1,21 @@
+package com.progressoft.jip.simulation.impl.ui;
+
+import com.progressoft.jip.framework.SimulationState;
+import com.progressoft.jip.framework.SimulationStateListener;
+
+public class DebugListener implements SimulationStateListener {
+
+	private static final Runnable SimulationState = null;
+
+	@Override
+	public void simulationStarted(SimulationState state) {
+	 new Thread(SimulationState).start();
+	}
+
+	@Override
+	public void statusChanged(SimulationState state) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

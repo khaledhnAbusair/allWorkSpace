@@ -1,0 +1,3 @@
+1479112649800	Rename type 'Transaction'
+1479118614533	Extract local variable 'contextClassLoader'
+1479118636132	Extract local variable 'class1'

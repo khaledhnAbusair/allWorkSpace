@@ -1,0 +1,61 @@
+package com.progressoft.jip.controllers;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import com.progressoft.jip.entity.UserEntity;
+import com.progressoft.jip.usecase.LoginUseCase;
+import com.progressoft.jip.usecase.impl.exception.UserNotFoundException;
+
+@Controller
+public class LoginController {
+
+	private static final String USER_MANAGEMENT = "/userManagement";
+	private static final String LOGIN_JSP_PAGE = "Login";
+	private static final String USER_NAME = "userName";
+	private static final String REDIRECT = "redirect:";
+	private static final String LOGOUT = "/logout";
+	private static final String LOGIN = "/login";
+
+	@Autowired
+	private LoginUseCase loginUseCase;
+
+	public void setLoginUseCase(LoginUseCase loginUseCase) {
+		this.loginUseCase = loginUseCase;
+	}
+
+	@RequestMapping(path = LOGIN, method = RequestMethod.GET)
+	public String viewLogin() {
+		return LOGIN_JSP_PAGE;
+	}
+
+	@RequestMapping(path = LOGIN, method = RequestMethod.POST)
+	public String login(@ModelAttribute UserEntity userEntity, HttpSession session, ModelMap modelMap,
+			UriComponentsBuilder bulider) {
+		UserEntity userInfo = loginUseCase.login(userEntity.getUserName(), userEntity.getPassword());
+		session.setAttribute(USER_NAME, userInfo.getUserName());
+		return REDIRECT + bulider.path(USER_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = LOGOUT, method = RequestMethod.GET)
+	public String logout(HttpSession session, UriComponentsBuilder builder) {
+		session.removeAttribute(USER_NAME);
+		return LOGIN_JSP_PAGE;
+	}
+
+	@ExceptionHandler(UserNotFoundException.class)
+	public String errorHanler(UserNotFoundException ex, Model model) {
+		model.addAttribute("error", ex.getMessage());
+		return "Login.jsp";
+	}
+
+}

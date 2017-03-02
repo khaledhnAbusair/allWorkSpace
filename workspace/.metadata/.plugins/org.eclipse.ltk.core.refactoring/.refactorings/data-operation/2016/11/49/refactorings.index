@@ -1,0 +1,111 @@
+1480231083755	Convert local variable 'importRequest' to field
+1480231089312	Convert local variable 'connectionSettings' to field
+1480231095298	Convert local variable 'data' to field
+1480231114741	Rename field 'connectionSettings'
+1480231119859	Rename field 'data'
+1480231401575	Rename type 'STAXParser'
+1480231953916	Infer generic type arguments
+1480232265639	Extract local variable 'equalsIgnoreCase'
+1480232284670	Extract local variable 'equalsIgnoreCase'
+1480235549454	Rename method 'readAuthors'
+1480235559343	Rename local variable 'authors'
+1480235930644	Rename method 'readConnectionSettings'
+1480236286209	Extract local variable 'data'
+1480241906649	Rename local variable 'value'
+1480243298106	Convert local variable 'listAttri' to field
+1480244756741	Convert local variable 'collect' to field
+1480245251861	Rename field 'key'
+1480253106165	Extract interface 'DataBaseOpertaions'
+1480253265489	Extract superclass 'QueryConstant'
+1480253434222	Delete elements
+1480253454917	Rename type 'MainWatchDirectory'
+1480253942501	Rename field 'columns'
+1480254375812	Extract method 'extracted'
+1480254430608	Rename local variable 'listAttri'
+1480254520101	Rename field 'listAttri'
+1480257782875	Rename local variable 'attributes'
+1480257920868	Rename type 'DataBaseQuery'
+1480257933175	Rename field 'dataBaseQuery'
+1480258649708	Rename field 'dataStatus'
+1480258705685	Rename local variable 'i'
+1480258710816	Rename local variable 'iindex'
+1480258759171	Inline local variable 'value'
+1480259198649	Rename type 'dbOperations'
+1480259510727	Rename field 'isUser'
+1480259516252	Rename field 'isPass'
+1480259788842	Rename field 'dbOperations'
+1480259834700	Rename type 'DatabaseOperations'
+1480259848834	Rename field 'databaseOperations'
+1480260679827	Delete element
+1480262142315	Extract local variable 'i'
+1480266370941	Rename local variable 'factoryS'
+1480270490094	Rename field 'attributeMap'
+1480270536345	Rename field 'attributesValues'
+1480270539729	Rename field 'hashMap'
+1480316922174	Rename type 'QueryConstant'
+1480326632420	Rename local variable 'columns'
+1480329358713	Extract method 'extracted'
+1480339396255	Rename type 'TEST'
+1480353679057	Extract constant 'IMPORT_REQUEST'
+1480356928292	Extract constant 'USE_SSL_FALSE'
+1480357149374	Extract constant 'STRING'
+1480357254155	Rename field 'MaxStatmentBatch'
+1480357328499	Extract constant 'TERMINATE'
+1480358068624	Rename type 'XMLParserData'
+1480358087558	Rename field 'xmlParserData'
+1480403866584	Rename field 'IBAN_COUNTRY_FORMATS_FILE'
+1480404932664	Rename type 'CSVLoaderTest'
+1480406511584	Rename local variable 'country'
+1480409551013	Rename field 'dataTagElement'
+1480409700760	Rename local variable 'qName'
+1480409725796	Rename local variable 'attributesValues'
+1480409827196	Rename method 'excuteInsertStatment'
+1480409834864	Rename method 'batch'
+1480409867265	Rename method 'finializeExecution'
+1480410040956	Extract local variable 'sql'
+1480410057821	Extract method 'generateSQLStatement'
+1480417247707	Delete element
+1480417634437	Delete elements
+1480428815539	Rename type 'CSVParser'
+1480432229810	Delete element
+1480432242932	Delete element
+1480438678193	Rename field 'columns'
+1480442751711	Extract method 'extracted'
+1480442766569	Extract method 'extracted'
+1480442851331	Extract method 'extracted'
+1480442874727	Rename method 'extracted'
+1480442889365	Extract method 'extracted'
+1480442967734	Extract method 'extracted'
+1480442983243	Extract method 'extracted'
+1480443359584	Extract method 'extracted'
+1480448081276	Rename type 'DataBaseOpertaions'
+1480448158166	Extract method 'extracted'
+1480448185981	Extract method 'extracted'
+1480448203352	Extract method 'extracted'
+1480448258301	Rename type 'JDBCGenrateQuery'
+1480453822227	Extract method 'extracted'
+1480454082631	Extract method 'extracted'
+1480454096038	Extract method 'extracted'
+1480493235491	Rename method 'splitComma'
+1480494142263	Copy compilation unit
+1480494147616	Move file
+1480494153747	Delete element
+1480494173911	Rename type 'CSVDataBase'
+1480494866185	Inline method 'excuteInsert'
+1480497356490	Rename field 'csvDataBase'
+1480497375321	Rename field 'genrateQuery'
+1480501729502	Delete element
+1480529099971	Rename type 'TerminateConnectionParsing'
+1480529424528	Rename package 'com.progressoft.jip.xmltest.exciption'
+1480529756823	Move compilation unit
+1480530685033	Move compilation unit
+1480530693595	Move compilation unit
+1480530723554	Move compilation units
+1480530740645	Move compilation unit
+1480530809354	Move compilation unit
+1480530835713	Move compilation unit
+1480530849771	Delete element
+1480530866742	Move compilation unit
+1480530876770	Move compilation unit
+1480530997978	Rename package 'com.progressoft.jip.xmltest'
+1480531047039	Rename package 'com.progressoft.jip.parsing.xsml'

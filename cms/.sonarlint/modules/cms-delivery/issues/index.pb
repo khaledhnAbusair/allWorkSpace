@@ -1,0 +1,19 @@
+
+a
+1target/m2e-wtp/web-resources/META-INF/MANIFEST.MF,4/b/4b2ce03a3f97d0748d69dbaf56eed56a9c33d29d
+V
+&src/main/webapp/WEB-INF/views/base.jsp,5/2/525998d2a12683b0777f874e3eecddf8897c0b7e
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+„
+Ttarget/m2e-wtp/web-resources/META-INF/maven/com.progressoft.jip/cms-delivery/pom.xml,b/9/b93ef446af6e19a0f56c4e3ac843b77512809746
+‹
+[target/m2e-wtp/web-resources/META-INF/maven/com.progressoft.jip/cms-delivery/pom.properties,6/b/6b942c0a22b48258166f07c1064f78aba08df55c
+\
+,src/main/webapp/WEB-INF/dispatcher-beans.xml,6/7/67d2867f4e500e9127622d8596d6f298ed83842f
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+i
+9target/cms-delivery-0.0.1-SNAPSHOT/WEB-INF/views/base.jsp,4/3/435598cc9fa51fe7590a464b7fd53466e67f80c5
+X
+(src/main/webapp/WEB-INF/root-context.xml,b/e/bee4914b3287c2660de63f745878aec30a17e6d2

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/batches-schema"
+	xmlns:tns="http://www.example.org/batches-schema" elementFormDefault="qualified">
+
+	<element name="batches" type="tns:BatchesRoot" />
+
+	<complexType name="BatchType">
+		<all>
+			<element name="issuer-name" type="string" />
+			<element name="issuer-id" type="string" />
+			<element name="total-count" type="int" />
+			<element name="Transactios" type="tns:TransactiosParent"></element>
+		</all>
+
+		<attribute name="id" type="string" use="required"></attribute>
+
+	</complexType>
+
+
+	<complexType name="BatchesRoot">
+		<sequence>
+			<element name="batch" type="tns:BatchType" minOccurs="1"
+				maxOccurs="unbounded">
+			</element>
+
+		</sequence>
+	</complexType>
+
+	<complexType name="TransactionType">
+		<all>
+			<element name="amount" type="double" />
+			<element name="debitor" type="string" />
+			<element name="creditor" type="string" />
+			<element name="currency" type="string" />
+		</all>
+
+	</complexType>
+
+	<complexType name="TransactiosParent">
+		<sequence>
+			<element name="transaction" type="tns:TransactionType"
+				minOccurs="1" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+
+
+</schema>

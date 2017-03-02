@@ -1,0 +1,19 @@
+
+\
+,src/main/webapp/WEB-INF/dispatcher-beans.xml,6/7/67d2867f4e500e9127622d8596d6f298ed83842f
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+X
+(src/main/webapp/WEB-INF/root-context.xml,b/e/bee4914b3287c2660de63f745878aec30a17e6d2
+…
+Utarget/m2e-wtp/web-resources/META-INF/maven/com.progressoft.jip/hr-war/pom.properties,3/5/35b552c724e410ed8315b242fcab8a80bea30be5
+~
+Ntarget/m2e-wtp/web-resources/META-INF/maven/com.progressoft.jip/hr-war/pom.xml,2/f/2ffb3ac062121bdcb3d0d1ce0a87661b3c153fde
+]
+-src/main/webapp/WEB-INF/views/departments.jsp,4/3/43c3217ceb5bc375b4d4c59c547cbf5126370c99
+a
+1target/m2e-wtp/web-resources/META-INF/MANIFEST.MF,4/b/4b2ce03a3f97d0748d69dbaf56eed56a9c33d29d
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+[
++src/main/webapp/WEB-INF/views/employees.jsp,5/0/50a464d2e8a5684cbfee3c95ef021d358c8272b0

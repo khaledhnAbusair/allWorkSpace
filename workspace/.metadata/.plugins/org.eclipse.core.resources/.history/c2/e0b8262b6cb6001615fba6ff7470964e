@@ -1,0 +1,19 @@
+package com.progressoft.jip.xmltest;
+
+import java.nio.file.Paths;
+
+public class TestXML {
+
+	public static void main(String[] args) {
+
+		// XMLParserConnection connection;
+		// connection = new
+		// XMLParserConnection(Paths.get("/home/khaled/task/monitor/employees.xml"));
+		// connection.parseDocument();
+
+		CSVParser csvParser = new CSVParser(Paths.get("/home/khaled/task/monitor/sampleTest.csv"));
+		csvParser.parseDocument();
+
+	}
+
+}

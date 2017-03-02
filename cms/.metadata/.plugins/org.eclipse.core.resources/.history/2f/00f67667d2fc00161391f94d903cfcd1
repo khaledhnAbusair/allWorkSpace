@@ -1,0 +1,152 @@
+package com.progressoft.jip.controllers;
+
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import com.progressoft.jip.entity.SiteEntity;
+import com.progressoft.jip.entity.view.SiteView;
+import com.progressoft.jip.usecase.SiteUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeFindAnySitesException;
+import com.progressoft.jip.usecase.impl.exception.PageNotFoundException;
+import com.progressoft.jip.usecase.impl.exception.SiteNotfoundException;
+import com.progressoft.jip.usecase.impl.exception.SiteUrlIsAlreadyExistException;
+
+@Controller
+public class SiteController {
+
+	private static final String SITE_MANAGEMENT_JSP_PAGE = "SiteManagement";
+	private static final String SITE_SETTINGS_JSP_PAGE = "SiteSettings";
+	private static final String SITE_SETTINGS_JSP = "SiteSettings.jsp";
+	private static final String SITE_MANAGEMENT = "/siteManagement";
+	private static final String EDIT_SITE_JSP_PAGE = "EditSite";
+	private static final String EDIT_SITE_JSP = "EditSite.jsp";
+	private static final String FAILURE_ERROR = "failureError";
+	private static final String SITE_SETTING = "/siteSetting";
+	private static final String ADD_SITE_JSP_PAGE = "AddSite";
+	private static final String ADD_SITE_JSP = "AddSite.jsp";
+	private static final String PAGE_CONTENT = "pageContent";
+	private static final String PARENT_SITE = "parentSite";
+	private static final String SITE_PARENT = "siteParent";
+	private static final String EDIT_SITE = "/editSite";
+	private static final String SITE_LOGO = "siteLogo";
+	private static final String REDIRECT = "redirect:";
+	private static final String ADD_SITE = "/addSite";
+	private static final String PAGE_URL = "pageUrl";
+	private static final String BASE_PAGE = "/base";
+	private static final String SITE_ID = "siteId";
+	private static final String SITES = "sites";
+	private static final String PAGES = "pages";
+	private static final String SITE = "site";
+	private static final String SAVE = "save";
+
+	@Autowired
+	private SiteUseCase siteUseCase;
+
+	public void setSiteUseCase(SiteUseCase siteUseCase) {
+		this.siteUseCase = siteUseCase;
+	}
+
+	@RequestMapping(path = SITE_SETTING, method = RequestMethod.GET)
+	public String viewSiteSetting(@RequestParam Map<String, String> params, Map<String, Object> model) {
+		SiteView siteView = siteUseCase.findOneSiteBysiteId(Integer.parseInt(params.get(SITE_ID)));
+		model.put(SITE, siteView);
+		return SITE_SETTINGS_JSP_PAGE;
+	}
+
+	@RequestMapping(path = ADD_SITE, method = RequestMethod.GET)
+	public String viewAddSite(Map<String, Object> model) {
+		model.put(SITE_PARENT, siteUseCase.getAllSites());
+		return ADD_SITE_JSP_PAGE;
+	}
+
+	@RequestMapping(path = EDIT_SITE, method = RequestMethod.GET)
+	public String viewEditSite(@RequestParam Map<String, String> params, Map<String, Object> model) {
+		SiteView siteView = siteUseCase.findOneSiteBysiteId(Integer.parseInt(params.get(SITE_ID)));
+		model.put(SITE, siteView);
+		model.put(PARENT_SITE, siteView);
+		model.put(PAGES, siteUseCase.getAllPages(siteView));
+		return EDIT_SITE_JSP_PAGE;
+	}
+
+	@RequestMapping(path = SITE_MANAGEMENT, method = RequestMethod.GET)
+	public String viewSiteManagement(Map<String, Object> model) {
+		model.put(SITES, siteUseCase.getAllSites());
+		return SITE_MANAGEMENT_JSP_PAGE;
+	}
+
+	@RequestMapping(path = EDIT_SITE, params = SAVE, method = RequestMethod.POST)
+	public String editSitePage(@ModelAttribute SiteEntity siteEntity, @RequestParam(name = PAGE_URL) String pageUrl,
+			Map<String, Object> model, UriComponentsBuilder bulider) {
+		siteUseCase.editSite(siteEntity, pageUrl);
+		return REDIRECT + bulider.path(SITE_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = ADD_SITE, method = RequestMethod.POST)
+	public String addSite(@ModelAttribute SiteEntity siteEntity, @RequestParam(name = SITE) Integer siteId,
+			UriComponentsBuilder builder, Map<String, Object> model) {
+		siteUseCase.addSite(siteEntity, siteId);
+		return REDIRECT + builder.path(SITE_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = SITE_SETTING, method = RequestMethod.POST)
+	public String editSiteSetting(@RequestPart(name = SITE_LOGO) MultipartFile siteLogo,
+			@RequestParam(name = SITE_ID) Integer siteId, UriComponentsBuilder builder) {
+		try {
+			siteUseCase.addSiteLogo(siteLogo.getBytes(), siteId);
+		} catch (IOException e) {
+			throw new IllegalStateException(e);
+		}
+		return REDIRECT + builder.path(SITE_MANAGEMENT).build().toUriString();
+	}
+
+	@RequestMapping(path = "/logo/{siteId}")
+	public void downloadSiteLogo(@PathVariable(name = "siteId") Integer siteId, HttpServletResponse response)
+			throws IOException {
+		response.setContentType("logo/jpg");
+		siteUseCase.copySiteImage(siteId, response.getOutputStream());
+	}
+
+	@ExceptionHandler(CannotBeFindAnySitesException.class)
+	public String handleCannotBeFindAnySitesException(Exception e, Model model) {
+		putErrorMap(e, model, SITE_SETTINGS_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(SiteNotfoundException.class)
+	public String handleSiteNotfoundException(Exception e, Model model) {
+		putErrorMap(e, model, SITE_SETTINGS_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(PageNotFoundException.class)
+	public String handlePageNotFoundException(Exception e, Model model) {
+		putErrorMap(e, model, EDIT_SITE_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(SiteUrlIsAlreadyExistException.class)
+	public String handleSiteUrlIsAlreadyExistException(Exception e, Model model) {
+		putErrorMap(e, model, ADD_SITE_JSP);
+		return BASE_PAGE;
+	}
+
+	private void putErrorMap(Exception e, Model model, String pageName) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, pageName);
+	}
+}

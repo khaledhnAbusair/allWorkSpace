@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private static void printProparties(Employee employee, BeanInfo beanInfo) throws IllegalAccessException, InvocationTargetException &apos; from &apos;com.progressoft.jip.introspection.Test.main()&apos; to &apos;com.progressoft.jip.introspection.Test&apos;&#x0A;- Original project: &apos;introspection&apos;&#x0A;- Method name: &apos;printProparties&apos;&#x0A;- Destination type: &apos;com.progressoft.jip.introspection.Test&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;printProparties&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/main\/java&lt;com.progressoft.jip.introspection{Test.java" name="printProparties" replace="false" selection="421 725" stamp="1478773771825" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,7 @@
+1485415870481	Rename local variable 'classPathXmlApplicationContext'
+1485418928189	Extract local variable 'entity'
+1485418937079	Rename local variable 'entity'
+1485423682970	Extract local variable 'pageable'
+1485424317616	Convert local variable 'context' to field
+1485426625698	Delete element
+1485427494044	Rename local variable 'and'

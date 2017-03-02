@@ -1,0 +1,141 @@
+package impl;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import entity.TermCategory;
+import exceptions.NoTermCategoryFoundException;
+import exceptions.NoTermCategoryHasBeenUpdated;
+import exceptions.TermCategoryCannotBeenDeletedBecauseHasChild;
+import exceptions.TermCategoryIsAlreadyExistException;
+import exceptions.TheRecordCannotBeDeleted;
+import loader.EntityManagerLoader;
+import repositories.TermCategoryRepositorey;
+import static constant.Constants.*;
+
+public class TermCategoryJpaRepositorey implements TermCategoryRepositorey {
+
+	private static final String ROOT_TYPE = "Root type";
+	private EntityManager entityManager;
+
+	public TermCategoryJpaRepositorey() {
+		entityManager = EntityManagerLoader.getEntityManger();
+	}
+
+	public TermCategoryJpaRepositorey(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
+	@Override
+	public void editCategory(TermCategory category) {
+
+		boolean categoryEdit = false;
+		TermCategory termCategory = entityManager.find(TermCategory.class, category.getCatName());
+		validateCategoryIsExist(termCategory);
+		Query updateQuery = entityManager.createQuery(UPDATE_TERM_CATEGORY);
+		populateCategoryForUpdate(category, updateQuery);
+		try {
+			entityManager.getTransaction().begin();
+			int effectedRow = updateQuery.executeUpdate();
+			validateEffectedRowUpdated(effectedRow);
+			entityManager.getTransaction().commit();
+			categoryEdit = true;
+		} finally {
+			if (!categoryEdit)
+				entityManager.getTransaction().rollback();
+		}
+	}
+
+	@Override
+	public void addCategory(TermCategory category) {
+		TermCategory termCategory = populateTermCategory(category);
+		entityManager.getTransaction().begin();
+		boolean categoryAdd = false;
+		try {
+			TermCategory find = entityManager.find(TermCategory.class, termCategory.getCatName());
+			validateCategoryIsAlreadyExist(find);
+			entityManager.persist(category);
+			entityManager.getTransaction().commit();
+			categoryAdd = true;
+		} finally {
+			if (!categoryAdd)
+				entityManager.getTransaction().rollback();
+		}
+	}
+
+	public void deleteByCatName(String catName){
+		TermCategory find = entityManager.find(TermCategory.class,catName);
+		if (Objects.isNull(find)) {
+			throw new NoTermCategoryFoundException();
+		}
+		if (ROOT_TYPE.equals(find.getCatName())) {
+			throw new TheRecordCannotBeDeleted();
+		}
+		if (find.getAllowChildren()) {
+			throw new TermCategoryCannotBeenDeletedBecauseHasChild();
+		}
+		entityManager.getTransaction().begin();
+		entityManager.remove(find);
+		entityManager.getTransaction().commit();
+	}
+	
+	@Override
+	public void deleteCategory(TermCategory category) {
+		TermCategory find = entityManager.find(TermCategory.class, category.getCatName());
+		if (Objects.isNull(find)) {
+			throw new NoTermCategoryFoundException();
+		}
+		if (ROOT_TYPE.equals(find.getCatName())) {
+			throw new TheRecordCannotBeDeleted();
+		}
+		if (find.getAllowChildren()) {
+			throw new TermCategoryCannotBeenDeletedBecauseHasChild();
+		}
+		entityManager.getTransaction().begin();
+		entityManager.remove(find);
+		entityManager.getTransaction().commit();
+
+	}
+
+	@Override
+	public Collection<TermCategory> loadCategories() {
+		TypedQuery<TermCategory> typedQuery = entityManager.createNamedQuery("TermCategory.findAll",
+				TermCategory.class);
+		return typedQuery.getResultList();
+	}
+
+
+
+	private TermCategory populateTermCategory(TermCategory category) {
+		TermCategory termCategory = new TermCategory();
+		termCategory.setCatName(category.getCatName());
+		termCategory.setAllowChildren(category.getAllowChildren());
+		return termCategory;
+	}
+
+	private void validateCategoryIsAlreadyExist(TermCategory find) {
+		if (Objects.nonNull(find))
+			throw new TermCategoryIsAlreadyExistException();
+	}
+
+	private void validateCategoryIsExist(TermCategory termCategory) {
+		if (Objects.isNull(termCategory))
+			throw new NoTermCategoryFoundException();
+	}
+
+	private void validateEffectedRowUpdated(int effectedRow) {
+		if (effectedRow == 0)
+			throw new NoTermCategoryHasBeenUpdated();
+	}
+
+	private void populateCategoryForUpdate(TermCategory category, Query updateQuery) {
+		updateQuery.setParameter("catName", category.getCatName());
+		updateQuery.setParameter("allowChildren", category.getAllowChildren());
+	}
+
+}

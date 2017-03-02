@@ -1,0 +1,10 @@
+package jpa.firstsample;
+
+public class Tesst {
+
+	private String a;
+	private String b;
+	
+	
+	
+}

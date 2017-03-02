@@ -1,0 +1,676 @@
+2017-02-08 08:30:56,651 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-parent:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/pom.xml.
+2017-02-08 08:30:56,704 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:web-interface:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/pom.xml.
+2017-02-08 08:31:06,793 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:Login:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/pom.xml.
+2017-02-08 08:31:07,217 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:web-war:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/pom.xml.
+2017-02-08 08:31:07,272 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:SubmitPayment:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/pom.xml.
+2017-02-08 08:31:07,370 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-core:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/pom.xml.
+2017-02-08 08:31:07,700 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-gateways:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/pom.xml.
+2017-02-08 08:31:07,779 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-jpa:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/pom.xml.
+2017-02-08 08:31:14,506 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/main/java
+2017-02-08 08:31:14,506 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-jpa/src/main/resources
+2017-02-08 08:31:14,507 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/test/java
+2017-02-08 08:31:14,726 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/main/java
+2017-02-08 08:31:14,730 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/test/java
+2017-02-08 08:31:14,854 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/main/java
+2017-02-08 08:31:14,869 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-core/src/main/resources
+2017-02-08 08:31:14,870 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/test/java
+2017-02-08 08:31:14,973 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/main/java
+2017-02-08 08:31:14,974 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Login/src/main/resources
+2017-02-08 08:31:14,975 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/test/java
+2017-02-08 08:31:15,229 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/main/java
+2017-02-08 08:31:15,230 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SubmitPayment/src/main/resources
+2017-02-08 08:31:15,230 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/test/java
+2017-02-08 08:31:15,322 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/main/java
+2017-02-08 08:31:15,323 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/test/java
+2017-02-08 08:31:18,356 [Worker-19] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 8 project(s) in 24 sec
+2017-02-08 08:31:26,395 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:26,405 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 08:31:26,422 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:26,422 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 08:31:31,877 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:31,878 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-08 08:31:31,880 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:31,880 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-08 08:31:32,873 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:32,875 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-08 08:31:32,878 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:32,879 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-08 08:31:33,274 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:33,275 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 08:31:33,277 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:33,277 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 08:31:34,062 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:34,063 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-08 08:31:34,066 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:34,067 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/src/test/resources
+2017-02-08 08:31:34,395 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:34,396 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-08 08:31:34,397 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:31:34,398 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-08 08:57:19,562 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:19,573 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 08:57:19,575 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:19,576 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 08:57:26,879 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:26,880 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 08:57:26,882 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:26,883 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 08:57:41,488 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:41,491 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 08:57:41,493 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 08:57:41,496 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 09:00:16,654 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:00:16,655 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 09:00:16,657 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:00:16,657 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 09:09:13,533 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:09:13,546 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-08 09:09:13,549 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:09:13,549 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-08 09:10:25,406 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:10:25,435 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 09:10:25,446 [Worker-19] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:10:25,447 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 09:25:12,799 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:12,809 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 09:25:12,811 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:12,812 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 09:25:15,101 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:15,102 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 09:25:15,132 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:15,133 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 09:25:17,995 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:17,996 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 09:25:17,998 [Worker-26] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:25:17,998 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 09:25:40,962 [Worker-29] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa
+2017-02-08 09:25:40,963 [Worker-29] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2017-02-08 09:25:49,800 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-08 09:25:55,856 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-08 09:26:01,130 [Worker-6] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa
+2017-02-08 09:26:01,131 [Worker-6] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-02-08 09:26:17,531 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-08 09:26:43,188 [Worker-25] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa
+2017-02-08 09:26:43,188 [Worker-25] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install -Dmaven.test.skip=true
+2017-02-08 09:27:07,575 [Worker-29] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-02-08 09:27:08,119 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-parent:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/pom.xml.
+2017-02-08 09:27:08,527 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-core:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/pom.xml.
+2017-02-08 09:27:08,741 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-gateways:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/pom.xml.
+2017-02-08 09:27:08,775 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-jpa:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/pom.xml.
+2017-02-08 09:27:08,783 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:web-interface:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/pom.xml.
+2017-02-08 09:27:08,832 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:Login:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/pom.xml.
+2017-02-08 09:27:08,885 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:SubmitPayment:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/pom.xml.
+2017-02-08 09:27:08,928 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:web-war:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/pom.xml.
+2017-02-08 09:27:10,560 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/main/java
+2017-02-08 09:27:10,562 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-core/src/main/resources
+2017-02-08 09:27:10,563 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/test/java
+2017-02-08 09:27:10,688 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/main/java
+2017-02-08 09:27:10,690 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/test/java
+2017-02-08 09:27:10,788 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/main/java
+2017-02-08 09:27:10,788 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-jpa/src/main/resources
+2017-02-08 09:27:10,789 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/test/java
+2017-02-08 09:27:10,865 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/main/java
+2017-02-08 09:27:10,866 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Login/src/main/resources
+2017-02-08 09:27:10,866 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/test/java
+2017-02-08 09:27:10,969 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/main/java
+2017-02-08 09:27:10,969 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SubmitPayment/src/main/resources
+2017-02-08 09:27:10,969 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/test/java
+2017-02-08 09:27:11,058 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/main/java
+2017-02-08 09:27:11,058 [Worker-29] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/test/java
+2017-02-08 09:27:13,695 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for web-war
+2017-02-08 09:27:13,698 [Worker-29] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 6 sec
+2017-02-08 09:27:19,376 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:19,377 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-08 09:27:19,387 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:19,388 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-08 09:27:20,468 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:20,468 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-08 09:27:20,469 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:20,470 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-08 09:27:21,680 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:21,682 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-08 09:27:21,687 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:21,687 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-08 09:27:22,071 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:22,072 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-08 09:27:22,074 [Worker-33] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:22,075 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-08 09:27:22,799 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:22,800 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-08 09:27:22,803 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:22,803 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/src/test/resources
+2017-02-08 09:27:23,117 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:23,117 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-08 09:27:23,119 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-08 09:27:23,120 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-08 09:27:23,120 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of web-war
+2017-02-08 09:27:23,121 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for web-war
+2017-02-08 09:27:23,137 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:11:40,674 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:11:40,693 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:11:40,695 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:11:40,695 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:12:01,973 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:01,974 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:12:01,976 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:01,976 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:12:25,582 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:25,584 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:12:25,586 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:25,586 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:12:45,990 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:45,991 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:12:45,993 [Worker-89] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:45,993 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:12:48,137 [Worker-84] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:48,138 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:12:48,140 [Worker-84] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:12:48,141 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:15:43,470 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:15:43,471 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:15:43,473 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:15:43,473 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:15:53,409 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:15:53,411 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 08:15:53,416 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:15:53,418 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 08:17:25,231 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:17:25,232 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 08:17:25,242 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:17:25,243 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 08:17:54,599 [Worker-96] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:17:54,607 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 08:17:54,609 [Worker-96] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:17:54,609 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 08:18:10,435 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:10,436 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 08:18:10,439 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:10,439 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 08:18:47,456 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:47,457 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 08:18:47,458 [Worker-95] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:47,459 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 08:18:49,813 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:49,813 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 08:18:49,814 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:18:49,815 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 08:20:04,680 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:20:04,680 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 08:20:04,681 [Worker-93] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 08:20:04,682 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 09:10:15,498 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 09:10:15,499 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 09:10:15,501 [Worker-105] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 09:10:15,501 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 10:29:03,875 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:03,885 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 10:29:03,888 [Worker-126] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:03,889 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 10:29:06,029 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:06,029 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 10:29:06,032 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:06,033 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 10:29:07,479 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:07,480 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 10:29:07,482 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:29:07,482 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 10:48:13,595 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:48:13,595 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 10:48:13,597 [Worker-133] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:48:13,597 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 10:48:16,043 [Worker-137] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:48:16,053 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 10:48:16,054 [Worker-137] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 10:48:16,055 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:19:39,196 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:39,222 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:19:39,223 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:39,224 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:19:48,286 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:48,286 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:19:48,287 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:48,288 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:19:52,971 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:52,971 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:19:52,972 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:19:52,973 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:20:26,052 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:20:26,053 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:20:26,055 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:20:26,055 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:20:46,373 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:20:46,377 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:20:46,378 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:20:46,379 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:21:08,705 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:21:08,706 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:21:08,707 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:21:08,707 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:21:58,020 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:21:58,021 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:21:58,023 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:21:58,023 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:22:01,918 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:22:01,919 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:22:01,921 [Worker-160] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:22:01,921 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:22:53,201 [Worker-154] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:22:53,205 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:22:53,207 [Worker-154] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:22:53,207 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:23:08,132 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:08,133 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:23:08,134 [Worker-162] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:08,134 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:23:13,473 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:13,473 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:23:13,474 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:13,475 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:23:36,042 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:36,042 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:23:36,044 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:23:36,044 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:24:44,042 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:24:44,067 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 12:24:44,085 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:24:44,085 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:25:14,085 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:14,086 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 12:25:14,088 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:14,088 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:25:38,811 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:38,816 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:25:38,819 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:38,819 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:25:46,814 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:46,815 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:25:46,815 [Worker-163] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:25:46,816 [Worker-163] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:25:59,700 [Worker-163] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 12:25:59,701 [Worker-163] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-02-09 12:26:18,021 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 12:26:28,730 [Worker-158] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 12:26:28,730 [Worker-158] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install -
+2017-02-09 12:26:40,914 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 12:27:00,855 [Worker-160] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 12:27:00,855 [Worker-160] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install -Dmaven.test.skip=true
+2017-02-09 12:27:36,785 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:36,786 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:27:36,787 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:36,788 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:27:37,253 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:37,254 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:27:37,254 [Worker-158] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:37,255 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:27:44,987 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:44,988 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:27:44,989 [Worker-159] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:27:44,989 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:29:07,224 [Worker-160] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2017-02-09 12:29:07,647 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-parent:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/pom.xml.
+2017-02-09 12:29:08,110 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-core:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/pom.xml.
+2017-02-09 12:29:08,225 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-gateways:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/pom.xml.
+2017-02-09 12:29:08,251 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:induction-payment-jpa:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/pom.xml.
+2017-02-09 12:29:08,257 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: com.progressoft.jip:web-interface:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/pom.xml.
+2017-02-09 12:29:08,298 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:Login:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/pom.xml.
+2017-02-09 12:29:08,333 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:SubmitPayment:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/pom.xml.
+2017-02-09 12:29:08,380 [Worker-160] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.progressoft.jip:web-war:0.0.1-SNAPSHOT @ /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/pom.xml.
+2017-02-09 12:29:10,826 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/main/java
+2017-02-09 12:29:10,826 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-core/src/main/resources
+2017-02-09 12:29:10,827 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-core/src/test/java
+2017-02-09 12:29:10,890 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/main/java
+2017-02-09 12:29:10,891 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-gateways/src/test/java
+2017-02-09 12:29:10,944 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/main/java
+2017-02-09 12:29:10,945 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /induction-payment-jpa/src/main/resources
+2017-02-09 12:29:10,945 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /induction-payment-jpa/src/test/java
+2017-02-09 12:29:10,995 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/main/java
+2017-02-09 12:29:10,995 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Login/src/main/resources
+2017-02-09 12:29:10,995 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Login/src/test/java
+2017-02-09 12:29:11,053 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/main/java
+2017-02-09 12:29:11,053 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SubmitPayment/src/main/resources
+2017-02-09 12:29:11,054 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SubmitPayment/src/test/java
+2017-02-09 12:29:11,098 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/main/java
+2017-02-09 12:29:11,099 [Worker-160] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /web-war/src/test/java
+2017-02-09 12:29:12,367 [Worker-160] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for web-war
+2017-02-09 12:29:12,370 [Worker-160] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 5 sec
+2017-02-09 12:29:15,980 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:15,981 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 12:29:15,992 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:15,993 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 12:29:16,383 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:16,384 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-09 12:29:16,385 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:16,386 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-09 12:29:16,837 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:16,838 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 12:29:16,840 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:16,841 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 12:29:17,110 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,111 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:29:17,112 [Worker-161] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,113 [Worker-161] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:29:17,590 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,591 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-09 12:29:17,594 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,595 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/src/test/resources
+2017-02-09 12:29:17,907 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,907 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:29:17,908 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:29:17,909 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:29:17,909 [Worker-167] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of web-war
+2017-02-09 12:29:17,909 [Worker-167] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for web-war
+2017-02-09 12:29:17,929 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:32:47,115 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:32:47,141 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:32:47,145 [Worker-156] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:32:47,146 [Worker-156] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:32:48,485 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:32:48,486 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:32:48,487 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:32:48,488 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:33:30,791 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:33:30,791 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:33:30,792 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:33:30,793 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:36:16,184 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:36:16,185 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:36:16,186 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:36:16,186 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:37:47,705 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:37:47,706 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:37:47,707 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:37:47,708 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:39:14,788 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:39:14,788 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:39:14,790 [Worker-167] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:39:14,790 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:40:08,689 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:40:08,689 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:40:08,690 [Worker-168] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:40:08,691 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:41:09,500 [Worker-169] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:41:09,501 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 12:41:09,506 [Worker-169] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:41:09,506 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 12:41:23,295 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:41:23,331 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:41:23,332 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:41:23,332 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:43:21,180 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:43:21,180 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:43:21,183 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:43:21,184 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:43:46,475 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:43:46,476 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 12:43:46,495 [Worker-172] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:43:46,495 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:44:09,124 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:44:09,125 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:44:09,126 [Worker-173] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:44:09,127 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:46:10,549 [Worker-175] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:46:10,550 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:46:10,551 [Worker-175] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:46:10,551 [Worker-175] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:53:31,329 [Worker-174] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:53:31,329 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:53:31,331 [Worker-174] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:53:31,331 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 12:53:42,509 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:53:42,509 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 12:53:42,515 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 12:53:42,516 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:03:23,712 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:03:23,712 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 13:03:23,713 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:03:23,713 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 13:03:36,344 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:03:36,344 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 13:03:36,346 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:03:36,346 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 13:13:58,305 [Worker-187] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:13:58,305 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 13:13:58,309 [Worker-187] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:13:58,311 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:14:00,751 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:14:00,751 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 13:14:00,752 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:14:00,753 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:14:25,681 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:14:25,682 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 13:14:25,683 [Worker-183] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:14:25,684 [Worker-183] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:26:47,101 [Worker-193] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 13:26:47,101 [Worker-193] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install -
+2017-02-09 13:26:57,530 [Worker-165] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 13:26:57,530 [Worker-165] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install -Dmaven.test.skip=true
+2017-02-09 13:27:56,676 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:56,677 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 13:27:56,679 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:56,679 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 13:27:56,870 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:56,871 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-09 13:27:56,872 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:56,872 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-09 13:27:57,151 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,152 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:27:57,157 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,157 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:27:57,351 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,352 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 13:27:57,353 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,354 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:27:57,531 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,532 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-09 13:27:57,533 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,533 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/src/test/resources
+2017-02-09 13:27:57,782 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,783 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 13:27:57,784 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:27:57,785 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 13:27:57,785 [Worker-165] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of web-war
+2017-02-09 13:27:57,785 [Worker-165] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for web-war
+2017-02-09 13:27:57,842 [Worker-165] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:35:09,339 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:35:09,340 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:35:09,341 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:35:09,341 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:36:23,870 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:36:23,871 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:36:23,873 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:36:23,873 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:37:39,939 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:39,940 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:37:39,941 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:39,942 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:37:49,502 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:49,502 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:37:49,503 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:49,503 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:37:55,041 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:55,042 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:37:55,043 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:37:55,043 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:38:03,114 [Worker-195] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:38:03,115 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:38:03,116 [Worker-195] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:38:03,116 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:43:02,739 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:43:02,762 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:43:02,763 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:43:02,764 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:44:38,425 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:44:38,426 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 13:44:38,427 [Worker-205] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:44:38,427 [Worker-205] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:45:32,080 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:32,081 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:45:32,082 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:32,082 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:45:35,197 [Worker-209] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:35,198 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:45:35,200 [Worker-209] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:35,201 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:45:37,359 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:37,359 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 13:45:37,360 [Worker-200] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:37,360 [Worker-200] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 13:45:46,440 [Worker-194] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:46,440 [Worker-194] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 13:45:46,441 [Worker-194] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:45:46,442 [Worker-194] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:52:12,169 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:52:12,170 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 13:52:12,171 [Worker-213] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:52:12,171 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 13:52:14,679 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:52:14,680 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 13:52:14,681 [Worker-188] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 13:52:14,681 [Worker-188] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 14:26:19,110 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 14:26:25,585 [Worker-222] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent
+2017-02-09 14:26:25,585 [Worker-222] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install
+2017-02-09 14:29:30,056 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:30,057 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:29:30,058 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:30,058 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:29:33,130 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:33,325 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:29:33,326 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:33,326 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:29:33,356 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:33,366 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-09 14:29:33,367 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:33,368 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-09 14:29:35,076 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:35,078 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:29:35,079 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:35,079 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:29:35,914 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:35,946 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 14:29:35,951 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:29:35,967 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 14:30:02,969 [Worker-231] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:30:02,970 [Worker-231] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:30:02,985 [Worker-231] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:30:02,985 [Worker-231] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:32:48,155 [Worker-228] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:48,156 [Worker-228] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:32:48,156 [Worker-228] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:48,157 [Worker-228] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:32:54,048 [Worker-222] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:54,048 [Worker-222] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:32:54,049 [Worker-222] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:54,049 [Worker-222] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:32:55,117 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:55,118 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:32:55,119 [Worker-225] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:32:55,119 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:33:51,726 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 14:33:57,433 [Worker-194] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project
+2017-02-09 14:33:57,434 [Worker-194] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install
+2017-02-09 14:34:17,631 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 14:34:23,812 [Worker-229] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways
+2017-02-09 14:34:23,813 [Worker-229] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install
+2017-02-09 14:34:41,543 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-02-09 14:34:46,205 [Worker-224] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa
+2017-02-09 14:34:46,206 [Worker-224] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean install
+2017-02-09 14:37:49,880 [Worker-230] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:37:49,901 [Worker-230] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:37:49,902 [Worker-230] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:37:49,903 [Worker-230] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:37:50,206 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:37:50,207 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:37:50,208 [Worker-232] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:37:50,208 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:39:24,061 [Worker-227] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:39:24,062 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:39:24,062 [Worker-227] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:39:24,063 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:39:24,215 [Worker-229] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:39:24,216 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:39:24,217 [Worker-229] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:39:24,217 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:41:19,032 [Worker-231] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:41:19,032 [Worker-231] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:41:19,033 [Worker-231] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:41:19,033 [Worker-231] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:41:29,546 [Worker-233] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:41:29,547 [Worker-233] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 14:41:29,548 [Worker-233] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:41:29,549 [Worker-233] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:53:53,780 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:53,792 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-02-09 14:53:53,799 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:53,800 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 14:53:56,838 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:56,839 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/main/resources
+2017-02-09 14:53:56,841 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:56,842 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-gateways/src/test/resources
+2017-02-09 14:53:58,664 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:58,666 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2017-02-09 14:53:58,870 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:53:58,871 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-core/src/test/resources
+2017-02-09 14:54:34,680 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:34,696 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-02-09 14:54:34,698 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:34,699 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/SubmitPayment/src/test/resources
+2017-02-09 14:54:35,311 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:35,322 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-02-09 14:54:35,324 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:35,325 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/Login/src/test/resources
+2017-02-09 14:54:36,596 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:36,597 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 14:54:36,598 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:36,599 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 14:54:36,732 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of web-war
+2017-02-09 14:54:36,733 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for web-war
+2017-02-09 14:54:36,898 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:48,777 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:48,784 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-09 14:54:48,790 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 14:54:48,791 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-09 15:14:40,134 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:14:40,159 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:14:40,161 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:14:40,161 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:15:49,888 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:15:49,888 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:15:49,894 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:15:49,894 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:16:26,973 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:26,975 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:16:26,976 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:26,976 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:16:30,679 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:30,679 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:16:30,682 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:30,683 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:16:41,478 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:41,479 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:16:41,481 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:41,481 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:16:58,228 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:58,234 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:16:58,236 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:16:58,236 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:17:05,493 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:17:05,494 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:17:05,495 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:17:05,496 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:17:58,558 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:17:58,559 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:17:58,563 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:17:58,564 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-09 15:18:27,906 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:18:27,907 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-02-09 15:18:27,909 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-09 15:18:27,909 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/induction-payment-jpa/src/test/resources
+2017-02-12 17:12:42,826 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-12 17:12:42,891 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-12 17:12:42,896 [Worker-6] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-12 17:12:42,896 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources
+2017-02-27 08:15:10,000 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-27 08:15:10,058 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/main/resources
+2017-02-27 08:15:10,061 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-02-27 08:15:10,063 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/khaled/workspacePaymentNew/payment-system/induction-payment-parent/WEB-Payment-Project/web-war/src/test/resources

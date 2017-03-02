@@ -1,0 +1,154 @@
+package com.progressoft.jip.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.progressoft.jip.entity.view.PageView;
+
+@Entity
+@Table(name = "page")
+public class PageEntity implements Serializable, PageView {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name = "page_url", nullable = false)
+	private String pageUrl;
+
+	@Lob
+	@Column(name = "page_content", nullable = false)
+	private String pageContent;
+
+	@Column(name = "page_title", nullable = false)
+	private String pageTitle;
+
+	@Lob
+	@Column(name = "seo", nullable = false)
+	private String seo;
+
+	@Column(name = "is_html")
+	private Boolean isHtml = true;
+
+	@Column(name = "is_publish")
+	private Boolean isPublish = true;
+
+	@ManyToOne
+	@JoinColumn(name = "siteId")
+	private SiteEntity siteId;
+
+	@Column(name = "is_landingPage")
+	private Boolean isLandingPage = false;
+
+	public void setLandingPage(boolean isLandingPage) {
+		this.isLandingPage = isLandingPage;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getPageContent()
+	 */
+	@Override
+	public String getPageContent() {
+		return pageContent;
+	}
+
+	public void setPageContent(String pageContent) {
+		this.pageContent = pageContent;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getPageTitle()
+	 */
+	@Override
+	public String getPageTitle() {
+		return pageTitle;
+	}
+
+	public void setPageTitle(String pageTitle) {
+		this.pageTitle = pageTitle;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getPageUrl()
+	 */
+	@Override
+	public String getPageUrl() {
+		return pageUrl;
+	}
+
+	public void setPageUrl(String pageUrl) {
+		this.pageUrl = pageUrl;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getSeo()
+	 */
+	@Override
+	public String getSeo() {
+		return seo;
+	}
+
+	public void setSeo(String seo) {
+		this.seo = seo;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getIsHtml()
+	 */
+	@Override
+	public Boolean getIsHtml() {
+		return isHtml;
+	}
+
+	public void setHtml(Boolean isHtml) {
+		this.isHtml = isHtml;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getIsPublish()
+	 */
+	public Boolean getIsPublish() {
+		return isPublish;
+	}
+
+	public void setPublish(Boolean isPublish) {
+		this.isPublish = isPublish;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.progressoft.jip.entity.PageView#getSiteId()
+	 */
+	@Override
+	public SiteEntity getSiteId() {
+		return siteId;
+	}
+
+	public void setSiteId(SiteEntity siteId) {
+		this.siteId = siteId;
+	}
+
+	@Override
+	public Boolean getIsLandingPage() {
+		return isLandingPage;
+	}
+
+}

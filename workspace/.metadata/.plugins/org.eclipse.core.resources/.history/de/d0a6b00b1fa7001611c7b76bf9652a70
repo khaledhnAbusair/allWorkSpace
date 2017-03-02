@@ -1,0 +1,39 @@
+package com.progressoft.jip.dao;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbutils.QueryRunner;
+
+import com.progressoft.jip.framework.VehicleStatus;
+
+public class DBUtilVehiclsStatueDao implements VehicleStatusDoa {
+	// java Api to easy connection with database and prepared statment
+
+	private DataSource dataSource;
+
+	
+	public DBUtilVehiclsStatueDao(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	@Override
+	public void create(VehicleStatus vehicleStatus) {
+		QueryRunner runner=new QueryRunner(dataSource);
+	}
+
+	@Override
+	public void update(VehicleStatus vehicleStatus) {
+
+	}
+
+	@Override
+	public void delete(VehicleStatus vehicleStatus) {
+
+	}
+
+	@Override
+	public Iterable<VehicleStatus> listAll() {
+		return null;
+	}
+
+}

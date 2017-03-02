@@ -1,0 +1,10 @@
+package com.progressoft.jip.social.messaging;
+
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+@FunctionalInterface
+public interface PostMessageHandler {
+	void processMessage(PostMessage postMessage);
+
+}

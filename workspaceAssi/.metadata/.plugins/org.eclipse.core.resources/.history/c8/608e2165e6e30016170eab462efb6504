@@ -1,0 +1,15 @@
+package Tasks;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 0;
+
+String name="khaled";
+String name2="ismail";
+			
+	
+	}
+	
+}

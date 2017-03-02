@@ -1,0 +1,8 @@
+
+Fsquid:EmptyStatementUsageCheck"Remove this empty statement.(ñ†ç¿
+jsquid:S1450 "TRemove the "split" field and declare it as a local variable in the relevant methods.(›¥ˆ~
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ØÁªÏ˛ˇˇˇˇ
+bsquid:CommentedOutCodeLine6"<This block of commented-out lines of code should be removed.(¥ù”Ô
+[squid:HiddenFieldCheckP"9Rename "split" which hides the field declared at line 32.(†„ˇ§
+[squid:HiddenFieldCheck^"9Rename "split" which hides the field declared at line 32.(ïÊÆÆ
+<squid:S11665"%Either log or rethrow this exception.(Ô≠£ƒ

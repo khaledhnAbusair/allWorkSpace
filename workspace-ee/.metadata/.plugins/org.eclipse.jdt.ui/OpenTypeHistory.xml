@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=induction-payment-project/src\/main\/java&lt;com.progressoft.jip.datastructures.builder{AccountDataStructureBuilder.java[AccountDataStructureBuilder" modifiers="513" timestamp="1483447636000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories{CurrencyGateway.java[CurrencyGateway" modifiers="513" timestamp="1483628209000"/>
+<typeInfo handle="=induction-payment-project/src\/main\/java&lt;com.progressoft.jip.gateway{CurrencyGateway.java[CurrencyGateway" modifiers="513" timestamp="1483447636000"/>
+<typeInfo handle="=induction-payment-project/src\/main\/java&lt;com.progressoft.jip.factory.impl{PaymentPurposeBehaviorsFactoryImpl.java[PaymentPurposeBehaviorsFactoryImpl" modifiers="1" timestamp="1483447636000"/>
+<typeInfo handle="=induction-payment-project/src\/test\/java&lt;com.progressoft.jip.repository.impl{PaymentPurposeRepositoryTest.java[PaymentPurposeRepositoryTest" modifiers="1" timestamp="1483447636000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories.impl{PaymentRequestJpaRepository.java[PaymentRequestJpaRepository" modifiers="1" timestamp="1483973555000"/>
+<typeInfo handle="=payment-system-repositories/src\/test\/java&lt;repositories.impl{PaymentRequestJpaRepositoryTest.java[PaymentRequestJpaRepositoryTest" modifiers="1" timestamp="1483975539000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;entity{PaymentRequest.java[PaymentRequest" modifiers="1" timestamp="1483966432000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;entity{PaymentPurpose.java[PaymentPurpose" modifiers="1" timestamp="1483896707000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories.impl{AccountJpaRepository.java[AccountJpaRepository" modifiers="1" timestamp="1484057725000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories.impl{CurrencyJpaRepository.java[CurrencyJpaRepository" modifiers="1" timestamp="1483959457000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories{PaymentRequestGateway.java[PaymentRequestGateway" modifiers="513" timestamp="1483971732000"/>
+<typeInfo handle="=terms-task-entity/src\/main\/java&lt;repositories{TermRepository.java[TermRepository" modifiers="513" timestamp="1484560387000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories{AccountGateway.java[AccountGateway" modifiers="513" timestamp="1483468506000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories{CurrencyExchangeRateGateway.java[CurrencyExchangeRateGateway" modifiers="513" timestamp="1483451108000"/>
+<typeInfo handle="=payment-system-repositories/src\/main\/java&lt;repositories.sqlconstants{SqlConstants.java[SqlConstants" modifiers="1" timestamp="1484070760000"/>
+<typeInfo handle="=web-servlets/\/home\/khaled\/.m2\/repository\/javax\/servlet\/javax.servlet-api\/3.1.0\/javax.servlet-api-3.1.0.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1480925239000"/>
+<typeInfo handle="=terms-task-entity/src\/main\/java&lt;entity{TermCategory.java[TermCategory" modifiers="1" timestamp="1484738631000"/>
+<typeInfo handle="=terms-task-entity/src\/main\/java&lt;impl{TermJpaRepositorey.java[TermJpaRepositorey" modifiers="1" timestamp="1484739046000"/>
+<typeInfo handle="=payment-system-repositories/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="1" timestamp="1485238621000"/>
+</typeInfoHistroy>

@@ -1,0 +1,11 @@
+
+wsquid:S2226,"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(æ¨ç†8ŞŸÍÇš+
+ysquid:S1845,"[Rename field "id" to prevent any misunderstanding/clash with field "ID" defined on line 40.(æ¨ç†8ñŠ—Çš+
+|squid:S2226+"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(ÌÀÿöüÿÿÿÿ8õóï™+
+Zsquid:S1948+"7Make "categoryJpaRepository" transient or serializable.(ÌÀÿöüÿÿÿÿ8õóï™+
+Isquid:S1989;"&Add a "try/catch" block for "forward".(’™šÀüÿÿÿÿ8Ñ×Óè™+
+Csquid:S1166D"%Either log or rethrow this exception.(”ı¾8¶²Äš+
+Ssquid:S1948*"0Make "termRepository" transient or serializable.(Çİßúşÿÿÿÿ8õóï™+
+Isquid:S1989;"&Add a "try/catch" block for "forward".(’™šÀüÿÿÿÿ8Ñ×Óè™+
+|squid:S2226*"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(Çİßúşÿÿÿÿ8õóï™+
+Nsquid:S1989H"+Add a "try/catch" block for "sendRedirect".(ïÂªùÿÿÿÿ8Åâ¿ğ™+

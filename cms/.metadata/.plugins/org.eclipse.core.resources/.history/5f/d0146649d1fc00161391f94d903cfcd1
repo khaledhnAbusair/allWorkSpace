@@ -1,0 +1,139 @@
+package com.progressoft.jip.controllers;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.util.UriComponentsBuilder;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.view.PageView;
+import com.progressoft.jip.usecase.PageUseCase;
+import com.progressoft.jip.usecase.SiteUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeDeleteDefaultPageException;
+import com.progressoft.jip.usecase.impl.exception.PageNotFoundException;
+import com.progressoft.jip.usecase.impl.exception.PageUrlIsAlreadyExistException;
+
+@Controller
+public class PageManagementController {
+
+	private static final String PAGES_MANAGEMENT_JSP_PAGE = "PagesManagement";
+	private static final String PAGE_MANAGEMNT_JSP = "PagesManagement.jsp";
+	private static final String PAGE_MANAGEMNT = "/pageManagement";
+	private static final String EDIT_PAGE_JSP_PAGE = "EditPage";
+	private static final String EDIT_PAGE_JSP = "EditPage.jsp";
+	private static final String FAILURE_ERROR = "failureError";
+	private static final String ADD_PAGE_JSP_PAGE = "AddPage";
+	private static final String ADD_PAGE_JSP = "AddPage.jsp";
+	private static final String PAGE_CONTENT = "pageContent";
+	private static final String PARENT_SITE = "parentSite";
+	private static final String REDIRECT = "redirect:";
+	private static final String EDIT_PAGE = "editPage";
+	private static final String ADD_PAGE = "/addPage";
+	private static final String PAGE_URL = "pageUrl";
+	private static final String BASE_PAGE = "/base";
+	private static final String DELETE = "delete";
+	private static final String PAGES = "pages";
+	private static final String SITE = "site";
+	private static final String PAGE = "page";
+	private static final String SAVE = "save";
+
+	@Autowired
+	private SiteUseCase siteUseCase;
+	@Autowired
+	private PageUseCase pageUseCase;
+
+	public void setPageUseCase(PageUseCase pageUseCase) {
+		this.pageUseCase = pageUseCase;
+	}
+
+	public void setSiteUseCase(SiteUseCase siteUseCase) {
+		this.siteUseCase = siteUseCase;
+	}
+
+	@RequestMapping(path = PAGE_MANAGEMNT, method = RequestMethod.GET)
+	public String viewPageManagement(Map<String, Object> model) {
+		model.put(PARENT_SITE, siteUseCase.getAllSites());
+		if (!model.containsKey(PAGES))
+			model.put(PAGES, pageUseCase.getAllPages());
+		return PAGES_MANAGEMENT_JSP_PAGE;
+	}
+
+	@RequestMapping(path = ADD_PAGE, method = RequestMethod.GET)
+	public String viewAddPage(Map<String, Object> model) {
+		model.put(PARENT_SITE, siteUseCase.getAllSites());
+		return ADD_PAGE_JSP_PAGE;
+
+	}
+
+	@RequestMapping(path = EDIT_PAGE, method = RequestMethod.GET)
+	public String viewEditPage(@RequestParam Map<String, String> params, Map<String, Object> model) {
+		PageView page = pageUseCase.findOneUserBypageUrl(params.get(PAGE_URL));
+		model.put(PAGE, page);
+		model.put(PARENT_SITE, siteUseCase.getAllSites());
+		return EDIT_PAGE_JSP_PAGE;
+	}
+
+	@RequestMapping(path = ADD_PAGE, method = RequestMethod.POST)
+	public String addPage(@ModelAttribute PageEntity pageEntity, @RequestParam(name = SITE) Integer siteId,
+			Map<String, Object> model, RedirectAttributes redirectAttributes, UriComponentsBuilder bulider) {
+		pageUseCase.addPage(pageEntity, siteId);
+		return REDIRECT + bulider.path(PAGE_MANAGEMNT).build().toUriString();
+	}
+
+	@RequestMapping(path = EDIT_PAGE, params = SAVE, method = RequestMethod.POST)
+	public String editPage(@ModelAttribute PageEntity pageEntity, @RequestParam(name = SITE) Integer siteId,
+			Map<String, Object> model, UriComponentsBuilder builder) {
+		pageUseCase.editPage(pageEntity, siteId);
+		return REDIRECT + builder.path(PAGE_MANAGEMNT).build().toUriString();
+	}
+
+	@RequestMapping(path = PAGE_MANAGEMNT, method = RequestMethod.POST)
+	public String pageManagementFilter(@RequestParam(name = SITE) Integer siteId, RedirectAttributes attributes,
+			UriComponentsBuilder builder) {
+		attributes.addFlashAttribute(PAGES, pageUseCase.loadAllPagesBySiteId(siteId));
+		return REDIRECT + builder.path(PAGE_MANAGEMNT).build().toUriString();
+	}
+
+	@RequestMapping(path = PAGE_MANAGEMNT, params = DELETE, method = RequestMethod.POST)
+	public String deletePage(@RequestParam(name = PAGE) String pageUrl, UriComponentsBuilder builder) {
+		pageUseCase.deletePage(pageUrl);
+		return REDIRECT + builder.path(PAGE_MANAGEMNT).build().toUriString();
+	}
+
+	@ExceptionHandler(PageUrlIsAlreadyExistException.class)
+	public String handlePageUrlIsAlreadyExistException(Exception e, Model model) {
+		putMapError(e, model, ADD_PAGE_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(PageNotFoundException.class)
+	public String handlePageNotFoundException(Exception e, Model model) {
+		putMapError(e, model, EDIT_PAGE_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(CannotBeDeleteDefaultPageException.class)
+	public String handleCannotBeDeleteDefaultPageException(Exception e, Model model) {
+		putMapError(e, model, PAGE_MANAGEMNT_JSP);
+		return BASE_PAGE;
+	}
+
+	@ExceptionHandler(Exception.class)
+	public String handleException(Exception e, Model model) {
+		putMapError(e, model, PAGE_MANAGEMNT_JSP);
+		return BASE_PAGE;
+	}
+
+	private void putMapError(Exception e, Model model, String pageName) {
+		model.addAttribute(FAILURE_ERROR, e.getMessage());
+		model.addAttribute(PAGE_CONTENT, pageName);
+	}
+}

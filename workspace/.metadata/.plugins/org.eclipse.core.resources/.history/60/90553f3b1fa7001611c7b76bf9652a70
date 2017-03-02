@@ -1,0 +1,53 @@
+package com.progressoft.jip.dao;
+
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbutils.QueryRunner;
+
+import com.progressoft.jip.framework.VehicleCase;
+import com.progressoft.jip.framework.VehicleStatus;
+import com.progressoft.jip.framework.VehicleStatus.Status;
+
+public class DBUtilVehiclsStatueDao implements VehicleStatusDoa {
+	// java Api to easy connection with database and prepared statment
+
+	private DataSource dataSource;
+
+	public DBUtilVehiclsStatueDao(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	@Override
+	public void create(VehicleStatus vehicleStatus) {
+		QueryRunner runner = new QueryRunner(dataSource);
+		String sql = "insert into VehicleStates (veh_id,arrive_time,park_time,left_time,current_status,type,task,arrive_after) values(?,?,?,?,?,?)";
+
+		VehicleCase vehicleCase = vehicleStatus.vehicle();
+		try {
+			runner.update(sql, vehicleCase.identifier(), vehicleStatus.statusTime(Status.PARKED),
+					vehicleStatus.statusTime(Status.LEFT), vehicleStatus.status().name(), vehicleCase.type(),
+					vehicleCase.task(), vehicleCase.arriveAfter());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void update(VehicleStatus vehicleStatus) {
+
+	}
+
+	@Override
+	public void delete(VehicleStatus vehicleStatus) {
+
+	}
+
+	@Override
+	public Iterable<VehicleStatus> listAll() {
+		return null;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.progressoft.jip.introspection;
+
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception {
+		BeanInfo beanInfo = Introspector.getBeanInfo(Employee.class);
+		PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
+		for (PropertyDescriptor propertyDescriptor : propertyDescriptors) {
+			System.out.println(propertyDescriptor.getName());
+		}
+		
+		
+	}
+
+}

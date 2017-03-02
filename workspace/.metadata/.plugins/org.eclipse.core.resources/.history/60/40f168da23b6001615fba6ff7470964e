@@ -1,0 +1,74 @@
+package com.progressoft.jip.xmltest;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+import org.apache.commons.dbcp.BasicDataSource;
+
+public class CSVGatewayImpl {
+	private BasicDataSource dataSource;
+	private String oldQuery = "";
+	private CSVStructure queries;
+	boolean enteredDataTag = false;
+
+	public CSVGatewayImpl() {
+		dataSource = new BasicDataSource();
+		dataSource.setUrl("jdbc:mysql://localhost:3306/DBEmployees");
+		dataSource.setUsername("root");
+		dataSource.setPassword("root");
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+	}
+
+	public void parsing(Path path) {
+		String fileToParse = "/home/khaled/task/monitor/sampleTest.csv";
+		BufferedReader fileReader = null;
+
+		// Delimiter used in CSV file
+		final String DELIMITER = ",";
+		String tablestartWith = "table#";
+		String tableName = null;
+		String[] columnName = null;
+		try {
+
+			String line = "";
+			fileReader = new BufferedReader(new FileReader(fileToParse));
+			fileReader.readLine();
+
+			while ((line = fileReader.readLine()) != null) {
+				if (line.contains(tablestartWith)) {
+					tableName = line.split("#")[1].split(DELIMITER)[0];
+					String[] split = line.split(DELIMITER);
+					int splitLength = split.length;
+					columnName = new String[splitLength - 1];
+					System.arraycopy(split, 1, columnName, 0, splitLength - 1);
+					Stream.of(columnName).forEach(System.out::println);
+
+					String[] tokens = split;
+					for (String token : tokens) {
+						System.out.println(token);
+					}
+					queries = new CSVStructure(dataSource.getConnection());
+					queries.executeRemainingQueries();
+					queries.createNewPreparedStatement(tableName, columnName);
+				} else {
+					String[] values = line.split(DELIMITER);
+					queries.insert(oldQuery, Arrays.asList(values));
+					Stream.of(values).forEach(System.out::println);
+				}
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fileReader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

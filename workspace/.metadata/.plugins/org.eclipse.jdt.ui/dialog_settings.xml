@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="Replace"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="true" key="Annotations"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
+	<item value="true" key="Comments"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="false" key="InstanceOf"/>
+	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="false" key="delegateUpdating"/>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item value="1" key="layout"/>
+		<item value="false" key="group_libraries"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;packageExplorer configured=&quot;true&quot; group_libraries=&quot;0&quot; layout=&quot;1&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;2&quot; sortWorkingSets=&quot;false&quot; workingSetName=&quot;Aggregate for window 1478586033608&quot;&gt;&#x0A;&lt;localWorkingSetManager&gt;&#x0A;&lt;workingSet editPageId=&quot;org.eclipse.jdt.internal.ui.OthersWorkingSet&quot; factoryID=&quot;org.eclipse.ui.internal.WorkingSetFactory&quot; id=&quot;1478589871901_1&quot; label=&quot;Other Projects&quot; name=&quot;Other Projects&quot;&gt;&#x0A;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/RemoteSystemsTempFiles&quot; type=&quot;4&quot;/&gt;&#x0A;&lt;/workingSet&gt;&#x0A;&lt;/localWorkingSetManager&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;Other Projects&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;SimualtionFixed&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;BankSystem&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;SimualtionAnotherExample&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;CarerrBooster&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;EnhancmentSimulationTask&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;BankApplication&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;BatchSample&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;Payments&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;PaymentTask&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;JAXP&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;TrainingJavaXML&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;BeanValedationApi&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;JDBCSettings&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;JUnitExample&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;DataImporterAssignment&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;SAXEXample&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;SAXExample2&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;IBANTest&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;CSVExample&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;FirstWebApp&quot;/&gt;&#x0A;&lt;activeWorkingSet workingSetName=&quot;JSE&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Other Projects&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;SimualtionFixed&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;BankSystem&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;SimualtionAnotherExample&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;CarerrBooster&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;EnhancmentSimulationTask&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;BankApplication&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;BatchSample&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;Payments&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;XML&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;PaymentTask&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;JAXP&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;TrainingJavaXML&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;BeanValedationApi&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;JDBCSettings&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;JUnitExample&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;DataImporterAssignment&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;SAXEXample&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;SAXExample2&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;IBANTest&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;CSVExample&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;FirstWebApp&quot;/&gt;&#x0A;&lt;allWorkingSets workingSetName=&quot;JSE&quot;/&gt;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0A;&lt;xmlDefinedFilters&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.sonarlint.eclipse.jdt.ui.filters.HideNonSonarProjects&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0A;&lt;/customFilters&gt;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
+		<item value="2" key="rootMode"/>
+		<item value="false" key="linkWithEditor"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item value="527" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="706" key="DIALOG_HEIGHT"/>
+		<item value="329" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
+		<item value="true" key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="336" key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_HEIGHT"/>
+		<item value="400" key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_WIDTH"/>
+		<item value="false" key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
+		<item value="true" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="400" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_WIDTH"/>
+		<item value="308" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT"/>
+		<item value="false" key="GoIntoTopLevelTypeAction.isChecked"/>
+		<item value="false" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
+	</section>
+	<section name="javadoc">
+		<item value="public" key="access"/>
+		<item value="false" key="noindex"/>
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="use"/>
+		<item value="true" key="author"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="false" key="nonavbar"/>
+		<item value="" key="docletpath"/>
+		<item value="/usr/lib/jvm/java-8-oracle/bin/javadoc" key="javadoc_command_history"/>
+		<item value="1.3" key="source"/>
+		<item value="true" key="version"/>
+		<item value="" key="docletname"/>
+		<item value="true" key="splitindex"/>
+		<item value="true" key="fromStandard"/>
+		<item value="false" key="notree"/>
+		<item value="false" key="openinbrowser"/>
+		<section name="projects">
+		</section>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
+		<item value="527" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="650" key="DIALOG_HEIGHT"/>
+		<item value="329" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="nls_accessor_history">
+		<section name="0">
+			<item value="Messages" key="accessorName"/>
+			<item value="=introspection/src\/main\/java&lt;com.progressoft.jip.introspection" key="bundlePackage"/>
+			<item value="messages.properties" key="bundleName"/>
+			<item value="=introspection/src\/main\/java&lt;com.progressoft.jip.introspection" key="accessorPackage"/>
+		</section>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="700" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="592" key="DIALOG_HEIGHT"/>
+		<item value="300" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="completion_proposal_size">
+		<item value="238" key="size.y"/>
+		<item value="353" key="size.x"/>
+		<item value="186" key="contextSelector.size.y"/>
+		<item value="276" key="contextSelector.size.x"/>
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item value="false" key="SortOrdering"/>
+		<item value="false" key="RemoveFinal"/>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="true" key="renameSubpackages"/>
+		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
+	<section name="ProblemSeveritiesConfigurationBlock">
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="true" key="expanded4"/>
+		<item value="false" key="expanded3"/>
+		<item value="false" key="expanded6"/>
+		<item value="false" key="expanded5"/>
+		<item value="false" key="expanded7"/>
+		<item value="false" key="expanded0"/>
+	</section>
+	<section name="DialogBounds_SuperInterfaceSelectionDialog">
+		<item value="412" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="594" key="DIALOG_HEIGHT"/>
+		<item value="118" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item value="false" key="OmitCallToSuper"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="-59" key="DIALOG_X_ORIGIN"/>
+			<item value="-199" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_unimplemented"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<section name="DialogBoundsSettings">
+			<item value="363" key="DIALOG_WIDTH"/>
+			<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="534" key="DIALOG_HEIGHT"/>
+			<item value="362" key="DIALOG_X_ORIGIN"/>
+			<item value="168" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item value="543" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="715" key="DIALOG_HEIGHT"/>
+		<item value="339" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item value="600" key="width"/>
+		<item value="400" key="height"/>
+	</section>
+	<section name="DialogBounds_AddDelegateMethodsDialog">
+		<item value="678" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="578" key="DIALOG_HEIGHT"/>
+		<item value="311" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="AddUnimplementedConstructorsDialog">
+		<item value="false" key="OmitCallToSuper"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="NewPackageWizardPage">
+		<item value="false" key="create_package_info_java"/>
+	</section>
+</section>

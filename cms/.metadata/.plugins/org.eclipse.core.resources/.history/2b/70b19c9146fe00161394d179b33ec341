@@ -1,0 +1,143 @@
+package com.progressoft.jip.usecase.impl;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.List;
+import java.util.Objects;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.SiteEntity;
+import com.progressoft.jip.entity.view.SiteView;
+import com.progressoft.jip.repository.PageRepository;
+import com.progressoft.jip.repository.SiteRepository;
+import com.progressoft.jip.usecase.SiteUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeFindAnySitesException;
+import com.progressoft.jip.usecase.impl.exception.PageNotFoundException;
+import com.progressoft.jip.usecase.impl.exception.SiteNotfoundException;
+import com.progressoft.jip.usecase.impl.exception.SiteUrlIsAlreadyExistException;
+
+public class SiteUseCaseImpl implements SiteUseCase {
+
+	private SiteRepository siteRepository;
+	private PageRepository pageRepository;
+
+	public void setPageRepository(PageRepository pageRepository) {
+		this.pageRepository = pageRepository;
+	}
+
+	public void setSiteRepository(SiteRepository siteRepository) {
+		this.siteRepository = siteRepository;
+	}
+
+	@Override
+	public Iterable<SiteEntity> getAllSites() {
+		Iterable<SiteEntity> findAllSite = siteRepository.findAll();
+		if (Objects.isNull(findAllSite))
+			throw new CannotBeFindAnySitesException();
+		return findAllSite;
+	}
+
+	@Override
+	public SiteView findOneSiteBysiteId(Integer siteId) {
+		SiteEntity siteEntity = siteRepository.findOne(siteId);
+		if (Objects.isNull(siteEntity))
+			throw new SiteNotfoundException();
+		else
+			return siteEntity;
+
+	}
+
+	@Override
+	public void editSite(SiteView siteView, String pageUrl) {
+		SiteEntity site = siteRepository.findOne(siteView.getSiteId());
+		if (Objects.isNull(site)) {
+			throw new SiteNotfoundException();
+		} else {
+			PageEntity oldLandingPage = site.getLandingPage();
+			oldLandingPage.setLandingPage(false);
+			pageRepository.save(oldLandingPage);
+			SiteEntity siteEntity = new SiteEntity();
+			PageEntity findOne = pageRepository.findOne(pageUrl);
+			findOne.setLandingPage(true);
+			siteEntity.setLandingPage(findOne);
+			siteEntity.setParentSiteName(siteView.getParentSiteName());
+			siteEntity.setSiteLogo(siteView.getSiteLogo());
+			siteEntity.setSiteName(siteView.getSiteName());
+			siteEntity.setSiteUrl(siteView.getSiteUrl());
+			siteEntity.setSubSite(siteView.getSubSite());
+			siteEntity.setPages(siteView.getPages());
+			siteEntity.setSiteId(siteView.getSiteId());
+			siteRepository.save(siteEntity);
+		}
+	}
+
+	@Override
+	public void addSite(SiteView siteView, Integer siteId) {
+		if (Objects.nonNull(siteRepository.findBySiteUrl(siteView.getSiteUrl()))) {
+			throw new SiteUrlIsAlreadyExistException();
+		}
+		SiteEntity siteEntity = new SiteEntity();
+		siteEntity.setParentSiteName(siteRepository.findOne(siteId));
+		siteEntity.setSiteLogo(siteView.getSiteLogo());
+		siteEntity.setSiteName(siteView.getSiteName());
+		siteEntity.setSiteUrl(siteView.getSiteUrl());
+		siteEntity.setSubSite(siteView.getSubSite());
+		PageEntity pageEntity = createDefaultLandingPage(siteEntity.getSiteName());
+		pageEntity.setSiteId(siteEntity);
+		siteEntity.setLandingPage(pageEntity);
+		siteRepository.save(siteEntity);
+	}
+
+	@Override
+	public List<PageEntity> getAllPages(SiteView siteView) {
+		if (Objects.isNull(siteRepository.findOne(siteView.getSiteId()))) {
+			throw new PageNotFoundException();
+		} else {
+			return siteRepository.findOne(siteView.getSiteId()).getPages();
+		}
+	}
+
+	@Override
+	public List<PageEntity> getAllPagesBySiteUrl(String siteUrl) {
+		SiteView site = siteRepository.findBySiteUrl("/" + siteUrl);
+		if (Objects.isNull(site))
+			throw new SiteNotfoundException();
+		if (Objects.isNull(site.getPages()))
+			throw new PageNotFoundException();
+		return site.getPages();
+	}
+
+	@Override
+	public void addSiteLogo(byte[] siteLogo, Integer siteId) {
+		SiteEntity siteEntity = siteRepository.findOne(siteId);
+		siteEntity.setSiteLogo(siteLogo);
+		siteRepository.save(siteEntity);
+	}
+
+	@Override
+	public void copySiteImage(Integer siteId, OutputStream stream) {
+		SiteEntity siteEntity = siteRepository.findOne(siteId);
+		if (Objects.isNull(siteEntity))
+			throw new SiteNotfoundException();
+		byte[] siteLogo = siteEntity.getSiteLogo();
+		if (Objects.nonNull(siteLogo)) {
+			try {
+				stream.write(siteLogo);
+			} catch (IOException e) {
+				throw new IllegalStateException(e);
+			}
+		}
+	}
+
+	private PageEntity createDefaultLandingPage(String siteName) {
+		PageEntity pageEntity = new PageEntity();
+		pageEntity.setHtml(true);
+		pageEntity.setLandingPage(true);
+		pageEntity.setPageContent("Welcome Content");
+		pageEntity.setPageTitle("Welcome" + siteName);
+		pageEntity.setSeo("Welcome Seo");
+		pageEntity.setPageUrl("/" + "Welcome" + siteName);
+		return pageEntity;
+	}
+
+}

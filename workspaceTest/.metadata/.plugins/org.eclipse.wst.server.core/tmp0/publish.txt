@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Tue Jan 31 12:55:45 EET 2017
+org.eclipse.jst.jee.server\:/binary\:/home/khaled/.m2/repository/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE.jar=WEB-INF/lib/spring-web-4.3.5.RELEASE.jar
+org.eclipse.jst.j2ee.server\:controllers=WEB-INF/lib/controllers-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:domain=WEB-INF/lib/domain-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:usecases=WEB-INF/lib/usecases-0.0.1-SNAPSHOT.jar

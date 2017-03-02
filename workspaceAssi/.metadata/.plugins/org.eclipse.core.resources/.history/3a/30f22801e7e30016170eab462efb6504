@@ -1,0 +1,8 @@
+package Tasks;
+
+public class NotEqualNameException extends Exception{
+
+	
+	
+	
+}

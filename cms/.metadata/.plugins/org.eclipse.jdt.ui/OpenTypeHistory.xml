@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=cms-usecase/src\/main\/java&lt;com.progressoft.jip.usecase.impl{UserUseCaseImpl.java[UserUseCaseImpl" modifiers="1" timestamp="1488272248000"/>
+<typeInfo handle="=controllers/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1485238621000"/>
+<typeInfo handle="=cms-delivery/\/usr\/lib\/jvm\/java-8-oracle\/jre\/lib\/rt.jar&lt;java.lang(Void.class[Void" modifiers="49" timestamp="1485238621000"/>
+<typeInfo handle="=entity/src\/main\/java&lt;com.progressoft.jip.entity{DraftPageEntity.java[DraftPageEntity" modifiers="1" timestamp="1488206734000"/>
+<typeInfo handle="=controllers/src\/main\/java&lt;com.progressoft.jip.controllers{LoginController.java[LoginController" modifiers="1" timestamp="1488268759000"/>
+<typeInfo handle="=entity/src\/main\/java&lt;com.progressoft.jip.entity{PageEntity.java[PageEntity" modifiers="1" timestamp="1488208890000"/>
+<typeInfo handle="=controllers/src\/main\/java&lt;com.progressoft.jip.filter{LoginFilter.java[LoginFilter" modifiers="1" timestamp="1488180463000"/>
+<typeInfo handle="=cms-usecase/src\/main\/java&lt;com.progressoft.jip.usecase.impl{SiteUseCaseImpl.java[SiteUseCaseImpl" modifiers="1" timestamp="1488350672000"/>
+<typeInfo handle="=controllers/src\/main\/java&lt;com.progressoft.jip.controllers{SiteController.java[SiteController" modifiers="1" timestamp="1488189134000"/>
+<typeInfo handle="=controllers/src\/main\/java&lt;com.progressoft.jip.controllers{PageManagementController.java[PageManagementController" modifiers="1" timestamp="1488268683000"/>
+<typeInfo handle="=cms-usecase/src\/main\/java&lt;com.progressoft.jip.usecase{LoginUseCase.java[LoginUseCase" modifiers="513" timestamp="1487952019000"/>
+</typeInfoHistroy>

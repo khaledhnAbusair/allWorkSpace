@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=induction-payment-core/src\/main\/java&lt;com.progressoft.jip.iban.impl{IBANCountryFormatsReaderImp.java[IBANCountryFormatsReaderImp" modifiers="1" timestamp="1486471439000"/>
+<typeInfo handle="=induction-payment-core/src\/main\/java&lt;com.progressoft.jip.iban.impl{IBANCountryFormatsSettings.java[IBANCountryFormatsSettings" modifiers="1" timestamp="1486471439000"/>
+<typeInfo handle="=induction-payment-core/src\/main\/java&lt;com.progressoft.jip.iban.impl{IBANFormatValidator.java[IBANFormatValidator" modifiers="1" timestamp="1486475117000"/>
+<typeInfo handle="=induction-payment-jpa/src\/main\/java&lt;com.progressoft.jip.jparepositories{AbstractRepository.java[AbstractRepository" modifiers="1" timestamp="1486471439000"/>
+<typeInfo handle="=Login/src\/main\/java&lt;login{AuthenticationManager.java[AuthenticationManager" modifiers="513" timestamp="1486472880000"/>
+<typeInfo handle="=Login/src\/main\/java&lt;login.impl{LoginServlet.java[LoginServlet" modifiers="1" timestamp="1486472915000"/>
+<typeInfo handle="=Login/src\/main\/java&lt;login.impl{MemoryAuthenticationManager.java[MemoryAuthenticationManager" modifiers="1" timestamp="1486472928000"/>
+</typeInfoHistroy>

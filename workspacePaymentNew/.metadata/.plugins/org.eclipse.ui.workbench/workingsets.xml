@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486535454280_1" label="induction-payment-parent" name="induction-payment-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/web-interface" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Login" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/web-war" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-jpa" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-gateways" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SubmitPayment" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486535435604_0" label="Window Working Set" name="Aggregate for window 1486535435603"/>
+</workingSetManager>

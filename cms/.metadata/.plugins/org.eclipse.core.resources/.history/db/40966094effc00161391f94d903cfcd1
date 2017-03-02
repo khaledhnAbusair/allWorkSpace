@@ -1,0 +1,14 @@
+package com.progressoft.jip.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.view.PageView;
+import com.progressoft.jip.entity.view.SiteView;
+
+public interface PageRepository extends CrudRepository<PageEntity, String> {
+	<P extends PageView> P findBypageUrl(String pageUri);
+
+	Iterable<PageEntity> findBySiteId(SiteView siteView);
+
+}

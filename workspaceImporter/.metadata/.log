@@ -1,0 +1,19 @@
+!SESSION 2017-01-31 16:40:34.551 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-01-31 16:44:53.939
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-01-31 16:44:53.965
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2017-02-02 03:46:59.789
+!MESSAGE An error occurred while downloading http://eclipse.sonarlint.org/compositeContent.xml. The cache file /home/khaled/.p2/org.eclipse.equinox.p2.repository/cache/downloading/compositeContent-406498191.xml could not be renamed to /home/khaled/.p2/org.eclipse.equinox.p2.repository/cache/compositeContent-406498191.xml.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2017-02-02 03:47:01.371
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/content.jar

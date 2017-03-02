@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.example.org/batches-schema" xsi:schemaLocation="http://www.example.org/batches-schema ./batches-schema.xsd">
+
+
+	<batch id="BTCH-001">
+		<issuer-name>KHALED</issuer-name>
+		<issuer-id>abusair</issuer-id>
+		<total-count>5</total-count>
+		<Transactios>
+
+			<transaction>
+
+	<amount>5</amount>
+				<creditor>1.5</creditor>
+				<currency>2</currency>
+				<debitor>0</debitor>
+			</transaction>
+
+		</Transactios>
+	</batch>
+  
+
+</batches>

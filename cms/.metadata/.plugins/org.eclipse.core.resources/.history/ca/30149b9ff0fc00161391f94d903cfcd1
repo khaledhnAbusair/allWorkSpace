@@ -1,0 +1,13 @@
+package com.progressoft.jip.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.progressoft.jip.entity.DraftPageEntity;
+import com.progressoft.jip.entity.PageEntity;
+
+public interface DraftPageRepository extends CrudRepository<DraftPageEntity, String> {
+	DraftPageEntity findByPublishedPage(PageEntity pageEntity);
+
+	void deleteByPublishedPage(PageEntity pageEntity);
+
+}

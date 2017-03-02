@@ -1,0 +1,40 @@
+package com.progressoft.jip.simulation.impl.ui;
+
+import com.progressoft.jip.framework.Simulation;
+import com.progressoft.jip.framework.SimulationCase;
+import com.progressoft.jip.framework.SimulationState;
+import com.progressoft.jip.framework.SimulationStateListener;
+
+public class AsyncSimulation implements Simulation {
+
+	@Override
+	public void simulationStarted(SimulationState state) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void statusChanged(SimulationState state) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void start(SimulationCase simCase) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public SimulationState getCurrentState() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addStateListener(SimulationStateListener listener) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

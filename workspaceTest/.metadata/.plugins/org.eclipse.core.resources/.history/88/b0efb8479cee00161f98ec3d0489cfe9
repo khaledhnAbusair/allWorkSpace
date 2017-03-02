@@ -1,0 +1,32 @@
+package camel.integration;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.main.Main;
+
+public class MessageRouting {
+
+	public static void main(String[] args) throws Exception {
+		CamelContext context = new DefaultCamelContext();
+		Main main = new Main();
+		
+		
+		context.addRoutes(new RouteBuilder() {
+			
+			@Override
+			public void configure() throws Exception {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		
+		
+		
+		
+		main.getCamelContexts().add(context);
+		main.start();
+		System.out.println("Done");
+	}
+}

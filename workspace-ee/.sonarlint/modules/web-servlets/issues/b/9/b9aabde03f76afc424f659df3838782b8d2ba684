@@ -1,0 +1,10 @@
+
+Csquid:S11666"%Either log or rethrow this exception.(”ı¾8÷úûÇš+
+Hsquid:S19899"*Add a "try/catch" block for "forwordPage".(ùèÃ¯8ÅËÆš+
+Hsquid:S1989+"*Add a "try/catch" block for "forwordPage".(ùèÃ¯8ÅËÆš+
+Hsquid:S19899"*Add a "try/catch" block for "forwordPage".(ùèÃ¯8ÅËÆš+
+Zsquid:S1948"7Make "categoryJpaRepository" transient or serializable.(ÌÀÿöüÿÿÿÿ8©ıê™+
+|squid:S2226"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(Çİßúşÿÿÿÿ8©ıê™+
+|squid:S2226"YRemove this misleading mutable servlet instance fields or make it "static" and/or "final"(ÌÀÿöüÿÿÿÿ8ÅËÆš+
+Hsquid:S1989+"*Add a "try/catch" block for "forwordPage".(ùèÃ¯8ÅËÆš+
+Ssquid:S1948"0Make "termRepository" transient or serializable.(Çİßúşÿÿÿÿ8—®úê™+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="486" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="373" key="DIALOG_HEIGHT"/>
+		<item value="467" key="DIALOG_X_ORIGIN"/>
+		<item value="162" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="FilterByLocation"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-usecase/src/main/java/com/progressoft/jip/usecase/impl/PageUseCaseImpl.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-usecase/src/main/java/com/progressoft/jip/usecase/PageUseCase.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-war/src/main/webapp/WEB-INF/views/SiteSettings.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-war/src/main/webapp/WEB-INF/views/EditPage.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-delivery/src/main/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-delivery/src/main/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-war/src/main/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-delivery/src/main/webapp/WEB-INF/dispatcher-beans.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-war/src/main/webapp/WEB-INF/views/PagesManagement.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-delivery/src/main/webapp/WEB-INF/views/base.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/cms-parent/cms-war/src/main/webapp/WEB-INF/views/base.jsp&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="529" key="DIALOG_HEIGHT"/>
+			<item value="357" key="DIALOG_X_ORIGIN"/>
+			<item value="39" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

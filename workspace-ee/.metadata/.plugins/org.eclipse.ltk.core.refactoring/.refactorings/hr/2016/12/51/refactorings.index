@@ -1,0 +1,7 @@
+1481442536540	Extract constant 'INSERT_INTO_LOCATIONS_LATITUDE_LONGITUDE_NAME_DESCRIPTION_VALUES'
+1481443006230	Rename package 'hr'
+1481454475220	Rename field 'lcoationDao'
+1481454872238	Extract local variable 'writer'
+1481615039503	Copy file
+1481615902573	Move 'locations-map.jsp' to 'webapp'
+1481622370952	Move 'locations-map.jsp' to 'Views'

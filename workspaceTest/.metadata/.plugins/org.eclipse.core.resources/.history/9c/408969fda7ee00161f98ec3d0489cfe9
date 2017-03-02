@@ -1,0 +1,46 @@
+package com.progressoft.jip.social.main;
+
+import org.apache.activemq.camel.component.ActiveMQComponent;
+import org.apache.camel.CamelContext;
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.main.Main;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CamelMain {
+	public static void main(String[] args) throws Exception {
+		ApplicationContext springContext = new ClassPathXmlApplicationContext(".beans.xml");
+
+		Main main = new Main();
+		CamelContext context = new DefaultCamelContext();
+
+		ActiveMQComponent mqComponent = new ActiveMQComponent();
+		mqComponent.setBrokerURL("tcp://localhost:61616");
+
+		context.addRoutes(new RouteBuilder() {
+
+			@Override
+			public void configure() throws Exception {
+				from("activemq:queue:say_hello_request")
+						.to("dataformat:jaxb:unmarshal?contextPath=com.progressoft.jip.social.messaging")
+						.process(new Processor() {
+
+							@Override
+							public void process(Exchange arg0) throws Exception {
+								Message inMessage = arg0.getIn();
+								Object body = inMessage.getBody();
+								System.out.println(body);
+							}
+						});
+
+			}
+		});
+
+		main.getCamelContexts().add(context);
+		main.run();
+	}
+}

@@ -1,0 +1,7 @@
+package com.progressoft.jip.simulation.impl.ui;
+
+import com.progressoft.jip.framework.SimulationStateListener;
+
+public class AsyncListener implements SimulationStateListener{
+
+}

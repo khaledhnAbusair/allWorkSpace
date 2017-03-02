@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.progressoft.jip</groupId>
+		<artifactId>payments-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>payment-facade</artifactId>
+	<properties>
+		<application.version>${project.version}</application.version>
+		<!-- this is my own version to share from application version -->
+
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.progressoft.jip</groupId>
+			<artifactId>payments-dao</artifactId>
+			<version>${application.version}</version>
+		</dependency>
+
+		<dependency>
+
+
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.progressoft.jip</groupId>
+			<artifactId>transaction-api</artifactId>
+			<version>${application.version}</version>
+		</dependency>
+	</dependencies>
+</project>

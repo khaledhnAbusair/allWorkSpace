@@ -1,0 +1,35 @@
+package repositories.impl;
+
+import javax.persistence.NoResultException;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import repositories.exceptions.NullAccountIBANException;
+
+public class AccountGatewayImplTest {
+	private AccountGatewayImpl accountGatewayImpl;
+
+	@Before
+	public void setUp() throws Exception {
+			accountGatewayImpl = new AccountGatewayImpl();
+	}
+
+	@Test(expected = NullAccountIBANException.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingNullIBANCode_ShouldThrowNullAccountIBAN() {
+
+		accountGatewayImpl.loadAccountByIBAN(null);
+	}
+
+	@Test(expected = NullAccountIBANException.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingEmptyIBANCode_ShouldThrowNullAccountIBAN() {
+		accountGatewayImpl.loadAccountByIBAN("");
+		System.out.println("");
+	}
+
+	@Test(expected = NoResultException.class)
+	public void givenAccountRepositrey_CallingLoadAccountByIBAN_PassingUnavailableIBANCode_ShouldThrowIbanNotExistException() {
+		accountGatewayImpl.loadAccountByIBAN("sddsdsdsdsdSSS");
+	}
+
+}

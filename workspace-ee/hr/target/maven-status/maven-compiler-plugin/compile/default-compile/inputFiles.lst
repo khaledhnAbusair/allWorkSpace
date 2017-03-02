@@ -1,0 +1,12 @@
+/home/khaled/workspace-ee/hr/src/main/java/hr/dao/DaoException.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/dao/JDBCDepartmentDao.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/dao/DepartmentsDao.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/web/DepartmentsServlet.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/web/LocationRestServlet.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/web/LocationServlet.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/dao/locationDao.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/web/LocationMapServlet.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/tags/CookieTag.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/dao/JDBCLocationDao.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/domain/LocationInformation.java
+/home/khaled/workspace-ee/hr/src/main/java/hr/domain/DepartmentsInfo.java

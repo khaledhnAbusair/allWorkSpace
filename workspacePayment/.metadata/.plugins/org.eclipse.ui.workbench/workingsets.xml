@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485841987188_0" label="induction-payment-parent" name="induction-payment-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/web-interface" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Login" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/web-war" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-jpa" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-gateways" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SubmitPayment" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485842221894_2" label="payment-system-project" name="payment-system-project"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1485842183857_1" label="Window Working Set" name="Aggregate for window 1485842183856"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486390684449_4" label="Window Working Set" name="Aggregate for window 1486390684449"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486390912373_6" label="Multiple Working Sets" name="Aggregate:induction-payment-parent:payment-system-project:">
+<workingSet IMemento.internal.id="induction-payment-parent"/>
+<workingSet IMemento.internal.id="payment-system-project"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1486394444480_5" label="Window Working Set" name="Aggregate for window 1486394444479"/>
+<mruList name="payment-system-project"/>
+</workingSetManager>

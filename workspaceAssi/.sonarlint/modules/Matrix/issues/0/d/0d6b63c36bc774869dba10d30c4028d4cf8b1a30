@@ -1,0 +1,3 @@
+
+π%squid:RedundantThrowsDeclarationCheck"ÇRemove the declaration of thrown exception 'com.progressoft.utilites.IncompatibleArgumentsException' which is a runtime exception.(≈èå•˘ˇˇˇˇ
+≥%squid:RedundantThrowsDeclarationCheck%"ÇRemove the declaration of thrown exception 'com.progressoft.utilites.IncompatibleArgumentsException' which is a runtime exception.(Ú«Ø"

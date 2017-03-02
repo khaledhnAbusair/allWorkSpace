@@ -1,0 +1,102 @@
+package com.progressoft.jip.xmltest;
+
+import static com.progressoft.jip.xmltest.Constant.*;
+import javax.xml.parsers.ParserConfigurationException;
+import org.apache.commons.dbcp.BasicDataSource;
+import org.xml.sax.helpers.DefaultHandler;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Schema;
+import javax.xml.parsers.SAXParser;
+import org.xml.sax.SAXException;
+import java.io.FileInputStream;
+import org.xml.sax.Attributes;
+import javax.xml.XMLConstants;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.io.File;
+
+public class XMLParserConnection extends DefaultHandler implements Parser {
+
+	private BasicDataSource dataSource = new BasicDataSource();
+	private XMLParserRecords parserRecords;
+	private FileInputStream inputStream;
+	private boolean isDriverClass = false;
+	private boolean isPassword = false;
+	private boolean isUserName = false;
+	private boolean isURL = false;
+	private Path path;
+
+	public XMLParserConnection(Path path) {
+		this.path = path;
+	}
+
+	@Override
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+		if (qName.equalsIgnoreCase(CONNECTION_SETTINGS)) {
+		} else if (qName.equalsIgnoreCase(USERNAME)) {
+			isUserName = true;
+		} else if (qName.equalsIgnoreCase(PASSWORD)) {
+			isPassword = true;
+		} else if (qName.equalsIgnoreCase(URL)) {
+			isURL = true;
+		} else if (qName.equalsIgnoreCase(DRIVER_CLASS_NAME)) {
+			isDriverClass = true;
+		}
+
+	}
+
+	@Override
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		if (qName.equalsIgnoreCase(CONNECTION_SETTINGS)) {
+			parserRecords = new XMLParserRecords(dataSource, path);
+			parserRecords.parseDocument();
+			throw new SAXException(TERMINATE);
+		}
+	}
+
+	@Override
+	public void characters(char[] ch, int start, int length) throws SAXException {
+
+		if (isUserName) {
+			dataSource.setUsername(new String(ch, start, length));
+			isUserName = false;
+		} else if (isPassword) {
+			dataSource.setPassword(new String(ch, start, length));
+			isPassword = false;
+		} else if (isURL) {
+			dataSource.setUrl(new String(ch, start, length) + DISABLE_SSL);
+			isURL = false;
+		} else if (isDriverClass) {
+			dataSource.setDriverClassName(new String(ch, start, length));
+			isDriverClass = false;
+		}
+	}
+
+	public Schema getSchema(File schemaPath) throws SAXException {
+		String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
+		SchemaFactory factoryS = SchemaFactory.newInstance(language);
+		Schema schema = factoryS.newSchema(schemaPath);
+		return schema;
+	}
+
+	@Override
+	public void parseDocument() {
+		try {
+			SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+			SAXParser saxParser = saxParserFactory.newSAXParser();
+			inputStream = new FileInputStream(path.toFile());
+			saxParser.parse(inputStream, this);
+
+		} catch (SAXException | ParserConfigurationException | IOException e) {
+
+			try {
+				throw new SAXException(e);
+			} catch (SAXException e1) {
+			}
+
+		}
+
+	}
+
+}

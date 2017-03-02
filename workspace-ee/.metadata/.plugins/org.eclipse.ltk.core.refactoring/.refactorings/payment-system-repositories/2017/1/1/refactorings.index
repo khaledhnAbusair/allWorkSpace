@@ -1,0 +1,95 @@
+1483449719408	Copy package
+1483449746042	Copy package
+1483449756694	Delete element
+1483449769044	Copy package
+1483449774881	Delete element
+1483450266400	Delete element
+1483450292534	Rename package 'com.progressoft.jip.gateway'
+1483451108501	Rename package 'jpa'
+1483453864714	Delete element
+1483454180041	Delete element
+1483454203403	Delete elements
+1483454418165	Rename type 'Account'
+1483456196283	Delete element
+1483456262374	Delete elements
+1483456586180	Rename method 'givenMySQLAccountGateway_CallingLoadAccountByIBAN_PassingNullIBANCode_ShouldThrowNullAccountIBAN'
+1483458632474	Rename field 'factory'
+1483458873880	Convert local variable 'query' to field
+1483458930260	Convert local variable 'fromCluse' to field
+1483468507270	Rename type 'AccountEntity'
+1483513215955	Extract method 'isNullAcount'
+1483513259232	Extract method 'isNullIban'
+1483513952105	Rename local variable 'Selectquery'
+1483517193766	Rename local variable 'selectquery'
+1483517207238	Infer generic type arguments
+1483517249683	Rename local variable 'resultList'
+1483517270515	Infer generic type arguments
+1483519901274	Rename local variable 'typedQuery'
+1483528032507	Rename type 'Test'
+1483528068114	Rename type 'EntityManager'
+1483528115172	Rename type 'EntityManagerAA'
+1483530039445	Rename package 'repositories.impl'
+1483530091441	Delete element
+1483530138037	Copy compilation unit
+1483530155484	Delete element
+1483531872782	Rename local variable 'account'
+1483532616129	Rename type 'EntManager'
+1483532681957	Move compilation unit
+1483532703008	Rename type 'ShareEntityManager'
+1483532716338	Rename field 'instance'
+1483534402235	Rename method 'givenMySQLAccountGateway_CallingUpdateAcount_PassingExistingAccount_ThenCallingLoadAccountByIBAN_ShouldReturnUpdatedAccount'
+1483534413922	Rename method 'givenMySQLAccountGateway_CallingLoadAccountByIBAN_PassingAvailableIBANCode_ShouldReturnAccount'
+1483535187601	Rename local variable 'accountAfter'
+1483536190321	Rename local variable 'updateQuery'
+1483538318744	Extract constant 'ACCOUNT_FIND_ALL'
+1483538360283	Extract constant 'UPDATE_ACCOUNT_AS_A_SET_A_TYPE_TYPE_A_BALANCE_BALANCE_A_STATUS_STATUS_A_CURRENCY_CURRENCY_CODE_A_RULE_RULE_WHERE_A_IBAN_IBAN'
+1483538397946	Rename field 'UPDATE_ACCOUNT'
+1483538424031	Rename field 'ACCOUNT_FIND_ALL'
+1483538517533	Extract method 'extracted'
+1483538782337	Extract method 'ifAcountNotUpdated'
+1483540079576	Rename method 'populateAccountQuery'
+1483540112954	Extract method 'populateNewAccount'
+1483540201521	Extract method 'populateNewAccount'
+1483542441493	Rename type 'AccountGatewayImpl'
+1483542456446	Rename field 'accountGatewayImpl'
+1483542473670	Rename type 'AccountGatewayImplTest'
+1483542510579	Rename method 'callingloadAccounts_ShouldReturnAccountsCollecton'
+1483542528454	Rename method 'givenAccountGateway_CallingLoadAccountByIBAN_PassingAvailableIBANCode_ShouldReturnAccount'
+1483542543230	Rename method 'givenAccountGateway_CallingUpdateAcount_PassingExistingAccount_ThenCallingLoadAccountByIBAN_ShouldReturnUpdatedAccount'
+1483542555837	Rename method 'givenAccountGateway_CallingCreateAccount_ShouldCreateAccount'
+1483543615344	Rename local variable 'account'
+1483605234667	Move compilation unit
+1483605257161	Move compilation unit
+1483610764765	Delete element
+1483610774176	Delete element
+1483627277048	Delete element
+1483627869749	Rename local variable 'loadCurrencies'
+1483628962833	Rename type 'currenciesNotFoundException'
+1483629046785	Rename local variable 'Currencies'
+1483629972008	Rename local variable 'query'
+1483632075929	Move compilation unit
+1483714004730	Rename method 'test'
+1483714780786	Rename method 'givenPaymentPurposeRepository_CallingLoadPaymentPurposeByCode_PassingEmptyCode_ShouldThrowNullPaymentPurposeCode'
+1483714909132	Rename method 'givenPaymentPurposeGateway_CallingLoadPaymentPurposeByCode_PassingExistingCode_ShouldReturnPaymentPurpose'
+1483715121127	Extract method 'extracted'
+1483715140849	Extract method 'extracted'
+1483715217088	Rename local variable 'paymentPurposeDataStructure'
+1483718845619	Rename method 'givenPaymentPurposeGateway_CallingInsertPaymentPurpose_PassPaymentPurposeExceedingPurposeCodeLengthLimit_ShouldThrowDataExceedingCodeColumnLimit'
+1483719183644	Extract method 'extracted'
+1483719508515	Rename method 'givenPaymentPurposRepository_CallingInsertPaymentPurpose_PassPaymentPurposeExceedingPurposeCodeLengthLimit_ShouldThrowDataExceedingCodeColumnLimit'
+1483719565080	Rename method 'givenPaymentPurposRepository_CallingInsertPaymentPurpose_PassPaymentPurposeExceedingPurposeCodeLengthLimit_ShouldTdhrowRollbackException'
+1483720709445	Rename method 'givenPaymentPurposRepository_CallingInsertPaymentPurpose_ShoulddInsertedPaymentPurpose'
+1483776997615	Extract method 'extracted'
+1483778033188	Rename method 'AfterTest'
+1483778101637	Rename method 'givenPaymentPurposeGateway_CallingInsertPaymentPurpose_PassPaymentPurposWithExistingCode_ShouldThrowDuplicatePaymentPurposeCode'
+1483778589274	Rename local variable 'typedQuery'
+1483779024336	Extract local variable 'paymentPurposeDataStructure'
+1483779049189	Rename local variable 'paymentPurposeDataStructure'
+1483779111178	Rename method 'givenPaymentPurposeGateway_CallingInsertPaymentPurpose_ThenCallingDeletePurPose_ShouldInsertThePurposeThenDeleteIt'
+1483779311487	Rename method 'givenPaymentPurposeGateway_CallingDeletePaymentPurposeByCode_PassingNoneExistingCode_ShouldThrowNoneExistingPaymentPurpose'
+1483779542626	Rename method 'givenPaymentPurposeGateway_CallingDeletePaymentPurposeByCode_PassingNullCode_ShouldThrowNullPaymentPurposeCode'
+1483781759524	Extract constant 'UPDATE_PAYMENT_PURPOSE_AS_P_SET_P_NAME_NAME_WHERE_P_CODE_CODE'
+1483784358901	Rename local variable 'findById'
+1483785520469	Extract method 'extracted'
+1483785563369	Extract method 'extracted'
+1483785624157	Rename local variable 'findByIdForLoad'

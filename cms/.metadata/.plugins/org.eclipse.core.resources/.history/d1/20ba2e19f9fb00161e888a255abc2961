@@ -1,0 +1,5 @@
+package com.progressoft.jip.usecase.impl.exception;
+
+public class CannotBeDeleteDefaultPageException extends RuntimeException {
+
+}

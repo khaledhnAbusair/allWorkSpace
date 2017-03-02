@@ -1,0 +1,13 @@
+package Tasks;
+
+public class NotEqualNameException extends RunTimeException{
+
+
+	public NotEqualNameException() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+}

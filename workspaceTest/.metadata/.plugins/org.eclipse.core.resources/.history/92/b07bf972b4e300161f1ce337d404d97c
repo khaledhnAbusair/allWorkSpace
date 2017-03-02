@@ -1,0 +1,8 @@
+package domain;
+
+public class PerdicateTest {
+
+	public static void main(String[] args) {
+		
+	}
+}

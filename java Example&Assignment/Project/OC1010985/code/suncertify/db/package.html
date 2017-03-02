@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head></head>
+<body bgcolor="white">
+Contains Framework and API to access database files data and structure localy
+or remotly.<p>
+{@link suncertify.db.Engine} defines the interface for an engine managing the
+access to a database file localted in same JVM file system or a reference for a
+remote database file engine resides in another JVM. An engine provides the
+access to a database file data (local or remote) through
+{@link suncertify.db.Session}s.<br>
+An {@link suncertify.db.EngineService} defines a factory for creating: database
+engines for managing the access for a local database file, remote database file
+engines references in another JVM, and network services for exposing a database
+engine functionallity to other JVMs. An implementation can be located using
+{@link suncertify.db.EngineServiceLoader} which uses java
+<code>java.util.ServiceLoader</code>
+to load <code>EngineService</code> implementation from classpath.<br>
+Below shows an example for creating a database engine, get database record
+structure configuration, and reading from a database file data:<br>
+<pre>
+<code>
+    // loads service implementation from classpath
+    EngineService service = EngineServiceLoader.locateEngineService();
+    File dbFile = new File("....");// path to database file
+    // gets/creates and engine for database file
+    Engine engine = service.getEngine(dbFile);
+    // get database file record structure descriptor.
+    Schema schema = engine.getDBSchema();
+    // obtain a new session, unique access to database file
+    Session session = engine.newSession();
+    // get the access to database records
+    DBMain dbMain = session.getDataAccess();
+    // read a record
+    dbMain.read(0);
+</code>
+</pre>
+The same code is used to access a remote database file except construction for
+engine will be by calling:
+<pre>
+<code>
+    // pass the host name in which the engine is running, the port, and the
+    // unique name assigned to remote engine.
+    Engine engine = service.getEngine("somehost",1521,"database");
+</code>
+</pre>
+Other ways can be used to instant the implementation for
+{@link suncertify.db.Engine} than using {@link suncertify.db.EngineService}
+interface.
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/data/jpa
+		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+
+	<bean id="entityManagerFactory" class="javax.persistence.persistence"
+		factory-method="createentityManagerFactory">
+		<constructor-arg value="emp_unit"></constructor-arg>
+		</bean>
+
+	<jpa:repositories base-package="domain.repository.**"
+		entity-manager-factory-ref=""></jpa:repositories>
+</beans>

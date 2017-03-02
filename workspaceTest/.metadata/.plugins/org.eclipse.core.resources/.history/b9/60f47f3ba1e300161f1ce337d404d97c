@@ -1,0 +1,26 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import domain.repository.EmployeeRepository;
+
+public class SpringDateTest {
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/data-bean.xml");
+		EmployeeRepository repository = context.getBean(EmployeeRepository.class);
+		Employee employee = new Employee();
+		employee.setFirstName("Khaled");
+		employee.setLastName("Abusair");
+		employee.setPosition("Java eveloper");
+		repository.save(employee);
+		
+		
+		Iterable<Employee> findAll = repository.findAll();
+		for (Employee employee2 : findAll) {
+			System.out.println(employee2.getFirstName());
+		}
+
+	}
+
+}

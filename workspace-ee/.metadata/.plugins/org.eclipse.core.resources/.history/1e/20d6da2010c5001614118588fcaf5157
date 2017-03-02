@@ -1,0 +1,53 @@
+package login;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MemoryAuthenticationManager implements AuthenticationManager {
+
+	private Map<String, Credentials> credentials = new HashMap<>();
+
+	{
+		Credentials user = new Credentials();
+		user.username = "admin";
+		user.fullName = "Administrator";
+		user.password = "pass1234";
+		credentials.put("admin", user);
+	}
+
+	@Override
+	public UserInfo authenticate(AuthenticateRequest request) {
+		String username = request.getUserName();
+		if (credentials.containsKey(username) && username != null) {
+			Credentials info = credentials.get(username);
+			if (info.password.equals(request.getPassword())) {
+				return info.getUserInfo();
+			}
+		}
+		throw new AuthenticationException("User Not Found");
+	}
+
+	private class Credentials {
+		private String username;
+		private String fullName;
+		private String password;
+
+		UserInfo getUserInfo() {
+			return new UserInfo() {
+				private static final long serialVersionUID = 1L;
+
+				@Override
+				public String getUserName() {
+					return username;
+				}
+
+				@Override
+				public String getFullName() {
+					return fullName;
+				}
+			};
+
+		}
+	}
+
+}

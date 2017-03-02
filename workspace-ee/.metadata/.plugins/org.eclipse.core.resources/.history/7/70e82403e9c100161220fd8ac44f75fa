@@ -1,0 +1,55 @@
+package com.progressoft.jip.downloader.web;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class DownloaderServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private Path pathToServe;
+
+	@Override
+	public void init() throws ServletException {
+		ServletContext servletContext = getServletContext();
+		String path = servletContext.getInitParameter("downloader.pathToServe");
+		if (Objects.isNull(path)) {
+			throw new ServletException("downloader.pathToserve context parameter is missing");
+		}
+		pathToServe = Paths.get(path);
+		if (Files.notExists(pathToServe) || !Files.isDirectory(pathToServe)) {
+			throw new ServletException("Path " + path + "doesn`t exist or not a directorey");
+		}
+
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String fileToDownload = req.getParameter("fileName");
+		if (fileToDownload == null) {
+			try (Stream<Path> list = Files.list(pathToServe)) {
+				List<Path> paths = list.collect(Collectors.toList());
+				req.setAttribute("paths", paths);
+			}
+			req.getRequestDispatcher("/files-list.jsp").forward(req, resp);
+		} else {
+			Path pathToDownload = pathToServe.resolve(fileToDownload);
+			String MimeType = getServletContext().getMimeType(fileToDownload).toString();
+			resp.setContentType(MimeType);
+			ServletOutputStream outputStream = resp.getOutputStream();
+			Files.copy(pathToDownload, outputStream);
+
+		}
+	}
+}

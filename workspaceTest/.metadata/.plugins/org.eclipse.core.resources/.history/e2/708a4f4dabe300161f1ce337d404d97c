@@ -1,0 +1,20 @@
+package domain.repository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Repository;
+
+import domain.Department;
+
+@Repository
+public interface DepartmentRepository extends org.springframework.data.repository.Repository<Department, String> {
+
+	Department save(Department department);
+
+	Iterable<Department> findAll();
+
+	Department findOne(String deptNumber);
+	
+	Page<Department> findAll(Pageable pageable);
+
+}

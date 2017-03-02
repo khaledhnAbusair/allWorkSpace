@@ -1,0 +1,8 @@
+package com.progressoft.jip.rest;
+
+import javax.ws.rs.Path;
+
+@Path("/departments")
+public class DepartmentService {
+
+}

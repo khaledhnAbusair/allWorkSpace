@@ -1,0 +1,29 @@
+1478799364703	Rename method 'addComponenetWithConstrains'
+1478799374240	Rename local variable 'gridx'
+1478799379306	Rename local variable 'gridy'
+1478799390259	Rename local variable 'weightx'
+1478799686426	Rename type 'VehicleModel'
+1478800009869	Rename method 'getTableModel'
+1478800992640	Rename local variable 'form1'
+1478801006805	Rename field 'tableModel'
+1478801288343	Rename local variable 'startButton'
+1478803338269	Rename field 'state'
+1478804531057	Extract method 'extracted'
+1478850108606	Extract method 'extracted'
+1478850146911	Extract method 'extracted'
+1478853483925	Rename field 'map'
+1478853555280	Delete element
+1478861799601	Rename type 'Tset'
+1478861860207	Rename type 'DetailsInfo'
+1478862275583	Extract method 'extracted'
+1478863785855	Delete element
+1478877227802	Move compilation units
+1478878262461	Delete element
+1478878621710	Rename method 'addJComponentDarkGrayBorder'
+1478930697899	Copy compilation unit
+1478931076869	Copy compilation unit
+1478931900596	Copy compilation unit
+1478932148378	Copy compilation unit
+1478932638066	Copy compilation unit
+1478933534854	Copy compilation unit
+1478933552060	Copy compilation unit

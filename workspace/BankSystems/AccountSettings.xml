@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<number>1</number>
+	<iban>2</iban>
+	<name>3</name>
+	<currecny>4</currecny>
+	<bankSwiftCode>5</bankSwiftCode>
+	<status>6</status>
+	<balance>7</balance>
+</index>

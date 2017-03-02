@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478589942218_2" label="SimualtionFixed" name="SimualtionFixed">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-parking-khaled" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-ui-genarator" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-parent" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478628357152_3" label="BankSystem" name="BankSystem">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/bank-system-core" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478685436542_4" label="SimualtionAnotherExample" name="SimualtionAnotherExample">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-test" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478772575535_5" label="CarerrBooster" name="CarerrBooster">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/introspection" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478784425037_6" label="EnhancmentSimulationTask" name="EnhancmentSimulationTask">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EnhancementSimulationVersion" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478936967626_7" label="BankApplication" name="BankApplication">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-impl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-ui" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479024622984_8" label="BatchSample" name="BatchSample">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/batch-sample" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479026963401_9" label="Payments" name="Payments">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/transaction-api" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payment-entities" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payment-facade" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-dao" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479202902421_9" label="XML" name="XML">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-parent" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479281843767_11" label="PaymentTask" name="PaymentTask">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-project" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479374713487_12" label="JAXP" name="JAXP">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JAXPExample" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479493726128_13" label="TrainingJavaXML" name="TrainingJavaXML">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DOMXMLExample" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479630210357_14" label="BeanValedationApi" name="BeanValedationApi">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/bean.validation" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479714477067_15" label="JDBCSettings" name="JDBCSettings">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jdbc.settings" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479800292314_16" label="JUnitExample" name="JUnitExample">
+<item elementID="=arrays.util" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1479886755868_17" label="DataImporterAssignment" name="DataImporterAssignment">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/data-importer-parent" type="4"/>
+<item elementID="=data-operation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480012396007_19" label="SAXEXample" name="SAXEXample">
+<item elementID="=SAX" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480071697681_20" label="SAXExample2" name="SAXExample2">
+<item elementID="=SAXExa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480401604051_20" label="IBANTest" name="IBANTest">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XML" type="4"/>
+<item elementID="=BankSystems" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480403170734_21" label="CSVExample" name="CSVExample">
+<item elementID="=Load_CSV_Database_Java_example" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480583863872_22" label="FirstWebApp" name="FirstWebApp">
+<item elementID="=helloworld" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480833519889_23" label="JSE" name="JSE">
+<item elementID="=Load_CSV_Database_Java_example" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/introspection" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jdbc.settings" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-parking-khaled" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BankApplication" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-project" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payment-facade" type="4"/>
+<item elementID="=BankSystems" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=arrays.util" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/bank-system-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/bean.validation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XML" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payment-entities" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-dao" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-ui" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/transaction-api" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/EnhancementSimulationVersion" type="4"/>
+<item elementID="=SAX" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SAXExa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-ui-genarator" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/data-importer-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JDBC" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DOMXMLExample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-ui" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JAXPExample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-impl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/batch-sample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/simulation-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payments-project-core" type="4"/>
+<item elementID="=data-operation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-parent" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1478586033609_0" label="Window Working Set" name="Aggregate for window 1478586033608"/>
+</workingSetManager>

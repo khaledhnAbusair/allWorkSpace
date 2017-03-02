@@ -1,0 +1,30 @@
+1478889519417	Extract method 'defineConstrains'
+1478889676728	Inline local variable 'gridx'
+1478889688051	Inline local variable 'gridy'
+1478889698651	Inline local variable 'insets'
+1478889702568	Inline local variable 'constranchor'
+1478889707832	Inline local variable 'constrweightx'
+1478892412397	Extract method 'initConstrainsParam'
+1478892981964	Rename method 'setGridXYWeightX'
+1478897036825	Extract local variable 'param'
+1478898692032	Rename method 'initConstrainsParam'
+1478898860011	Extract interface 'Parameters'
+1478928308437	Delete element
+1478928470018	Copy compilation units
+1478930619085	Move compilation units
+1478931649813	Rename type 'TypeTaskKey'
+1478932032548	Rename type 'VehicleCasesModel'
+1478932202908	Rename field 'tableModel'
+1478932704938	Rename type 'SimulationCaseImpl'
+1478933587269	Rename type 'SimulationStateDisplay'
+1478934211944	Delete element
+1478934344521	Move compilation unit
+1478934409021	Extract method 'extracted'
+1478935273598	Rename local variable 'cp'
+1478935411484	Rename local variable 'comp'
+1478936035075	Delete element
+1478936222088	Extract method 'extracted'
+1478936246936	Rename method 'btStart'
+1478936279869	Extract method 'extracted'
+1478936296907	Extract method 'extracted'
+1478967820577	Extract local variable 'identifier'

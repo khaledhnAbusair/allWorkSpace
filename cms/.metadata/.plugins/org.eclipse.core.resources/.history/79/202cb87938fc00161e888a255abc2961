@@ -1,0 +1,37 @@
+package com.progressoft.jip.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "draft")
+public class DraftPageEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "draft_id")
+	private Integer draftId;
+
+	@Column(name = "draft_title", nullable = false)
+	private String draftTitle;
+
+	@Column(name = "draft_url", nullable = false)
+	private String draftUrl;
+
+	@Lob
+	@Column(name = "draft_content")
+	private String draftContent;
+
+	@Lob
+	@Column(name = "draft_seo", nullable = false)
+	private String draftSeo;
+
+	@JoinColumn(name="published_page")
+	private PageEntity publishedPage;
+}

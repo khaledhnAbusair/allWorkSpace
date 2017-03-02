@@ -1,0 +1,17 @@
+package domain.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import domain.Employee;
+
+/**
+ * @author khaled
+ *
+ */
+@Repository
+public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
+	Iterable<Employee> findByFirstName(String firstName);
+	Iterable<Employee> findByFirstNameLike(String firstName);
+	
+}

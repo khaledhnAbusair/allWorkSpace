@@ -1,0 +1,61 @@
+package com.progressoft.jip.introspection;
+
+import java.util.Date;
+
+public class Employee {
+	private String userID;
+	private String userName;
+	private String lastName;
+	private Date birthDate;
+	private Date hireDate;
+	private double salary;
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public Date getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+}

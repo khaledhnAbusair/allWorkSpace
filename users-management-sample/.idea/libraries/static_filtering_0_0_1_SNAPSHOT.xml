@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="static-filtering-0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/static-filtering/target/static-filtering-0.0.1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

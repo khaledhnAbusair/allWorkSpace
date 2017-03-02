@@ -1,0 +1,5 @@
+package com.progressoft.jip.xmltest;
+
+public interface Parser {
+
+}

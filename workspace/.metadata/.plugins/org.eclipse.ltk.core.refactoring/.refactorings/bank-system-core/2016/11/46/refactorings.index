@@ -1,0 +1,11 @@
+1478629578212	Rename type 'Create'
+1478629866228	Rename type 'OperationProcess'
+1478632575582	Rename type 'BankImple'
+1478632676548	Rename type 'JdbcAccount'
+1478683620433	Delete element
+1478683638597	Rename field 'driverClas'
+1478683644642	Rename local variable 'driverClas'
+1478683649559	Rename method 'getDriverClas'
+1478685069010	Extract local variable 'jdbcSettings'
+1478686388324	Copy package
+1478686404987	Copy package

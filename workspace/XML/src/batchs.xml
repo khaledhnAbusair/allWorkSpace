@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batches> <!-- Root Element -->
+
+	<batch id="BATCH-001"> <!-- Complex Elements because attributes ,child -->
+
+		<issuer-name> Khaled Abusair </issuer-name><!-- Simple elements -->
+		<issuer-id> KHA </issuer-id>
+		
+		
+		<total-count>2</total-count>
+		<transactions>
+
+			<!-- Attributes = key + "value" -->
+			<transaction id="TRNS-001" expected-date="17/7/2016">
+				<amount>13000</amount>
+				<debitor> 989898 </debitor>
+				<creditor>747474</creditor>
+				<currency>JOD</currency>
+			</transaction>
+
+
+			<transaction id="TRNS-002">
+				<amount>1000</amount>
+				<debitor> 4545454 </debitor>
+				<creditor>23548</creditor>
+				<currency>USD</currency>
+			</transaction>
+
+
+		</transactions>
+
+	</batch>
+</batches>

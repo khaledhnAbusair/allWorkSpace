@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package bean.validation;
+
+import java.math.BigDecimal;
+
+/**
+ * @author khaled
+ *
+ */
+public class Account {
+private String accountNumber;
+private String name;
+private String email;
+private BigDecimal balance;
+}

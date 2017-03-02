@@ -1,0 +1,6 @@
+domain/Department.class
+domain/repository/DepartmetRepository.class
+domain/repository/EmployeeRepository.class
+domain/Employee.class
+domain/repository/AttachmentRepository.class
+domain/Attachment.class

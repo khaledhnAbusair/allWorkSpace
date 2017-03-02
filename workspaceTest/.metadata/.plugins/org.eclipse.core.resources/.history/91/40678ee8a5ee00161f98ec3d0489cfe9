@@ -1,0 +1,15 @@
+package com.progressoft.jip.social.main;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.main.Main;
+
+public class CamelMain {
+	public static void main(String[] args) {
+		Main main = new Main();
+		CamelContext context = new DefaultCamelContext();
+
+		main.getCamelContexts().add(context);
+		main.run();
+	}
+}

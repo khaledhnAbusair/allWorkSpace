@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;FILE_HOME_KHALED_DESKTOP_CAMEL&apos; from expression &apos;&quot;file:/home/khaled/Desktop/camel&quot;&apos;&#x0A;- Original project: &apos;camel.integration&apos;&#x0A;- Constant name: &apos;FILE_HOME_KHALED_DESKTOP_CAMEL&apos;&#x0A;- Constant expression: &apos;&quot;file:/home/khaled/Desktop/camel&quot;&apos;&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Replace occurrences of expression with constant" description="Extract constant &apos;FILE_HOME_KHALED_DESKTOP_CAMEL&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src\/main\/java&lt;camel.integration{MessageRouting.java" name="FILE_HOME_KHALED_DESKTOP_CAMEL" qualify="false" replace="true" selection="612 0" stamp="1486626744247" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1" metadata-complete="false">
+
+	<servlet>
+		<servlet-name>DepartmentsServlet</servlet-name>
+		<servlet-class>hr.web.DepartmentsServlet</servlet-class>
+
+
+		<init-param>
+			<param-name>db.username</param-name>
+			<param-value>root</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>db.password</param-name>
+			<param-value>root</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>db.url</param-name>
+			<param-value>jdbc:mysql://localhost:3306/DBEmployees</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>db.driver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DepartmentsServlet</servlet-name>
+		<url-pattern>/departments</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+		<description>A dataSource Connected to maps database</description>
+		<res-ref-name>jdbc/maps</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<lookup-name>jdbc/maps</lookup-name>
+	</resource-ref>
+</web-app>
+	

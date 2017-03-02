@@ -1,0 +1,10 @@
+
+ssquid:S1188z"\Reduce this anonymous class number of lines from 23 to at most 20, or make it a named class.(Ë¹ÚÌ
+jsquid:S1450h"SRemove the "code" field and declare it as a local variable in the relevant methods.(²âèú
+jsquid:S1450|"SRemove the "code" field and declare it as a local variable in the relevant methods.(²âèú
+rsquid:S1450}"VRemove the "newName" field and declare it as a local variable in the relevant methods.(ÕÇ…úÿÿÿÿ
+Osquid:S12130"8Move this variable to comply with Java Code Conventions.(°¨™
+Tsquid:S1213D"8Move this variable to comply with Java Code Conventions.(Ø…¸£şÿÿÿÿ
+Tsquid:S1213X"8Move this variable to comply with Java Code Conventions.(ˆ€öŞıÿÿÿÿ
+Osquid:S1213f"8Move this variable to comply with Java Code Conventions.(¬ß¶¸
+Osquid:S1213z"8Move this variable to comply with Java Code Conventions.(Ë¹ÚÌ

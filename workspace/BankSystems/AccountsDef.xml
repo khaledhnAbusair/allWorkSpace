@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Accounts>
+	<Account>
+		<number>564566784567689</number>
+		<iban>JO88TTYM4829967920679303755710</iban>
+		<name>SAMI</name>
+		<currecny>JOD</currecny>
+		<bankSwiftCode>ARABJOAX131</bankSwiftCode>
+		<status>ACTIVE</status>
+		<balance>633.75</balance>
+	</Account>
+
+
+	<Account>
+		<number>564566784567689</number>
+		<iban>JO88TTYM4829967920679303755710</iban>
+		<name>SAMI</name>
+		<currecny>JOD</currecny>
+		<bankSwiftCode>ARABJOAX131</bankSwiftCode>
+		<status>ACTIVE</status>
+		<balance>633.75</balance>
+	</Account>
+
+
+	<Account>
+		<number>564566784567689</number>
+		<iban>JO88TTYM4829967920679303755710</iban>
+		<name>SAMI</name>
+		<currecny>JOD</currecny>
+		<bankSwiftCode>ARABJOAX131</bankSwiftCode>
+		<status>ACTIVE</status>
+		<balance>633.75</balance>
+	</Account>
+
+
+	<Account>
+		<number>564566784567689</number>
+		<iban>JO88TTYM4829967920679303755710</iban>
+		<name>SAMI</name>
+		<currecny>JOD</currecny>
+		<bankSwiftCode>ARABJOAX131</bankSwiftCode>
+		<status>ACTIVE</status>
+		<balance>633.75</balance>
+	</Account>
+
+</Accounts>

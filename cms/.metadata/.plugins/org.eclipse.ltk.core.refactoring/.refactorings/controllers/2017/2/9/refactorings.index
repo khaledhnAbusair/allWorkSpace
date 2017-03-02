@@ -1,0 +1,7 @@
+1488180445244	Extract constant 'URLS_EXCLUDE'
+1488180450866	Extract constant 'DISPATCH_LOGIN'
+1488180454952	Extract constant 'USER_NAME'
+1488188071997	Delete element
+1488188535600	Rename method 'extracted'
+1488188649126	Rename method 'putMapError'
+1488202428610	Extract constant 'DRAFT'

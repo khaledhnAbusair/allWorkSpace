@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1487656096417_1" label="cms-parent" name="cms-parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/controllers" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cms-usecase" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cms-delivery" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cms-parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cms-war" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/entity" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1487656026002_0" label="Window Working Set" name="Aggregate for window 1487656026002"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1487683954827_2" label="Window Working Set" name="Aggregate for window 1487683954827"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1487687842079_3" label="Window Working Set" name="Aggregate for window 1487687842079"/>
+</workingSetManager>

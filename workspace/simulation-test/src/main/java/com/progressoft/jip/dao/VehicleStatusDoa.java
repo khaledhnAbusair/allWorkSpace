@@ -1,0 +1,18 @@
+package com.progressoft.jip.dao;
+
+import java.util.ArrayList;
+
+import com.progressoft.jip.framework.VehicleStatus;
+
+public interface VehicleStatusDoa {
+
+	public void create(VehicleStatus vehicleStatus);
+
+	public void update(VehicleStatus vehicleStatus);
+
+	public void delete(VehicleStatus vehicleStatus);
+
+	public default Iterable<VehicleStatus> listAll() {
+		return new ArrayList<>();
+	}
+}

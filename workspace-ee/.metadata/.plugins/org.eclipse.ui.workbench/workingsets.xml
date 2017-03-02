@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1481625924276_1" label="file-downloader" name="file-downloader"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1482045514604_3" label="userManage" name="userManage"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1482737764349_5" label="jpa" name="jpa">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/jpa.firstsample" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1483447713012_6" label="Payment" name="Payment">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/payment-system-repositories" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/induction-payment-project" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1483861253554_7" label="CDI" name="CDI">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/users-management-sample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/memorey-security" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/login" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1483861501514_17" label="users-management-sample" name="users-management-sample">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/users-management-sample" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/security" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/memorey-security" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/login" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1484030531181_9" label="terms-task" name="terms-task">
+<item elementID="=terms-task-entity" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=web-servlets" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=web-store-managment" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1481092269470_0" label="Window Working Set" name="Aggregate for window 1481092269469"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1482045840220_8" label="Multiple Working Sets" name="Aggregate:file-downloader:userManage:">
+<workingSet IMemento.internal.id="file-downloader"/>
+<workingSet IMemento.internal.id="userManage"/>
+</workingSet>
+<mruList name="terms-task"/>
+<mruList name="Payment"/>
+<mruList name="CDI"/>
+<mruList name="userManage"/>
+<mruList name="jpa"/>
+</workingSetManager>

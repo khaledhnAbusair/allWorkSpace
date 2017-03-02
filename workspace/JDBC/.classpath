@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Courses/OCP8/sqlite-jdbc-3.14.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Courses/OCP8/mysql-connector-java-5.1.40.tar/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="C:/temp/commons-dbcp2-2.1.1-bin/commons-dbcp2-2.1.1/commons-dbcp2-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/temp/commons-pool2-2.4.2-bin/commons-pool2-2.4.2/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="C:/temp/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

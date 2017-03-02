@@ -1,0 +1,30 @@
+1479897438873	Delete element
+1479904750768	Rename type 'WatchDirectoryPath'
+1479904952770	Rename local variable 'fs'
+1479905881302	Copy compilation unit
+1479905894835	Delete element
+1479972502338	Extract constant 'CONNECTION_SETTINGS'
+1479973582373	Extract constant 'USERNAME'
+1479973859721	Rename package 'com.progressoft.jip.datastracture'
+1479980265013	Extract constant 'PASSWORD'
+1479980286535	Extract constant 'URL'
+1479980307501	Extract constant 'DRIVER_CLASS_NAME'
+1479980712497	Extract local variable 'name'
+1479983797379	Delete elements
+1479984520554	Rename type 'XMLParser'
+1479985586510	Extract constant 'DATA'
+1479986332368	Delete elements
+1479986600891	Extract constant 'DEPARTMENTS'
+1479999555994	Rename field 'requestStatus'
+1479999567394	Rename method 'getRequest'
+1479999574637	Rename field 'request'
+1480000828399	Extract local variable 'entrySet'
+1480145563347	Delete element
+1480153374057	Rename type 'ThreadDemo'
+1480153407892	Rename field 'PD'
+1480153580417	Rename local variable 'T1'
+1480153586420	Rename local variable 'T2'
+1480154646753	Delete element
+1480155642865	Delete element
+1480155647834	Delete element
+1480176334520	Delete element

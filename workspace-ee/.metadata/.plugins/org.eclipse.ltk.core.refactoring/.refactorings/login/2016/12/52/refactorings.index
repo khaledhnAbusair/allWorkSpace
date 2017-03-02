@@ -1,0 +1,9 @@
+1482048691788	Extract local variable 'request'
+1482048717728	Extract method 'extracted'
+1482138367184	Convert local variable 'urlsToExclude' to field
+1482138465102	Extract method 'extracted'
+1482138485143	Rename method 'isEccludedMathc'
+1482138779230	Rename method 'isEccludedMatch'
+1482138791213	Rename local variable 'exclide'
+1482142882733	Rename type 'SessionFilter'
+1482229246462	Extract constant 'USER_INFO'

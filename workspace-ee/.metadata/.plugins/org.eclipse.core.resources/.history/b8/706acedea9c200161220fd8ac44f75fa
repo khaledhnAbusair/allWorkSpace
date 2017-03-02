@@ -1,0 +1,8 @@
+package security;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(urlPatterns="/login")
+public class LoginServlet {
+
+}

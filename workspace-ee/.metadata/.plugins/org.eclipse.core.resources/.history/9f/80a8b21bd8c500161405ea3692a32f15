@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment id="WebFragment_ID" version="3.0"
+	metadata-complete="true" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd">
+
+	<display-name>login</display-name>
+	<name>login</name>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>login.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>login.LoginFilter</filter-class>
+
+		<init-param>
+			<param-name>urls.exclude</param-name>
+			<param-value>/login,/static/[\w\W]*</param-value>
+		</init-param>
+
+	</filter>
+
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>Fixation</filter-name>
+		<filter-class>login.SessionFixationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Fixation</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-fragment>

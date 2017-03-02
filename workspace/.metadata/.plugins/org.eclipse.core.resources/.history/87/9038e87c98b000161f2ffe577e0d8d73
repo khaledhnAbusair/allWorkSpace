@@ -1,0 +1,37 @@
+package arrays.util;
+
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class MatrixSumationTest {
+	private static int[][] m1 = { { 1, 2 }, { 3, 4 } };
+	private static int[][] m2 = { { 5, 6 }, { 7, 8 } };
+
+	@Test
+	@Ignore
+	public void givenMatrixSumation_WhentestInvalidMatrixesSizes() {
+		int[][] actuals = { { 6, 8 }, { 10, 12 } };
+		int[][] result = MatrixUtils.sum(m1, m2);
+		Assert.assertArrayEquals("Result matrix is not as expected", result, actuals);
+	}
+
+	@Test(expected=IllegalArgumentException.class)
+	public void sumIsValidMatrixesSizes() {
+		int [][] invalidSize=new int[][]{{1,2},{1}};
+		MatrixUtils.sum(invalidSize, m2);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testFirstMatrixIsNull() {
+		// new more enhancement
+		MatrixUtils.sum(null, m2);
+
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testSecondMatrixIsNull() {
+		MatrixUtils.sum(m1, null);
+	}
+
+}

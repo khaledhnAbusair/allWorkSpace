@@ -1,0 +1,16 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import domain.repository.EmployeeRepository;
+
+public class PerdicateTest {
+
+	public static void main(String[] args) {
+		ApplicationContext applicationContext=new ClassPathXmlApplicationContext("/data-beans.xml");
+		EmployeeRepository bean = applicationContext.getBean(EmployeeRepository.class);
+		
+		QEmployee.employee.firstName.eq("khaled").and(QEmployee.employee.lastName.eq("abusair"));
+	}
+}

@@ -1,0 +1,9 @@
+package domain;
+
+public class SpringDateTest {
+
+	public static void main(String[] args) {
+
+	}
+
+}

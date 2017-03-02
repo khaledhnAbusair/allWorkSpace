@@ -1,0 +1,10 @@
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\AuthenticateRequest.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\LoginFilter.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\MemoryAuthenticationManager.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\AuthenticationManager.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\AuthenticationException.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\UserInfo.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\SessionFixationFilter.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\SecurityContext.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\BadCredentialsException.java
+C:\Courses\induction-3\users-management-sample\login\src\main\java\login\LoginServlet.java

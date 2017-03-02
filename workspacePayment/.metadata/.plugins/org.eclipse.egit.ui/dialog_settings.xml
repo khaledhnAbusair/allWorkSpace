@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/SaleemKhair/payment-system.git"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item value="734" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="323" key="DIALOG_HEIGHT"/>
+		<item value="127" key="DIALOG_X_ORIGIN"/>
+		<item value="181" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.fetch.FetchResultDialog.dialogBounds">
+		<item value="640" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="495" key="DIALOG_HEIGHT"/>
+		<item value="184" key="DIALOG_X_ORIGIN"/>
+		<item value="80" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/home/khaled/workspacePayment/payment-system/.git">
+			<item value="true"/>
+			<item value="Saleem &lt;saleemkhair@gmail.com&gt;"/>
+			<item value="project nature changed to parent-module no changes in code 2&#x0A;&#x0A;Change-Id: I0000000000000000000000000000000000000000&#x0A;"/>
+			<item value="Khaled Abusair &lt;khaledhnabusair@gmail.com&gt;"/>
+			<item value="4ace7dc4d8f4eacb70be67d062f5d2d5d4e44604"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

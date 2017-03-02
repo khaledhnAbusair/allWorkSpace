@@ -1,0 +1,27 @@
+1485958124326	Extract method 'extracted'
+1485963501182	Extract method 'convertToSqlDate'
+1485963602606	Extract method 'validatePaymentRequest'
+1485964908568	Delete element
+1485965171824	Delete element
+1486020076665	Delete element
+1486020333740	Extract local variable 'message'
+1486022160766	Rename local variable 'validatePaymentRequest'
+1486022731694	Extract local variable 'paymentListener'
+1486025837929	Extract method 'extracted'
+1486026015330	Extract constant 'REGEX'
+1486026084014	Rename local variable 'format'
+1486026097383	Extract constant 'YYYY_MM_DD'
+1486026108695	Rename field 'DATE_FORAM'
+1486026125886	Extract constant '_0'
+1486026147200	Extract constant '_1'
+1486026180339	Extract constant '_2'
+1486026191370	Extract constant '_3'
+1486026203891	Extract constant '_4'
+1486026211364	Extract constant '_5'
+1486026217650	Extract constant '_6'
+1486028231534	Extract local variable 'paymentRequest'
+1486034950567	Rename local variable 'paymentListener'
+1486034963117	Rename local variable 'paymentListener'
+1486037841001	Delete element
+1486041271745	Rename local variable 'paymentListener'
+1486042775410	Delete element

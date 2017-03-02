@@ -1,0 +1,12 @@
+package com.progressoft.jip.rest;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.ws.rs.Path;
+
+@Path("/departments")
+public class DepartmentService {
+
+	@PersistenceContext(unitName = "webservices-restful")
+	private EntityManager entityManager;
+}

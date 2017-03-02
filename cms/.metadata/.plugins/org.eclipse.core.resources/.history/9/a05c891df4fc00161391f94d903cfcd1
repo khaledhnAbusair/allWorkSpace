@@ -1,0 +1,24 @@
+package com.progressoft.jip.usecase;
+
+import com.progressoft.jip.entity.PageEntity;
+import com.progressoft.jip.entity.view.DraftPageView;
+import com.progressoft.jip.entity.view.PageView;
+
+public interface PageUseCase {
+	void addPage(PageView pageView, Integer siteId);
+
+	Object findOnePageBypageUrl(String pageUrl);
+
+	Iterable<PageEntity> getAllPages();
+
+	void editPage(DraftPageView draftPageView, Integer siteId);
+
+	void deletePage(String pageUrl);
+
+	Iterable<PageEntity> loadAllPagesBySiteId(Integer siteId);
+
+	PageView loadPageContent(String siteUrl, String pageUrl);
+
+	PageView loadLandingPage(String siteUrl);
+
+}

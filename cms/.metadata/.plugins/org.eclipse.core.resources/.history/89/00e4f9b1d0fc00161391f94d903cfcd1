@@ -1,0 +1,67 @@
+package com.progressoft.jip.deliverycontrollers;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.progressoft.jip.deliverycontrollers.exception.UnpublishedPageException;
+import com.progressoft.jip.usecase.PageUseCase;
+import com.progressoft.jip.usecase.impl.exception.LoadPageContentException;
+import com.progressoft.jip.usecase.impl.exception.LoadSiteContentException;
+
+@Controller
+public class DeliveryControllers {
+	private static final String SITE_URL_PAGE_URL = "/{siteUrl}/{pageUrl}";
+	private static final String PAGE_CONTENT = "pageContent";
+	private static final String SITE_URL_PARAM = "/{siteUrl}";
+	private static final String BASE_JSP_PAGE = "base";
+	private static final String PAGE_URL = "pageUrl";
+	private static final String SITE_URL = "siteUrl";
+	private static final String ERROR = "error";
+	@Autowired
+	private PageUseCase pageUseCase;
+
+	@RequestMapping(path = SITE_URL_PAGE_URL, method = RequestMethod.GET)
+	public String page(@PathVariable(name = SITE_URL) String siteUrl, @PathVariable(name = PAGE_URL) String pageUrl,
+			Map<String, Object> model) {
+		model.put(PAGE_CONTENT, pageUseCase.loadPageContent(siteUrl, pageUrl).getPageContent());
+		return BASE_JSP_PAGE;
+	}
+
+	@RequestMapping(path = SITE_URL_PARAM, method = RequestMethod.GET)
+	public String site(@PathVariable(name = SITE_URL) String siteUrl, Map<String, Object> model) {
+		model.put(PAGE_CONTENT, pageUseCase.loadLandingPage(siteUrl).getPageContent());
+		return BASE_JSP_PAGE;
+	}
+
+	@ExceptionHandler(LoadSiteContentException.class)
+	public String handleLoadSiteContentException(Exception exception, Model model) {
+		model.addAttribute(ERROR, exception.getMessage());
+		return BASE_JSP_PAGE;
+	}
+
+	@ExceptionHandler(LoadPageContentException.class)
+	public String handleLoadPageContentException(Exception exception, Model model) {
+		model.addAttribute(ERROR, exception.getMessage());
+		return BASE_JSP_PAGE;
+	}
+
+	@ExceptionHandler(UnpublishedPageException.class)
+	public String handleUnpublishedPageException(Exception exception, Model model) {
+		model.addAttribute(ERROR, exception.getMessage());
+		return BASE_JSP_PAGE;
+	}
+	
+	@ExceptionHandler(Exception.class)
+	public String handleException(Exception exception, Model model) {
+		model.addAttribute(ERROR, exception.getMessage());
+		return BASE_JSP_PAGE;
+	}
+
+}

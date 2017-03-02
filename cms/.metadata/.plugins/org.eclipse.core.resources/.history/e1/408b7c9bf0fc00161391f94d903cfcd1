@@ -1,0 +1,10 @@
+package com.progressoft.jip.repository;
+
+import com.progressoft.jip.entity.DraftPageEntity;
+import com.progressoft.jip.entity.PageEntity;
+
+public interface DraftPageRepository {
+	DraftPageEntity findByPublishedPage(PageEntity pageEntity);
+	void deleteByPublishedPage(PageEntity pageEntity);
+
+}

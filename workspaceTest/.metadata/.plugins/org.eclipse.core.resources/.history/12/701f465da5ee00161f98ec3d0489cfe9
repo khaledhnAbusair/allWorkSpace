@@ -1,0 +1,151 @@
+/**
+ * 
+ */
+package com.progressoft.jip.social.messaging;
+
+import java.io.ByteArrayOutputStream;
+
+import javax.annotation.PostConstruct;
+import javax.jms.Connection;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageListener;
+import javax.jms.MessageProducer;
+import javax.jms.Queue;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+
+import org.apache.camel.StringSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.progressoft.jip.social.messaging.PostMessageResult.Status;
+
+/**
+ * @author PSLPT 147
+ *
+ */
+@Component
+public class PostMessageConsumer implements MessageListener {
+
+	@Autowired
+	private QueueConnectionFactory connectionFactory;
+
+	@Autowired
+	private Queue requestQueue;
+
+	@Autowired
+	private Queue resultQueue;
+
+	@Autowired
+	private PostMessageHandler handler;
+
+	private Unmarshaller unmarshaller;
+
+	private Session session;
+
+	private Connection connection;
+
+	private MessageProducer producer;
+
+	private Marshaller marshaller;
+
+	@PostConstruct
+	public void init() {
+		initJAXBContetxt();
+		initJMSConnection();
+		initJMSProducer();
+		initJMSConsumer();
+	}
+
+	private void initJMSConnection() {
+		try {
+			connection = connectionFactory.createConnection();
+			session = connection.createSession(true, Session.SESSION_TRANSACTED);
+		} catch (JMSException e) {
+			throw new IllegalStateException(e);
+		}
+
+	}
+
+	private void initJMSProducer() {
+		try {
+			producer = session.createProducer(resultQueue);
+		} catch (JMSException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	private void initJAXBContetxt() {
+		try {
+			JAXBContext jaxbContext = JAXBContext.newInstance(PostMessage.class, PostMessageResult.class);
+			unmarshaller = jaxbContext.createUnmarshaller();
+			marshaller = jaxbContext.createMarshaller();
+		} catch (JAXBException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	private void initJMSConsumer() {
+		try {
+			MessageConsumer consumer = session.createConsumer(requestQueue);
+			consumer.setMessageListener(this);
+			connection.start();
+		} catch (JMSException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	@Override
+	public void onMessage(Message message) {
+		try {
+			PostMessageResult result = processJMSMessage(message);
+			String correlationID = message.getJMSCorrelationID();
+			sendResult(result, correlationID);
+			session.commit();
+		} catch (JMSException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	private PostMessageResult processJMSMessage(Message message) {
+		PostMessageResult result = new PostMessageResult();
+		try {
+			processMessage(message);
+			result.setStatus(Status.SUCCESS);
+		} catch (Exception e) {
+			result.setStatus(Status.FAILED);
+			result.setDetails(e.getMessage());
+		}
+		return result;
+	}
+
+	private void sendResult(PostMessageResult result, String correlationID) {
+		try {
+			ByteArrayOutputStream os = new ByteArrayOutputStream();
+			marshaller.marshal(result, os);
+			String xmlResult = new String(os.toByteArray());
+			TextMessage message = session.createTextMessage(xmlResult);
+			message.setJMSCorrelationID(correlationID);
+			producer.send(message);
+		} catch (JAXBException | JMSException e) {
+			throw new IllegalStateException();
+		}
+	}
+
+	private void processMessage(Message message) throws JMSException, JAXBException {
+		TextMessage asText = (TextMessage) message;
+		String xmlMessage = asText.getText();
+		JAXBElement<PostMessage> postMessage;
+		postMessage = unmarshaller.unmarshal(new StringSource(xmlMessage), PostMessage.class);
+		handler.processMessage(postMessage.getValue());
+	}
+
+}

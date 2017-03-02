@@ -1,0 +1,20 @@
+package com.progressoft.jip.simulation.impl.ui;
+
+import com.progressoft.jip.framework.SimulationState;
+import com.progressoft.jip.framework.SimulationStateListener;
+
+public class AsyncListener implements SimulationStateListener{
+
+	@Override
+	public void simulationStarted(SimulationState state) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void statusChanged(SimulationState state) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

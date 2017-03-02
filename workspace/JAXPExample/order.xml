@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PurchaseOrder OrderDate="2001-01-01"
+	xmlns="http://tempuri.org/PurchaseOrderSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://tempuri.org/PurchaseOrderSchema.xsd address.xsd ">
+	<ShipTo country="US">
+		<name>name</name>
+		<street>street</street>
+		<city>city</city>
+		<state>state</state>
+		<zip>0</zip>
+	</ShipTo>
+
+	<BillTo country="US">
+		<name>name</name>
+		<street>street</street>
+		<city>city</city>
+		<state>state</state>
+		<zip>0</zip>
+	</BillTo>
+</PurchaseOrder>

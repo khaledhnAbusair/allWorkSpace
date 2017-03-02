@@ -1,0 +1,26 @@
+package com.progressoft.jip.parsing.tools;
+
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.function.Consumer;
+
+import com.progressoft.jip.parsing.importer.SettingsReader;
+import com.progressoft.jip.parsing.importer.XMLSettings;
+import com.progressoft.jip.parsing.watcherfile.WatcherDirctoryServices;
+
+public class DataImporter {
+
+	public static void main(String[] args) throws IOException {
+	
+		SettingsReader importer = new SettingsReader(Paths.get(args[0]));
+		importer.parseDocument();
+		importer.getXMLSettings().stream().forEach(new Consumer<XMLSettings>() {
+			@Override
+			public void accept(XMLSettings t) {
+				WatcherDirctoryServices watcherDirctoryServices = new WatcherDirctoryServices(t);
+				new Thread(watcherDirctoryServices).start();
+			}
+		});
+	}
+
+}

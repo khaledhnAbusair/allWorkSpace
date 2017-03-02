@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="419" key="DIALOG_X_ORIGIN"/>
+		<item value="243" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="CATEG" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="CATEG"/>
+			<item value="termCategory"/>
+			<item value="sear"/>
+			<item value="lik"/>
+			<item value="add"/>
+			<item value="form"/>
+			<item value="Account"/>
+			<item value="package repositories.impl;"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&apos;"/>
+			<item value="`"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="363" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu Condensed|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="474" key="DIALOG_HEIGHT"/>
+		<item value="82" key="DIALOG_X_ORIGIN"/>
+		<item value="140" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

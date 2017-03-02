@@ -1,0 +1,6 @@
+samples/security/AuthenticationException.class
+samples/security/AuthenticationManager.class
+samples/security/UserInfo.class
+samples/security/AuthenticateRequest.class
+samples/security/BadCredentialsException.class
+samples/security/UsersManager.class

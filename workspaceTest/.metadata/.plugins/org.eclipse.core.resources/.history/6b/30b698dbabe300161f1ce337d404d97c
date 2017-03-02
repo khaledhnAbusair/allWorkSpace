@@ -1,0 +1,33 @@
+package domain;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+import domain.repository.DepartmentRepository;
+
+public class DepartmentTest {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/data-bean.xml");
+		DepartmentRepository bean = context.getBean(DepartmentRepository.class);
+
+		Department department = new Department();
+
+		department.setDeptNo("SE1131333225");
+		department.setName("Software Enginering");
+		//bean.save(department);
+	
+		PageRequest pageable = new PageRequest(1, 2);
+		Page<Department> page = bean.findAll(pageable);
+		System.out.println(page.getTotalPages());
+	
+		
+		
+		
+		}
+
+}

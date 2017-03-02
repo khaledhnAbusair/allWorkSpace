@@ -1,0 +1,148 @@
+package com.progressoft.jip.usecase.impl;
+
+import java.util.Objects;
+
+import javax.annotation.PostConstruct;
+
+import com.progressoft.jip.entity.UserEntity;
+import com.progressoft.jip.entity.view.UserView;
+import com.progressoft.jip.repository.UserRepository;
+import com.progressoft.jip.usecase.UserUseCase;
+import com.progressoft.jip.usecase.impl.exception.CannotBeFindAnyUserException;
+import com.progressoft.jip.usecase.impl.exception.ConfirmPasswordDoesNotMatchException;
+import com.progressoft.jip.usecase.impl.exception.UserIsAlreadyExistException;
+import com.progressoft.jip.usecase.impl.exception.UserNotFoundException;
+
+public class UserUseCaseImpl implements UserUseCase {
+	private static final String ADMINISTRATOR_MANAGER = "Administrator manager";
+	private static final String ADMIN = "admin";
+	private static final String COMLIX_PSSWORD = "P@ssw0rd";
+	private UserRepository userRepository;
+
+	public void setUserRepository(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
+
+	@Override
+	public UserView findOneUserByUserName(String userName) {
+		if (Objects.isNull(userRepository.findByUserName(userName))) {
+			throw new UserNotFoundException();
+		} else {
+			return userRepository.findByUserName(userName);
+		}
+	}
+
+	@Override
+	public void addUser(UserView userView) {
+		if (Objects.nonNull(userRepository.findByUserName(userView.getUserName()))) {
+			throw new UserIsAlreadyExistException();
+		} else {
+			UserEntity userEntity = new UserEntity();
+			userEntity.setFullName(userView.getFullName());
+			userEntity.setPassword(userView.getPassword());
+			userEntity.setUserName(userView.getUserName());
+			userRepository.save(userEntity);
+		}
+	}
+
+	@Override
+	public void editUserFullName(UserView userView) {
+		if (Objects.isNull(userRepository.findByUserName(userView.getUserName()))) {
+			throw new UserNotFoundException();
+		} else {
+			UserEntity userEntity = new UserEntity();
+			userEntity.setFullName(userView.getFullName());
+			userEntity.setUserName(userView.getUserName());
+			userEntity.setPassword(userView.getPassword());
+			userRepository.save(userEntity);
+		}
+	}
+
+	@Override
+	public void disableUser(UserView userView) {
+		if (Objects.isNull(userRepository.findByUserName(userView.getUserName()))) {
+			throw new UserNotFoundException();
+		} else {
+			UserEntity userEntity = new UserEntity();
+			userEntity.setIsDisable(false);
+			userEntity.setFullName(userView.getFullName());
+			userEntity.setUserName(userView.getUserName());
+			userEntity.setPassword(userView.getPassword());
+			userRepository.save(userEntity);
+		}
+	}
+
+	@Override
+	public void enableUser(UserView userView) {
+		if (Objects.isNull(userRepository.findByUserName(userView.getUserName()))) {
+			throw new UserNotFoundException();
+		} else {
+			UserEntity userEntity = new UserEntity();
+			userEntity.setIsDisable(true);
+			userEntity.setFullName(userView.getFullName());
+			userEntity.setUserName(userView.getUserName());
+			userEntity.setPassword(userView.getPassword());
+			userRepository.save(userEntity);
+		}
+	}
+
+	@Override
+	public void resetUserPassword(UserView userView) {
+		if (Objects.isNull(userRepository.findByUserName(userView.getUserName()))) {
+			throw new UserNotFoundException();
+		} else {
+			UserEntity userEntity = new UserEntity();
+			userEntity.setPassword(COMLIX_PSSWORD);
+			userEntity.setFullName(userView.getFullName());
+			userEntity.setUserName(userView.getUserName());
+			userRepository.save(userEntity);
+		}
+	}
+
+	@Override
+	public void deleteUser(UserView userView) {
+		if (Objects.isNull(userView.getUserName())) {
+			throw new UserNotFoundException();
+		} else {
+			userRepository.delete(userView.getUserName());
+		}
+	}
+
+	@Override
+	public Iterable<UserEntity> getAllUsers() {
+		if (Objects.isNull(userRepository.findAll())) {
+			throw new CannotBeFindAnyUserException();
+		}
+		return userRepository.findAll();
+	}
+
+	@Override
+	public void changeUserPassword(String userName, String password, String newPassword, String confirmPassword) {
+		UserView user = userRepository.findByUserName(userName);
+		if (Objects.isNull(userName)) {
+			throw new UserNotFoundException();
+		} else {
+			if (user.getPassword().equals(password)) {
+				if (!confirmPassword.equals(newPassword))
+					throw new ConfirmPasswordDoesNotMatchException();
+				UserEntity userEntity = new UserEntity();
+				userEntity.setPassword(newPassword);
+				userEntity.setFullName(user.getFullName());
+				userEntity.setIsDisable(user.getIsDisable());
+				userEntity.setUserName(user.getUserName());
+				userRepository.save(userEntity);
+			}
+		}
+	}
+
+	@PostConstruct
+	private void addAdminUser(UserEntity userEntity) {
+		if (Objects.isNull(userRepository.findByUserName(ADMIN))) {
+			userEntity.setFullName(ADMINISTRATOR_MANAGER);
+			userEntity.setUserName(ADMIN);
+			userEntity.setPassword(COMLIX_PSSWORD);
+			userRepository.save(userEntity);
+		}
+	}
+
+}

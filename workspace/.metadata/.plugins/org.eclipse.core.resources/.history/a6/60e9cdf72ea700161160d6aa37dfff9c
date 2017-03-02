@@ -1,0 +1,28 @@
+package com.progressoft.jip.introspection;
+
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception {
+		BeanInfo beanInfo = Introspector.getBeanInfo(Employee.class);
+		PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
+		for (PropertyDescriptor propertyDescriptor : propertyDescriptors) {
+			System.out.println(propertyDescriptor.getName());
+			System.out.println("------------------------");
+			System.out.println(propertyDescriptor.getReadMethod());
+			System.out.println("------------------------");
+			System.out.println(propertyDescriptor.getWriteMethod());
+			System.out.println("-------------------------");
+			System.out.println(propertyDescriptor.getShortDescription());
+			System.out.println("-------------------------");
+			System.out.println(propertyDescriptor.getPropertyEditorClass());
+System.out.println("----------------------");
+
+		}
+
+	}
+
+}

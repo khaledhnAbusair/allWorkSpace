@@ -1,0 +1,6 @@
+package com.progressoft.jip.initializer;
+
+public class Void {
+	public static final VOID =new Void();
+
+}

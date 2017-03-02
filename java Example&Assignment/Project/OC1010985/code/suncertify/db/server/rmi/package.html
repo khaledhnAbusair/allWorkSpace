@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head></head>
+<body bgcolor="white">
+   Contains an implementation for engine network server using RMI.<p>
+   Database engine management and access interfaces under package
+   <code>suncertify.db</code> are mirrored to an RMI remote interfaces to be
+   exposed and accessed via remote RMI clients. The following are each database
+   remote engine interface with related engine local interface:<br>
+   <ul>
+     <li>{@link suncertify.db.server.rmi.RemoteEngine} will stands off interface
+         {@link suncertify.db.Engine}</li>
+     <li>{@link suncertify.db.server.rmi.RemoteSession} will stands off interface
+         {@link suncertify.db.Session}</li>
+     <li>{@link suncertify.db.server.rmi.RemoteDBMain} will stands off interface
+         {@link suncertify.db.DBMain}</li>
+     </ul>
+   <pre>
+   Below is an example to obtain an RMI stub related to an engine service and
+   accessing data from its database:
+   <code>
+   // lookup an engine stub exported on port 1234 with name service1
+   RemoteEngine engine = (RemoteEngine)Naming.lookup("//host:1234/service1");
+   // creates a session
+   RemoteSession remoteSession = engine.newSession();
+   // Get data access
+   RemoteDBMain remoteDBMain = remoteSession.getDataAccess();
+   // read record 0 from remote database
+   remoteDBMain.read(0);
+   </code>
+   </pre>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+package bean.validation;
+
+import java.math.BigDecimal;
+
+import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+public class Account {
+
+	@NotNull
+	@Size(min = 10, max = 20, message = "The account number shall be between 10-20")
+	private String accountNumber;
+
+	@NotNull
+	private String name;
+
+	@javax.validation.constraints.Pattern(regexp = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$")
+	private String email;
+
+	private BigDecimal balance;
+
+	
+	private String iban;
+
+	@AssertFalse
+	private boolean nothing;
+	
+	
+	
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public BigDecimal getBalance() {
+		return balance;
+	}
+
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
+	}
+
+	public String getIban() {
+		return iban;
+	}
+
+	public void setIban(String iban) {
+		this.iban = iban;
+	}
+
+}

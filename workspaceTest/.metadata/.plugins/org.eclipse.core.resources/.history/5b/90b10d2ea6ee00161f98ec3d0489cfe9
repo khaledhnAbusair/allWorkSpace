@@ -1,0 +1,22 @@
+package com.progressoft.jip.social.main;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.main.Main;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class CamelMain {
+	public static void main(String[] args) throws Exception {
+		ApplicationContext springContext=new ClassPathXmlApplicationContext(".beans.xml");
+		
+		Main main = new Main();
+		CamelContext context = new DefaultCamelContext();
+
+		
+		
+		
+		main.getCamelContexts().add(context);
+		main.run();
+	}
+}

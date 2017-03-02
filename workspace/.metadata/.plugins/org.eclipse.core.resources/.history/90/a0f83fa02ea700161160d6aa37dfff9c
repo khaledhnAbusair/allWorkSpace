@@ -1,0 +1,12 @@
+package com.progressoft.jip.introspection;
+
+import java.beans.IntrospectionException;
+import java.beans.Introspector;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception {
+		Introspector.getBeanInfo(Employee.class);
+	}
+
+}
